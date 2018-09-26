@@ -1,0 +1,22 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+
+// Block
+// --------------------------------------------------
+.tags
+  display: inline-flex
+  flex-wrap: wrap
+
+
+// Elements
+// --------------------------------------------------
+.tags__tag
+  display: block
+  background-color: $gray-light
+  padding: 0 0.3em
+  border-radius: 2px
+  margin-bottom: 0.3em
+  &:before
+    content: '#'
+  &:not(:last-child)
+    margin-right: 0.3em

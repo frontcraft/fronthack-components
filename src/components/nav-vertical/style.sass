@@ -1,0 +1,30 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Block
+// --------------------------------------------------
+.nav-vertical
+  list-style-type: none
+  padding: 0
+  +breakpoint(tablet)
+    border-bottom: 10px solid red
+
+
+// Elements
+// --------------------------------------------------
+.nav-vertical__link
+  padding: 10px 0 10px 15px
+  color: $gray-base
+  display: block
+  border-bottom: 1px solid $gray-lighter
+
+// States
+// --------------------------------------------------
+.nav-vertical__link
+  &.is-active,
+  &:hover
+    padding-left: 10px
+    border-left: 5px solid $brand-primary
+    background-color: white
+    text-decoration: none
+    font-weight: $bold

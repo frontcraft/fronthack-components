@@ -1,7 +1,10 @@
 {
-    "env": {},
+    "env": {
+        "compiler": "frontcraft.envs/bundlers/webpack-sass@0.0.2"
+    },
     "dependencies": {
-        "frontcraft.fronthack/globals/style": "0.0.1"
+        "frontcraft.fronthack/globals/style": "0.0.1",
+        "frontcraft.fronthack/components/form": "0.0.6"
     },
     "componentsDefaultDirectory": "src/{namespace}/{name}",
     "packageManager": "yarn"
