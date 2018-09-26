@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
-import Accordion from './components/Accordion';
+import Alert from './components/Alert';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Accordion items={[
-          {
-            title: 'First accordion item',
-            content: 'Content for the first accordion'
-          },
-          {
-            title: 'Second accordion item',
-            content: 'Content for the first accordion'
-          },
-        ]}/>
+        <Alert message="Example message" type="success"/>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormInput
             fieldname="username"

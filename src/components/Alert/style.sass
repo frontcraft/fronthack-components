@@ -1,0 +1,47 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Alert
+//
+// Alert with icon and description in various states.
+
+
+// Block
+// --------------------------------------------------
+.alert
+  font-size: 14px
+  line-height: 21px
+  color: $text-color
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $gray-lightest
+  border: 1px solid $gray-light
+  padding: 22px $container-paddings
+  margin-bottom: 40px
+
+// Elements
+// --------------------------------------------------
+.alert__icon
+  font-size: 24px
+  margin-right: 10px
+  opacity: 0.6
+
+// Modifiers
+// --------------------------------------------------
+.alert--success
+  border-color: $green
+  background-color: lighten($green, 66%)
+  .alert__icon
+    color: $green
+
+.alert--warning
+  border-color: $yellow
+  background-color: lighten($yellow, 33%)
+  .alert__icon
+    color: $yellow
+
+.alert--error
+  border-color: $red
+  background-color: lighten($red, 50%)
+  .alert__icon
+    color: $red

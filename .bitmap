@@ -198,5 +198,27 @@
         "trackDir": "src/components/Accordion",
         "origin": "AUTHORED"
     },
+    "frontcraft.fronthack/components/alert@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Alert/Alert.js",
+                "test": false,
+                "name": "Alert.js"
+            },
+            {
+                "relativePath": "src/components/Alert/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Alert/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Alert/index.js",
+        "trackDir": "src/components/Alert",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
