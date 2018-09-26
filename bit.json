@@ -4,7 +4,7 @@
     },
     "dependencies": {
         "frontcraft.fronthack/globals/style": "0.0.1",
-        "frontcraft.fronthack/components/form": "0.0.6"
+        "frontcraft.fronthack/components/form": "0.0.7"
     },
     "componentsDefaultDirectory": "src/{namespace}/{name}",
     "packageManager": "yarn"

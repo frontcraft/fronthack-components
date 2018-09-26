@@ -44,92 +44,6 @@
         "origin": "IMPORTED",
         "originallySharedDir": "src/globals/style"
     },
-    "frontcraft.fronthack/components/form@0.0.6": {
-        "files": [
-            {
-                "name": "Form.js",
-                "relativePath": "Form.js",
-                "test": false
-            },
-            {
-                "name": "FormCheckbox.js",
-                "relativePath": "FormCheckbox.js",
-                "test": false
-            },
-            {
-                "name": "FormInput.js",
-                "relativePath": "FormInput.js",
-                "test": false
-            },
-            {
-                "name": "FormRadio.js",
-                "relativePath": "FormRadio.js",
-                "test": false
-            },
-            {
-                "name": "FormSelect.js",
-                "relativePath": "FormSelect.js",
-                "test": false
-            },
-            {
-                "name": "_ItemWrapper.js",
-                "relativePath": "_ItemWrapper.js",
-                "test": false
-            },
-            {
-                "name": "README.md",
-                "relativePath": "docs/README.md",
-                "test": false
-            },
-            {
-                "name": "form-basic.md",
-                "relativePath": "docs/form-basic.md",
-                "test": false
-            },
-            {
-                "name": "form-custom.md",
-                "relativePath": "docs/form-custom.md",
-                "test": false
-            },
-            {
-                "name": "form-item.md",
-                "relativePath": "docs/form-item.md",
-                "test": false
-            },
-            {
-                "name": "form-layouts.md",
-                "relativePath": "docs/form-layouts.md",
-                "test": false
-            },
-            {
-                "name": "form-states.md",
-                "relativePath": "docs/form-states.md",
-                "test": false
-            },
-            {
-                "name": "helpers.js",
-                "relativePath": "helpers.js",
-                "test": false
-            },
-            {
-                "name": "index.js",
-                "relativePath": "index.js",
-                "test": false
-            },
-            {
-                "name": "style.sass",
-                "relativePath": "style.sass",
-                "test": false
-            }
-        ],
-        "mainFile": "index.js",
-        "rootDir": "src/components/form",
-        "origin": "IMPORTED",
-        "dependencies": [
-            "frontcraft.fronthack/globals/style@0.0.1"
-        ],
-        "originallySharedDir": "src/components/form"
-    },
     "frontcraft.fronthack/components/tags@0.0.1": {
         "files": [
             {
@@ -185,6 +99,77 @@
         "trackDir": "src/components/nav-vertical",
         "origin": "AUTHORED",
         "mainDistFile": "dist/src/components/nav-vertical/index.js"
+    },
+    "frontcraft.fronthack/components/form@0.0.7": {
+        "files": [
+            {
+                "name": "Form.js",
+                "relativePath": "Form.js",
+                "test": false
+            },
+            {
+                "name": "FormInput.js",
+                "relativePath": "FormInput.js",
+                "test": false
+            },
+            {
+                "name": "README.md",
+                "relativePath": "docs/README.md",
+                "test": false
+            },
+            {
+                "name": "form-basic.md",
+                "relativePath": "docs/form-basic.md",
+                "test": false
+            },
+            {
+                "name": "form-custom.md",
+                "relativePath": "docs/form-custom.md",
+                "test": false
+            },
+            {
+                "name": "form-item.md",
+                "relativePath": "docs/form-item.md",
+                "test": false
+            },
+            {
+                "name": "form-layouts.md",
+                "relativePath": "docs/form-layouts.md",
+                "test": false
+            },
+            {
+                "name": "form-states.md",
+                "relativePath": "docs/form-states.md",
+                "test": false
+            },
+            {
+                "name": "helpers.js",
+                "relativePath": "helpers.js",
+                "test": false
+            },
+            {
+                "name": "index.js",
+                "relativePath": "index.js",
+                "test": false
+            },
+            {
+                "relativePath": "renderInput.js",
+                "test": false,
+                "name": "renderInput.js"
+            },
+            {
+                "name": "style.sass",
+                "relativePath": "style.sass",
+                "test": false
+            }
+        ],
+        "mainFile": "index.js",
+        "rootDir": "src/components/form",
+        "origin": "IMPORTED",
+        "dependencies": [
+            "frontcraft.fronthack/globals/style@0.0.1"
+        ],
+        "originallySharedDir": "src/components/form"
     },
     "version": "13.0.4"
 }

@@ -21,7 +21,7 @@ export const FormConsumer = ({children}) => (
  * @name Form
  * @property {array} fields List of field names
  * @example
- *   <Form fields={['username', 'color']}>
+ *   <Form fields={['username', 'framework', 'color', 'car']}>
  *     <FormInput
  *       fieldname="username"
  *       label="User name"
