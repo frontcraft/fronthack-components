@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
-import Tags from './components/tags';
+import Accordion from './components/Accordion';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Tags/>
+        <Accordion items={[
+          {
+            title: 'First accordion item',
+            content: 'Content for the first accordion'
+          },
+          {
+            title: 'Second accordion item',
+            content: 'Content for the first accordion'
+          },
+        ]}/>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormInput
             fieldname="username"

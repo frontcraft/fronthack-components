@@ -171,5 +171,32 @@
         ],
         "originallySharedDir": "src/components/form"
     },
+    "frontcraft.fronthack/components/accordion@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Accordion/Accordion.js",
+                "test": false,
+                "name": "Accordion.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Accordion/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Accordion/index.js",
+        "trackDir": "src/components/Accordion",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
