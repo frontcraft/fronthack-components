@@ -11,6 +11,7 @@ import validator from 'validator';
  *   value => inputHandler(this, 'username', value, 'text', true)
  */
 export function inputHandler(fields, fieldName, value, type, required = false) {
+  console.log('TCL: inputHandler -> type', type);
   let validation, help = null;
 
   // If value is an array, remove its empty values.

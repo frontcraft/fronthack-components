@@ -1,8 +1,7 @@
 import React from 'react'
 import './style.sass'
-import { FormItemWrapper } from './'
 import { FormConsumer } from './Form'
-import { inputHandler } from './helpers'
+import renderInput from './renderInput'
 
 /**
  * A single line form input
@@ -11,6 +10,7 @@ import { inputHandler } from './helpers'
  * @param {string} type Type of the input
  * @param {string} placeholder Placeholder content
  * @param {string} initialHelp Help text
+ * @param {array} options Avaliable options (for some types of inputs)
  * @param {string|object} addon Content or icon at the right hand of the field
  * @example
  *   <FormInput
@@ -21,31 +21,37 @@ import { inputHandler } from './helpers'
  *     initialHelp="Your desired name"
  *   />
  */
-const FormInput = ({fieldname, label, type, placeholder, initialHelp, addon}) => {
+const FormInput = ({
+  fieldname,
+  label,
+  type,
+  placeholder,
+  initialHelp,
+  options,
+  addon,
+  required,
+}) => {
   return(
     <FormConsumer>
       {({fields, setValue}) => {
+        !fields[fieldname] && console.error(`Field "${fieldname}" is not defined in props of the parent Form component. Define Form props as on example: <Form fields={['${fieldname}']}>.`)
         const { value, validation } = fields[fieldname]
-        // TODO: Throw error that this field is not defined in the Form props.
         const help = fields[fieldname].help ? fields[fieldname].help : initialHelp
         return (
-          <FormItemWrapper
-            fieldname={fieldname}
-            label={label}
-            type={type}
-            validation={validation}
-            help={help}
-            addon={addon}
-          >
-            <input
-              className="form__input"
-              name={fieldname}
-              type={type}
-              placeholder={placeholder}
-              onChange={e => setValue(inputHandler(fields, fieldname, e.target.value, 'string', true))}
-              value={value ? value : ''}
-            />
-          </FormItemWrapper>
+          <div className={`form__item${validation ? ` has-${validation}` : ''}`}>
+            { label && ['checkbox', 'radio'].includes(type) ?
+              <span className="form__label">{label}</span>
+            : label &&
+              <label className="form__label" htmlFor={fieldname}>{label}</label>
+            }
+              {renderInput(fields, fieldname, type, value, placeholder, setValue, options, required)}
+            { addon &&
+              <div className="form__addon">{addon}</div>
+            }
+            { help &&
+              <span className="form__help">{help}</span>
+            }
+          </div>
         )
       }}
     </FormConsumer>
@@ -55,6 +61,7 @@ const FormInput = ({fieldname, label, type, placeholder, initialHelp, addon}) =>
 FormInput.defaultProps = {
   type: 'text',
   placeholder: false,
+  required: false,
 }
  
 export default FormInput;
