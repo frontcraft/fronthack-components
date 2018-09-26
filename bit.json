@@ -1,0 +1,8 @@
+{
+    "env": {},
+    "dependencies": {
+        "frontcraft.fronthack/globals/style": "0.0.1"
+    },
+    "componentsDefaultDirectory": "src/{namespace}/{name}",
+    "packageManager": "yarn"
+}
