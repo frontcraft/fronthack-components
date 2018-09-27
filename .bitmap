@@ -375,5 +375,27 @@
         "trackDir": "src/components/Tooltip",
         "origin": "AUTHORED"
     },
+    "components/dropdown": {
+        "files": [
+            {
+                "relativePath": "src/components/Dropdown/Dropdown.js",
+                "test": false,
+                "name": "Dropdown.js"
+            },
+            {
+                "relativePath": "src/components/Dropdown/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Dropdown/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Dropdown/index.js",
+        "trackDir": "src/components/Dropdown",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
