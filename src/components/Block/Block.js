@@ -5,7 +5,7 @@ import './style.sass'
  * An universal block with headline and content.
  * @render react
  * @name Block
- * @property {string} prop - explanation
+ * @property {string} title - Displayed block title
  * @example
  *  <Block title="Title of the block">
  *    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>

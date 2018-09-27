@@ -309,5 +309,27 @@
         "trackDir": "src/components/Block",
         "origin": "AUTHORED"
     },
+    "components/cloudlet": {
+        "files": [
+            {
+                "relativePath": "src/components/Cloudlet/Cloudlet.js",
+                "test": false,
+                "name": "Cloudlet.js"
+            },
+            {
+                "relativePath": "src/components/Cloudlet/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Cloudlet/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Cloudlet/index.js",
+        "trackDir": "src/components/Cloudlet",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }

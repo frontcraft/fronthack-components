@@ -1,0 +1,25 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Cloudlet
+//
+// A cloud with sentence like in comic books.
+
+
+// Block
+// --------------------------------------------------
+.cloudlet
+  background-color: $gray-lightest
+  position: relative
+  margin: 0 20px 20px 0
+  padding: 15px 25px
+  border-right: 1px #fff solid
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 0
+    height: 0
+    top: 0
+    right: -20px + 1
+    border-bottom: 20px solid transparent
+    border-left: 20px solid $gray-lightest
