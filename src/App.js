@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
-import Cloudlet from './components/Cloudlet';
+import Donut from './components/Donut';
 import Icon from './components/Icon';
 import Badge from './components/Badge';
 import { Form, FormInput } from './components/form';
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cloudlet>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</Cloudlet>
+        <Donut percentage={43} />
         <Alert message="Example message" type="success"/>
         <div>Test<Badge number={7}/></div>
         <div><Icon type="bell" /><Badge number={7}/></div>

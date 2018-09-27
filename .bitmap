@@ -331,5 +331,27 @@
         "trackDir": "src/components/Cloudlet",
         "origin": "AUTHORED"
     },
+    "components/donut": {
+        "files": [
+            {
+                "relativePath": "src/components/Donut/Donut.js",
+                "test": false,
+                "name": "Donut.js"
+            },
+            {
+                "relativePath": "src/components/Donut/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Donut/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Donut/index.js",
+        "trackDir": "src/components/Donut",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
