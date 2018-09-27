@@ -353,5 +353,27 @@
         "trackDir": "src/components/Donut",
         "origin": "AUTHORED"
     },
+    "components/tooltip": {
+        "files": [
+            {
+                "relativePath": "src/components/Tooltip/Tooltip.js",
+                "test": false,
+                "name": "Tooltip.js"
+            },
+            {
+                "relativePath": "src/components/Tooltip/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Tooltip/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Tooltip/index.js",
+        "trackDir": "src/components/Tooltip",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }

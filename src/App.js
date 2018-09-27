@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
+import Tooltip from './components/Tooltip';
 import Donut from './components/Donut';
 import Icon from './components/Icon';
 import Badge from './components/Badge';
@@ -11,10 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Donut percentage={43} />
         <Alert message="Example message" type="success"/>
         <div>Test<Badge number={7}/></div>
         <div><Icon type="bell" /><Badge number={7}/></div>
+        <Tooltip message="Hey I'm made with pure CSS" direction="tr">
+          <Donut percentage={43} />
+        </Tooltip>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormInput
             fieldname="username"
