@@ -265,5 +265,27 @@
         "mainDistFile": "src/components/Icon/dist/index.js",
         "originallySharedDir": "src/components/Icon"
     },
+    "components/badge": {
+        "files": [
+            {
+                "relativePath": "src/components/Badge/Badge.js",
+                "test": false,
+                "name": "Badge.js"
+            },
+            {
+                "relativePath": "src/components/Badge/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Badge/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Badge/index.js",
+        "trackDir": "src/components/Badge",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }

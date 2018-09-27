@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
+import Icon from './components/Icon';
+import Badge from './components/Badge';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
@@ -9,6 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <Alert message="Example message" type="success"/>
+        <div>Test<Badge number={7}/></div>
+        <div><Icon type="bell" /><Badge number={7}/></div>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormInput
             fieldname="username"
