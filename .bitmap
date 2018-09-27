@@ -287,5 +287,27 @@
         "trackDir": "src/components/Badge",
         "origin": "AUTHORED"
     },
+    "components/block": {
+        "files": [
+            {
+                "relativePath": "src/components/Block/Block.js",
+                "test": false,
+                "name": "Block.js"
+            },
+            {
+                "relativePath": "src/components/Block/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Block/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Block/index.js",
+        "trackDir": "src/components/Block",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
