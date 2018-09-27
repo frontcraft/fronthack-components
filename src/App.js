@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
-import Dropdown from './components/Dropdown';
+import Field from './components/Field';
 import Icon from './components/Icon';
 import Badge from './components/Badge';
 import { Form, FormInput } from './components/form';
@@ -14,20 +14,12 @@ class App extends Component {
         <Alert message="Example message" type="success"/>
         <div>Test<Badge number={7}/></div>
         <div><Icon type="bell" /><Badge number={7}/></div>
-        <Dropdown links={[
-          {
-            label: 'Profile',
-            url: '#',
-          },
-          {
-            label: 'Settings',
-            url: '#',
-          },
-          {
-            label: 'Log out',
-            url: '#',
-          },
-        ]} overlay>Toggle dropdown</Dropdown>
+        <Field label="Field label" spacing values={[
+          'Multiple value',
+          'Another value',
+          'Third value',
+        ]}/>
+        <Field label="Field label" inlineLabel>Single value</Field>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormInput
             fieldname="username"

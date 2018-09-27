@@ -40,7 +40,7 @@ class Dropdown extends Component {
         <div className="dropdown__inner">
           <nav className="dropdown__nav">
             {links.map((link, index) => (
-              <a href={link.url} className="dropdown__link">{link.label}</a>
+              <a href={link.url} className="dropdown__link" key={index}>{link.label}</a>
             ))}
           </nav>
         </div>
