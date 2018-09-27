@@ -218,7 +218,52 @@
         ],
         "mainFile": "src/components/Alert/index.js",
         "trackDir": "src/components/Alert",
-        "origin": "AUTHORED"
+        "origin": "AUTHORED",
+        "mainDistFile": "dist/src/components/Alert/index.js"
+    },
+    "frontcraft.fronthack/components/icon@0.0.1": {
+        "files": [
+            {
+                "name": "Icon.js",
+                "relativePath": "Icon.js",
+                "test": false
+            },
+            {
+                "name": "waat-icons.eot",
+                "relativePath": "fonts/waat-icons.eot",
+                "test": false
+            },
+            {
+                "name": "waat-icons.svg",
+                "relativePath": "fonts/waat-icons.svg",
+                "test": false
+            },
+            {
+                "name": "waat-icons.ttf",
+                "relativePath": "fonts/waat-icons.ttf",
+                "test": false
+            },
+            {
+                "name": "waat-icons.woff",
+                "relativePath": "fonts/waat-icons.woff",
+                "test": false
+            },
+            {
+                "name": "index.js",
+                "relativePath": "index.js",
+                "test": false
+            },
+            {
+                "name": "style.sass",
+                "relativePath": "style.sass",
+                "test": false
+            }
+        ],
+        "mainFile": "index.js",
+        "rootDir": "src/components/Icon",
+        "origin": "IMPORTED",
+        "mainDistFile": "src/components/Icon/dist/index.js",
+        "originallySharedDir": "src/components/Icon"
     },
     "version": "13.0.4"
 }

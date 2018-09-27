@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import bemCx from 'bem-modifiers'
+import Icon from '@bit/frontcraft.fronthack.components.icon'
 import './style.sass'
 
 /**
@@ -14,7 +15,7 @@ class Alert extends Component {
     const { message, type } = this.props
     return(
       <div className={bemCx('alert', type)}>
-        <div className="alert__icon"><i className="icon icon--warning"></i></div>
+        <div className="alert__icon"><Icon type="warning" /></div>
         {message}
       </div>
     )
