@@ -6,6 +6,7 @@ import Field from './components/Field';
 import Icon from './components/Icon';
 import Badge from './components/Badge';
 import HamburgerNav from './components/HamburgerNav';
+import Stepper from './components/Stepper';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
@@ -13,6 +14,10 @@ class App extends Component {
     return (
       <div className="App">
         <Alert message="Example message" type="success"/>
+        <Stepper
+          steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
+          current={2}
+        />
         <HamburgerNav links={[
           {
             label: 'Home',

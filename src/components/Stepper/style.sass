@@ -1,0 +1,76 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Stepper
+//
+// Shows progress through numbered steps
+
+
+// Block
+// --------------------------------------------------
+.stepper
+  margin: 21px auto 16px
+  display: table
+  width: 100%
+  max-width: 740px
+  table-layout: fixed
+  line-height: 21px
+
+// Elements
+// --------------------------------------------------
+.stepper__label
+  margin: 20px 0 0 50%
+  width: 100%
+  text-align: center
+  white-space: nowrap
+  font-weight: $bold
+
+.stepper__item
+  display: table-cell
+  position: relative
+  overflow: visible
+  // Dots
+  &::before
+    content: ''
+    position: absolute
+    right: -7px
+    display: block
+    width: 15px
+    height: 15px
+    background-color: $brand-primary-light
+    border: 4px solid $brand-primary-light
+    border-radius: 50%
+    box-sizing: border-box
+    z-index: 2
+
+  // First element
+  &:first-of-type
+    width: 0
+    .stepper__label
+      width: 40px
+      margin-left: -20px
+
+  // All other elements
+  & + .stepper__item
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      height: 4px
+      width: calc(100% - 10px)
+      right: 5px
+      top: 5px
+      z-index: 1
+      background-color: $brand-primary-light
+
+// States
+// --------------------------------------------------
+.stepper__item.is-active
+  .stepper__label
+    font-weight: $bold
+  & ~ .stepper__item
+    &::before
+      border-color: $gray-lighter
+      background-color: transparent
+    &::after
+      background-color: $gray-lighter
