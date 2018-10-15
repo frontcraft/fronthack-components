@@ -5,6 +5,7 @@ import Alert from './components/Alert';
 import Field from './components/Field';
 import Icon from './components/Icon';
 import Badge from './components/Badge';
+import HamburgerNav from './components/HamburgerNav';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
@@ -12,6 +13,21 @@ class App extends Component {
     return (
       <div className="App">
         <Alert message="Example message" type="success"/>
+        <HamburgerNav links={[
+          {
+            label: 'Home',
+            url: 'home',
+            icon: 'home',
+          },
+          {
+            label: 'About',
+            url: 'about',
+          },
+          {
+            label: 'Contact',
+            url: 'contact',
+          },
+        ]} />
         <div>Test<Badge number={7}/></div>
         <div><Icon type="bell" /><Badge number={7}/></div>
         <Field label="Field label" spacing values={[

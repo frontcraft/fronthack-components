@@ -229,26 +229,6 @@
                 "test": false
             },
             {
-                "name": "waat-icons.eot",
-                "relativePath": "fonts/waat-icons.eot",
-                "test": false
-            },
-            {
-                "name": "waat-icons.svg",
-                "relativePath": "fonts/waat-icons.svg",
-                "test": false
-            },
-            {
-                "name": "waat-icons.ttf",
-                "relativePath": "fonts/waat-icons.ttf",
-                "test": false
-            },
-            {
-                "name": "waat-icons.woff",
-                "relativePath": "fonts/waat-icons.woff",
-                "test": false
-            },
-            {
                 "name": "index.js",
                 "relativePath": "index.js",
                 "test": false

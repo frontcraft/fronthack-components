@@ -1,0 +1,60 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Hamburger nav
+//
+// Drawer that appears from the left side of the screen.
+
+
+// Block
+// --------------------------------------------------
+// .hamburger-nav
+
+// Elements
+// --------------------------------------------------
+.hamburger-nav__icon
+  font-size: 30px
+  cursor: pointer
+
+.hamburger-nav__overlay
+  display: none
+
+.hamburger-nav__wrapper
+  display: none
+  position: fixed
+  background-color: $gray-dark
+  top: 0
+  right: 20vw
+  bottom: 0
+  left: 0
+  z-index: 101
+  box-shadow: 0 0 30px black
+  +breakpoint(tablet)
+    right: 60vw
+
+.hamburger-nav__menu
+  padding-top: 10px
+  +breakpoint(tablet)
+    padding-top: 40px
+
+.hamburger-nav__link
+  display: block
+  padding: 10px $container-paddings
+  &:hover,
+  &:focus
+    background-color: $gray-light
+    color: white
+
+.hamburger-nav__link-icon
+  float: right
+  margin-left: 10px
+
+
+// Modifiers
+// --------------------------------------------------
+.hamburger-nav.is-visible
+  .hamburger-nav__overlay
+    display: block
+    +overlay()
+  .hamburger-nav__wrapper
+    display: block

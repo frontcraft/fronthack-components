@@ -149,7 +149,7 @@ import './style.sass'
  */
 class Icon extends Component {
   render() {
-    return <i className={bemCx('icon', this.props.type)} />
+    return <i className={bemCx('icon', this.props.type, this.props.className)} />
   }
 }
 
