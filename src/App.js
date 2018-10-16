@@ -7,12 +7,26 @@ import Icon from './components/Icon';
 import Badge from './components/Badge';
 import HamburgerNav from './components/HamburgerNav';
 import Stepper from './components/Stepper';
+import LanguageSelect from './components/LanguageSelect';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <LanguageSelect
+          languages={[
+            {
+              name: 'English',
+              callback: () => alert('Callback. It can be history.push or anything'),
+            },
+            {
+              name: 'Polish',
+              callback: () => alert('Callback. It can be history.push or anything'),
+            },
+          ]}
+          current="English"
+        />
         <Alert message="Example message" type="success"/>
         <Stepper
           steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}

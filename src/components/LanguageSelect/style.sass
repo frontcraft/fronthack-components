@@ -1,0 +1,27 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Language select
+//
+// Selector to change the current language of visited site
+
+
+// Block
+// --------------------------------------------------
+.language-select
+  text-transform: uppercase
+  font-size: 12px
+
+// Elements
+// --------------------------------------------------
+.language-select__link
+  display: inline-block
+  color: $gray-dark
+  cursor: pointer
+  & + &
+    margin-left: 15px
+
+// States
+// --------------------------------------------------
+.language-select__link.is-active
+  color: $text-color
+  font-weight: $bold
