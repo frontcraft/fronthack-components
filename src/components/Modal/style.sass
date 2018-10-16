@@ -1,0 +1,102 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Modal
+//
+// Animated popup window
+
+
+$modal-width-xs: 300px
+$modal-width-sm: 440px
+$modal-width: 540px
+$modal-width-lg: 790px
+
+
+// Block
+// --------------------------------------------------
+.modal
+  font-family: $font-family-base
+  line-height: $line-height-base
+
+
+// Elements
+// --------------------------------------------------
+.modal__trigger
+  cursor: pointer
+
+.modal__inner
+  display: none
+  position: fixed
+  top: 50%
+  transform: translate(-50%, -50%)
+  left: 50%
+  width: $modal-width
+  box-shadow: 0 5px 10px 0 lighten($gray-base, 30%)
+  z-index: 101
+  max-width: 100%
+  max-height: 100%
+  overflow-y: auto
+
+.modal__title
+  background-color: $brand-primary
+  padding: 10px 30px
+  color: #fff
+  text-align: center
+  font-weight: $bold
+
+.modal__content
+  background-color: #fff
+  padding: 30px
+  font-weight: $bold
+
+.modal__overlay
+  display: none
+  +overlay
+
+
+// States
+// --------------------------------------------------
+.modal.is-open
+  .modal__inner
+    display: block
+    animation:
+      name: modal-inner
+      duration: 250ms
+      timing-function: ease-in-out
+      iteration-count: 1
+      fill-mode: forwards
+  .modal__overlay
+    display: block
+    animation:
+      name: modal-overlay
+      duration: 250ms
+      timing-function: ease-in-out
+      iteration-count: 1
+      fill-mode: forwards
+
+
+@keyframes modal-overlay
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes modal-inner
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+// Modifiers
+// --------------------------------------------------
+.modal--xs
+  .modal__inner
+    width: $modal-width-xs
+
+.modal--sm
+  .modal__inner
+    width: $modal-width-sm
+
+.modal--lg
+  .modal__inner
+    width: $modal-width-lg

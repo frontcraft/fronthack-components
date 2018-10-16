@@ -4,18 +4,30 @@ import './style/index.sass';
 import Alert from './components/Alert';
 import Field from './components/Field';
 import Icon from './components/Icon';
+import Button from './components/Button';
 import Badge from './components/Badge';
 import HamburgerNav from './components/HamburgerNav';
 import Stepper from './components/Stepper';
 import LanguageSelect from './components/LanguageSelect';
 import ListingItem from './components/ListingItem';
 import Breadcrumb from './components/Breadcrumb';
+import Logo from './components/Logo';
+import Modal from './components/Modal';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Modal
+          size="lg"
+          title="Modal title"
+          trigger={<Button variant="primary">Open modal</Button>}
+          // isOpen
+        >
+          Modal content
+        </Modal>
+        <Logo />
         <Breadcrumb items={['Docs', 'Components API', 'Button']} />
         <ListingItem
           id="12345"

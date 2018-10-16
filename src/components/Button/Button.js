@@ -20,7 +20,7 @@ class Button extends Component {
   render() {
     const {
       children,
-      callback,
+      onClick,
       variant,
       size,
       disabled,
@@ -33,7 +33,7 @@ class Button extends Component {
           [size]: size,
           disabled: disabled,
         }, { [className]: className })}
-        onClick={callback}
+        onClick={onClick}
       >{children}</div>
     )
   }
@@ -44,7 +44,7 @@ Button.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  callback: PropTypes.func,
+  onClick: PropTypes.func,
   variant: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool,

@@ -23,7 +23,7 @@ class Breadcrumb extends Component {
 }
 
 Breadcrumb.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string)
+  items: PropTypes.arrayOf(PropTypes.string).isRequried,
 }
 
 export default Breadcrumb
