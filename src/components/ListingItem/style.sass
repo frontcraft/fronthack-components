@@ -1,0 +1,75 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Listing item
+//
+// Single item on a list of articles for example.
+
+$listing-item-media-width: 160px
+$listing-item-height: 180px
+
+
+// Block
+// --------------------------------------------------
+.listing-item
+  +breakpoint(tablet)
+    display: flex
+    align-items: stretch
+    height: $listing-item-height
+  & + &
+    padding-top: 30px
+    border-top: 1px $gray-lighter solid
+    margin-top: 30px
+
+
+// Elements
+// --------------------------------------------------
+.listing-item__media
+  width: 100%
+  margin-bottom: 10px
+  position: relative
+  overflow: hidden
+  img
+    width: 100%
+  +breakpoint(tablet)
+    max-width: $listing-item-media-width
+    overflow: hidden
+    margin: 0 30px 0 0
+    img
+      position: absolute
+      width: auto
+      min-width: 100%
+      min-height: 100%
+
+
+.listing-item__text
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  text-overflow: ellipsis
+
+
+.listing-item__title
+  margin-top: 0
+  a
+    color: $gray-base
+  h2, h3
+    margin: 0 !important
+
+
+.listing-item__meta
+  font-size: $font-size-small
+  color: $gray-light
+  width: 100%
+  display: block
+
+
+.listing-item__description
+  text-align: justify
+  flex-grow: 1
+
+
+.listing-item__footer
+  margin-top: $line-height-base / 2
+  overflow: hidden

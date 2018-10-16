@@ -8,12 +8,20 @@ import Badge from './components/Badge';
 import HamburgerNav from './components/HamburgerNav';
 import Stepper from './components/Stepper';
 import LanguageSelect from './components/LanguageSelect';
+import ListingItem from './components/ListingItem';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <ListingItem
+          id="12345"
+          title="Featured article name"
+          date="16 October 2018"
+          description="Teaser text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+          mediaUrl="http://placehold.it/200x145"
+        />
         <LanguageSelect
           languages={[
             {
