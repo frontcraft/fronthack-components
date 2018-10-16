@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
 import Icon from '@bit/frontcraft.fronthack.components.icon'
 import './style.sass'

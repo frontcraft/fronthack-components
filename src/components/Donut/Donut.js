@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
