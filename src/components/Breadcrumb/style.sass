@@ -1,0 +1,33 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Breadcrumb
+//
+// Menu that shows the location of current page in a site navigation context
+
+
+// Component
+// --------------------------------------------------
+.breadcrumb
+  margin-bottom: 20px
+  font-size: 14px
+  padding: 10px 0
+  background-color: transparent
+  +breakpoint(tablet)
+    margin-bottom: 30px
+
+
+// Elements
+// --------------------------------------------------
+.breadcrumb__item
+  color: $gray-light
+  display: inline
+  &:hover
+    text-decoration: none
+  &::after
+    content: ' > '
+    color: $gray-light
+  &:last-of-type
+    color: $gray-dark
+    &::after
+      content: none

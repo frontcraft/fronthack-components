@@ -9,12 +9,14 @@ import HamburgerNav from './components/HamburgerNav';
 import Stepper from './components/Stepper';
 import LanguageSelect from './components/LanguageSelect';
 import ListingItem from './components/ListingItem';
+import Breadcrumb from './components/Breadcrumb';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Breadcrumb items={['Docs', 'Components API', 'Button']} />
         <ListingItem
           id="12345"
           title="Featured article name"
