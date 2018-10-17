@@ -14,8 +14,8 @@ class NavSubway extends Component {
     return(
       <nav className="nav-subway">
       {this.props.links.map((link, index) =>
-        <div class="nav-subway__item" key={index}>
-          <div class="nav-subway__station"></div>
+        <div className="nav-subway__item" key={index}>
+          <div className="nav-subway__station"></div>
           <a href={link.url} className="nav-subway__link">{link.label}</a>
         </div>
       )}

@@ -15,6 +15,7 @@ import Logo from './components/Logo';
 import Modal from './components/Modal';
 import NavHorizontal from './components/NavHorizontal';
 import NavSubway from './components/NavSubway';
+import Pagination from './components/Pagination';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
@@ -49,6 +50,11 @@ class App extends Component {
             url: 'contact',
           },
         ]} />
+        <Pagination
+          maxItems={5}
+          callback={item => alert(item)}
+          current={3}
+        />
         <Modal
           size="lg"
           title="Modal title"
