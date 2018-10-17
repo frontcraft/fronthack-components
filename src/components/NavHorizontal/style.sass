@@ -1,0 +1,31 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+@import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+
+// Nav horizontal
+//
+// Inline navigation for primary top bar menu or footer links
+
+
+// Block
+// --------------------------------------------------
+.nav-horizontal
+  font-size: 14px
+  line-height: 24px
+
+
+// Elements
+// --------------------------------------------------
+.nav-horizontal__link
+  display: block
+  padding: 15px 0
+  text-align: center
+  +breakpoint(desktop)
+    display: inline-block
+    padding: 38px 0
+    & + &
+      margin-left: 37px
+  &:hover
+    color: $brand-primary
+  img
+    vertical-align: middle

@@ -13,12 +13,42 @@ import ListingItem from './components/ListingItem';
 import Breadcrumb from './components/Breadcrumb';
 import Logo from './components/Logo';
 import Modal from './components/Modal';
+import NavHorizontal from './components/NavHorizontal';
+import NavSubway from './components/NavSubway';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavHorizontal links={[
+          {
+            label: 'Home',
+            url: 'home',
+          },
+          {
+            label: 'About',
+            url: 'about',
+          },
+          {
+            label: 'Contact',
+            url: 'contact',
+          },
+        ]} />
+        <NavSubway links={[
+          {
+            label: 'Home',
+            url: 'home',
+          },
+          {
+            label: 'About',
+            url: 'about',
+          },
+          {
+            label: 'Contact',
+            url: 'contact',
+          },
+        ]} />
         <Modal
           size="lg"
           title="Modal title"

@@ -1,0 +1,35 @@
+@import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Nav subway
+//
+// Navigation that looks like a subway map
+
+
+// Block
+// --------------------------------------------------
+.nav-subway
+  list-style-type: none
+  position: relative
+  border-left: 2px solid $brand-primary-light
+  margin-left: 5px
+  padding-left: 20px
+
+// Elements
+// --------------------------------------------------
+.nav-subway__item
+  padding: 0
+  &:not(:last-child)
+    padding-bottom: 10px
+
+.nav-subway__station
+  position: absolute
+  margin-top: 8px
+  left: -8px
+  background-color: white
+  border: 2px $brand-primary-light solid
+  border-radius: 50%
+  width: 10px
+  height: 10px
+
+.nav-subway__link
+  color: $gray-base
