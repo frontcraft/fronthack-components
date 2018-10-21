@@ -8,13 +8,13 @@ import './style.sass'
  * @name Breadcrumb
  * @property {string} prop - explanation
  * @example
- *  <Breadcrumb />
+ *  <Breadcrumb items={['Docs', 'Components API', 'Button']} />
  */
 class Breadcrumb extends Component {
   render() {
     return(
       <div className="breadcrumb">
-        {this.props.items.map((item, index) => 
+        {this.props.items.map((item, index) =>
           <span className="breadcrumb__item" key={index}>{item}</span>
         )}
       </div>

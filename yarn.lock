@@ -5,6 +5,9 @@
 "@bit/frontcraft.fronthack.components.form@file:./src/components/form":
   version "0.0.0"
 
+"@bit/frontcraft.fronthack.components.icon@file:./src/components/Icon":
+  version "0.0.0"
+
 "@bit/frontcraft.fronthack.globals.style@file:./src/style":
   version "0.0.0"
 

@@ -5,9 +5,22 @@ import './style.sass'
  * Navigation that looks like a subway map
  * @render react
  * @name NavSubway
- * @property {string} prop - explanation
+ * @property {array} links - Array of objects, that has two keys with sting values - label and url.
  * @example
- *  <NavSubway />
+ *  <NavSubway links={[
+ *    {
+ *      label: 'Home',
+ *      url: 'home',
+ *    },
+ *    {
+ *      label: 'About',
+ *      url: 'about',
+ *    },
+ *    {
+ *      label: 'Contact',
+ *      url: 'contact',
+ *    },
+ *  ]} />
  */
 class NavSubway extends Component {
   render() {

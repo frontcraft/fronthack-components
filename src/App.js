@@ -51,7 +51,7 @@ class App extends Component {
           },
         ]} />
         <Pagination
-          maxItems={5}
+          pages={5}
           callback={item => alert(item)}
           current={3}
         />

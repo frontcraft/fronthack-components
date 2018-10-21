@@ -6,9 +6,19 @@ import './style.sass'
  * Single item on a list of articles for example.
  * @render react
  * @name ListingItem
- * @property {string} prop - explanation
+ * @property {string} id - unique item id
+ * @property {string} title - featured title
+ * @property {string} date - formatted date
+ * @property {string} description - teaser text
+ * @property {string} mediaUrl - url for the featured image
  * @example
- *  <ListingItem />
+ *  <ListingItem
+ *    id="12345"
+ *    title="Featured article name"
+ *    date="16 October 2018"
+ *    description="Teaser text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+ *    mediaUrl="http://placehold.it/200x145"
+ *  />
  */
 class ListingItem extends Component {
   render() {

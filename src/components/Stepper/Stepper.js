@@ -6,9 +6,13 @@ import './style.sass'
  * Shows progress through numbered steps
  * @render react
  * @name Stepper
- * @property {string} prop - explanation
+ * @property {array} steps - explanation
+ * @property {integer} current - active step number
  * @example
- *  <Stepper />
+ *  <Stepper
+ *    steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
+ *    current={2}
+ *  />
  */
 class Stepper extends Component {
   render() {

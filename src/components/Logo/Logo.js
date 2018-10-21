@@ -5,7 +5,6 @@ import './style.sass'
  * Primary branding element of any site
  * @render react
  * @name Logo
- * @property {string} prop - explanation
  * @example
  *  <Logo />
  */

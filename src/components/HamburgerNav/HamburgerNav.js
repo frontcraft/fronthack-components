@@ -7,9 +7,23 @@ import Icon from '../Icon'
  * Drawer that appears from the left side of the screen.
  * @render react
  * @name HamburgerNav
- * @property {string} prop - explanation
+ * @property {array} links - objects, that stores label, url and optional icon type
  * @example
- *  <HamburgerNav />
+ *  <HamburgerNav links={[
+ *    {
+ *      label: 'Home',
+ *      url: 'home',
+ *      icon: 'home',
+ *    },
+ *    {
+ *      label: 'About',
+ *      url: 'about',
+ *    },
+ *    {
+ *      label: 'Contact',
+ *      url: 'contact',
+ *    },
+ *  ]} />
  */
 class HamburgerNav extends Component {
   state = {
@@ -28,7 +42,7 @@ class HamburgerNav extends Component {
         { this.state.show &&
           <div className="hamburger-nav__wrapper">
             <nav className="hamburger-nav__menu">
-              { this.props.links.map((link, index) => 
+              { this.props.links.map((link, index) =>
                 <a href={link.url} className="hamburger-nav__link" key={index}>
                   {link.icon &&
                     <Icon type={link.icon} className="hamburger-nav__link-icon" />

@@ -6,9 +6,17 @@ import './style.sass'
  * Animated popup window
  * @render react
  * @name Modal
- * @property {string} prop - explanation
+ * @property {string} size - explanation
+ * @property {string} title - explanation
+ * @property {node} trigger - an element that will act as a trigger
+ * @property {bool} isOpen - force open state with a prop
  * @example
- *  <Modal />
+ *  <Modal
+ *    size="lg"
+ *    title="Modal title"
+ *    trigger={<Button variant="primary">Open modal</Button>}
+ *    // isOpen
+ *  >Modal content</Modal>
  */
 class Modal extends Component {
   state = {
@@ -21,7 +29,7 @@ class Modal extends Component {
         [size]: size
       }, 'is-open')}>
         <span onClick={() => this.setState({ isOpen: true })}>{trigger}</span>
-        
+
         { this.state.isOpen &&
           <div className="modal__inner">
             {title && <div className="modal__title">{title}</div>}

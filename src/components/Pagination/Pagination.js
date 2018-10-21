@@ -7,16 +7,22 @@ import './style.sass'
  * Element with minimalistic markup to switch between the pages
  * @render react
  * @name Pagination
- * @property {string} prop - explanation
+ * @property {integer} pages - number of total pages
+ * @property {function} callback - operation to perform after click
+ * @property {integer} current - current page number
  * @example
- *  <Pagination />
+ *  <Pagination
+ *    pages={5}
+ *    callback={item => alert(item)}
+ *    current={3}
+ *  />
  */
 class Pagination extends Component {
   render() {
-    const { maxItems, callback, current } = this.props
+    const { pages, callback, current } = this.props
     let items = []
     let i = 1
-    while (i < maxItems) {
+    while (i < pages) {
       items.push(i)
       i++
     }

@@ -6,9 +6,22 @@ import './style.sass'
  * Selector to change the current language of visited site
  * @render react
  * @name LanguageSelect
- * @property {string} prop - explanation
+ * @property {array} languages - objects that contains language name and callback
+ * @property {current} prop - currently selected language
  * @example
- *  <LanguageSelect />
+ *  <LanguageSelect
+ *    languages={[
+ *      {
+ *        name: 'English',
+ *        callback: () => alert('Callback. It can be history.push or anything'),
+ *      },
+ *      {
+ *        name: 'Polish',
+ *        callback: () => alert('Callback. It can be history.push or anything'),
+ *      },
+ *    ]}
+ *    current="English"
+ *  />
  */
 class LanguageSelect extends Component {
   render() {
