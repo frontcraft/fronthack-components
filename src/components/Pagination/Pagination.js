@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Icon from '../Icon'
+import Icon from '@bit/frontcraft.fronthack.components.icon'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 

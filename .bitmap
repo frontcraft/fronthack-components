@@ -211,6 +211,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Alert/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Alert/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -229,9 +234,34 @@
                 "test": false
             },
             {
+                "relativePath": "fonts/waat-icons.eot",
+                "test": false,
+                "name": "waat-icons.eot"
+            },
+            {
+                "relativePath": "fonts/waat-icons.svg",
+                "test": false,
+                "name": "waat-icons.svg"
+            },
+            {
+                "relativePath": "fonts/waat-icons.ttf",
+                "test": false,
+                "name": "waat-icons.ttf"
+            },
+            {
+                "relativePath": "fonts/waat-icons.woff",
+                "test": false,
+                "name": "waat-icons.woff"
+            },
+            {
                 "name": "index.js",
                 "relativePath": "index.js",
                 "test": false
+            },
+            {
+                "relativePath": "static.html",
+                "test": false,
+                "name": "static.html"
             },
             {
                 "name": "style.sass",
@@ -258,6 +288,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Badge/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Badge/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -278,6 +313,11 @@
                 "relativePath": "src/components/Block/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Block/static.html",
+                "test": false,
+                "name": "static.html"
             },
             {
                 "relativePath": "src/components/Block/style.sass",
@@ -302,6 +342,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Cloudlet/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Cloudlet/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -322,6 +367,11 @@
                 "relativePath": "src/components/Donut/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Donut/static.html",
+                "test": false,
+                "name": "static.html"
             },
             {
                 "relativePath": "src/components/Donut/style.sass",
@@ -346,6 +396,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Tooltip/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Tooltip/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -366,6 +421,11 @@
                 "relativePath": "src/components/Dropdown/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Dropdown/static.html",
+                "test": false,
+                "name": "static.html"
             },
             {
                 "relativePath": "src/components/Dropdown/style.sass",
@@ -390,6 +450,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Field/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Field/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -397,6 +462,276 @@
         ],
         "mainFile": "src/components/Field/index.js",
         "trackDir": "src/components/Field",
+        "origin": "AUTHORED"
+    },
+    "components/breadcrumb": {
+        "files": [
+            {
+                "relativePath": "src/components/Breadcrumb/Breadcrumb.js",
+                "test": false,
+                "name": "Breadcrumb.js"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Breadcrumb/index.js",
+        "trackDir": "src/components/Breadcrumb",
+        "origin": "AUTHORED"
+    },
+    "components/button": {
+        "files": [
+            {
+                "relativePath": "src/components/Button/Button.js",
+                "test": false,
+                "name": "Button.js"
+            },
+            {
+                "relativePath": "src/components/Button/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Button/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Button/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Button/index.js",
+        "trackDir": "src/components/Button",
+        "origin": "AUTHORED"
+    },
+    "components/hamburger-nav": {
+        "files": [
+            {
+                "relativePath": "src/components/HamburgerNav/HamburgerNav.js",
+                "test": false,
+                "name": "HamburgerNav.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/HamburgerNav/index.js",
+        "trackDir": "src/components/HamburgerNav",
+        "origin": "AUTHORED"
+    },
+    "components/language-select": {
+        "files": [
+            {
+                "relativePath": "src/components/LanguageSelect/LanguageSelect.js",
+                "test": false,
+                "name": "LanguageSelect.js"
+            },
+            {
+                "relativePath": "src/components/LanguageSelect/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/LanguageSelect/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/LanguageSelect/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/LanguageSelect/index.js",
+        "trackDir": "src/components/LanguageSelect",
+        "origin": "AUTHORED"
+    },
+    "components/listing-item": {
+        "files": [
+            {
+                "relativePath": "src/components/ListingItem/ListingItem.js",
+                "test": false,
+                "name": "ListingItem.js"
+            },
+            {
+                "relativePath": "src/components/ListingItem/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/ListingItem/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/ListingItem/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/ListingItem/index.js",
+        "trackDir": "src/components/ListingItem",
+        "origin": "AUTHORED"
+    },
+    "components/logo": {
+        "files": [
+            {
+                "relativePath": "src/components/Logo/Logo.js",
+                "test": false,
+                "name": "Logo.js"
+            },
+            {
+                "relativePath": "src/components/Logo/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Logo/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Logo/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Logo/index.js",
+        "trackDir": "src/components/Logo",
+        "origin": "AUTHORED"
+    },
+    "components/modal": {
+        "files": [
+            {
+                "relativePath": "src/components/Modal/Modal.js",
+                "test": false,
+                "name": "Modal.js"
+            },
+            {
+                "relativePath": "src/components/Modal/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Modal/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Modal/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Modal/index.js",
+        "trackDir": "src/components/Modal",
+        "origin": "AUTHORED"
+    },
+    "components/nav-subway": {
+        "files": [
+            {
+                "relativePath": "src/components/NavSubway/NavSubway.js",
+                "test": false,
+                "name": "NavSubway.js"
+            },
+            {
+                "relativePath": "src/components/NavSubway/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/NavSubway/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/NavSubway/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/NavSubway/index.js",
+        "trackDir": "src/components/NavSubway",
+        "origin": "AUTHORED"
+    },
+    "components/pagination": {
+        "files": [
+            {
+                "relativePath": "src/components/Pagination/Pagination.js",
+                "test": false,
+                "name": "Pagination.js"
+            },
+            {
+                "relativePath": "src/components/Pagination/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Pagination/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Pagination/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Pagination/index.js",
+        "trackDir": "src/components/Pagination",
+        "origin": "AUTHORED"
+    },
+    "components/stepper": {
+        "files": [
+            {
+                "relativePath": "src/components/Stepper/Stepper.js",
+                "test": false,
+                "name": "Stepper.js"
+            },
+            {
+                "relativePath": "src/components/Stepper/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Stepper/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Stepper/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Stepper/index.js",
+        "trackDir": "src/components/Stepper",
         "origin": "AUTHORED"
     },
     "version": "13.0.4"
