@@ -734,7 +734,7 @@
         "trackDir": "src/components/Tooltip",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/rating@0.0.1": {
+    "frontcraft.fronthack/components/rating@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Rating/Rating.js",
@@ -747,6 +747,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/Rating/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/Rating/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -756,7 +761,7 @@
         "trackDir": "src/components/Rating",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/social-links@0.0.1": {
+    "frontcraft.fronthack/components/social-links@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/SocialLinks/SocialLinks.js",
@@ -769,6 +774,11 @@
                 "name": "index.js"
             },
             {
+                "relativePath": "src/components/SocialLinks/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
                 "relativePath": "src/components/SocialLinks/style.sass",
                 "test": false,
                 "name": "style.sass"
@@ -778,7 +788,7 @@
         "trackDir": "src/components/SocialLinks",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/tabs@0.0.1": {
+    "frontcraft.fronthack/components/tabs@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/Tabs/Tabs.js",
@@ -789,6 +799,11 @@
                 "relativePath": "src/components/Tabs/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Tabs/static.html",
+                "test": false,
+                "name": "static.html"
             },
             {
                 "relativePath": "src/components/Tabs/style.sass",
