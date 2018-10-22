@@ -1,0 +1,40 @@
+// @import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Rating
+//
+// Widget to display any rating from (0 to 3 points by default).
+
+
+// Block
+// --------------------------------------------------
+// .rating
+
+
+// Elements
+// --------------------------------------------------
+.rating__dot
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  display: inline-block
+  background-color: $gray-lighter
+  & + &
+    margin-left: 10px
+
+
+// Modifiers
+// --------------------------------------------------
+.rating--1
+  .rating__dot:nth-last-of-type(3)
+    background-color: $brand-primary
+
+.rating--2
+  .rating__dot:nth-last-of-type(3),
+  .rating__dot:nth-last-of-type(2)
+    background-color: $brand-primary
+
+.rating--3
+  .rating__dot:nth-last-of-type(3),
+  .rating__dot:nth-last-of-type(2),
+  .rating__dot:nth-last-of-type(1)
+    background-color: $brand-primary

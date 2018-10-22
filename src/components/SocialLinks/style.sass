@@ -1,0 +1,37 @@
+// @import '~@bit/frontcraft.fronthack.globals.style/variables'
+
+// Social links
+//
+// Social media icons. Share links might be simply an urls, which is described
+// in this article https://css-tricks.com/simple-social-sharing-links/
+
+
+// Block
+// --------------------------------------------------
+.social-links
+  display: flex
+  align-items: center
+
+// Elements
+// --------------------------------------------------
+.social-links__label
+  margin-right: 20px
+
+.social-links__link
+  font-size: 20px
+  width: 40px
+  height: 40px
+  line-height: 40px
+  display: block
+  text-align: center
+  color: white
+  background-color: $brand-primary
+  border: 1px $brand-primary solid
+  border-radius: 50%
+  & + &
+    margin-left: 20px
+  &:not(:hover) *
+    color: white
+  &:hover
+    color: $brand-primary
+    background-color: transparent

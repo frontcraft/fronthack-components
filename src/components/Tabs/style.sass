@@ -1,0 +1,40 @@
+// @import '~@bit/frontcraft.fronthack.globals.style/variables'
+// @import '~@bit/frontcraft.fronthack.globals.style/mixins'
+
+// Tabs
+//
+// Switch between different views
+
+
+// Block
+// --------------------------------------------------
+.tabs
+  position: relative
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  +clearfix
+
+
+// Elements
+// --------------------------------------------------
+.tabs__label
+  cursor: pointer
+  margin: 0
+  background: $gray-dark
+  color: white
+  padding: 5px 10px
+  margin-right: 2px
+  overflow: hidden
+
+.tabs__content
+  width: 100%
+  padding: 10px
+  background: $gray-light
+  min-width: 100%
+
+
+// States
+// --------------------------------------------------
+.tabs__label.is-active
+  background-color: $gray-light

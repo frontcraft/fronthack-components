@@ -18,12 +18,24 @@ import NavSubway from './components/NavSubway';
 import Pagination from './components/Pagination';
 import Parallax, { ParallaxGroup } from './components/Parallax';
 import ProgressBar from './components/ProgressBar';
+import Rating from './components/Rating';
+import SocialLinks from './components/SocialLinks';
+import Tabs from './components/Tabs';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Tabs labels={['First', 'Second', 'Third']}>
+          {[
+            <div>Content of the first tab</div>,
+            <div>Content of the second tab</div>,
+            <div>Content of the third tab</div>
+          ]}
+        </Tabs>
+        <SocialLinks url={window.location.href } />
+        <Rating value={1} />
         <ProgressBar percentage={45} />
         <NavHorizontal links={[
           {
