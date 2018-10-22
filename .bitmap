@@ -734,5 +734,71 @@
         "trackDir": "src/components/Tooltip",
         "origin": "AUTHORED"
     },
+    "frontcraft.fronthack/components/rating@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Rating/Rating.js",
+                "test": false,
+                "name": "Rating.js"
+            },
+            {
+                "relativePath": "src/components/Rating/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Rating/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Rating/index.js",
+        "trackDir": "src/components/Rating",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/social-links@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/SocialLinks/SocialLinks.js",
+                "test": false,
+                "name": "SocialLinks.js"
+            },
+            {
+                "relativePath": "src/components/SocialLinks/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/SocialLinks/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/SocialLinks/index.js",
+        "trackDir": "src/components/SocialLinks",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/tabs@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Tabs/Tabs.js",
+                "test": false,
+                "name": "Tabs.js"
+            },
+            {
+                "relativePath": "src/components/Tabs/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Tabs/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Tabs/index.js",
+        "trackDir": "src/components/Tabs",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
