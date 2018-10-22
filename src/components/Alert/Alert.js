@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
 import Icon from '@bit/frontcraft.fronthack.components.icon'
-import './style.sass'
+// import './style.sass'
 
 /**
  * Alert with icon and description in various states.

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './style.sass'
+// import './style.sass'
 
 /**
  * Navigation that looks like a subway map

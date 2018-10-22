@@ -4,8 +4,8 @@
     },
     "dependencies": {
         "frontcraft.fronthack/globals/style": "0.0.1",
-        "frontcraft.fronthack/components/form": "0.0.7",
-        "frontcraft.fronthack/components/icon": "0.0.1"
+        "frontcraft.fronthack/components/form": "0.0.8",
+        "frontcraft.fronthack/components/icon": "0.0.2"
     },
     "componentsDefaultDirectory": "src/{namespace}/{name}",
     "packageManager": "yarn"

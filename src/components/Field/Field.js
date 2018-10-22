@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
-import './style.sass'
+// import './style.sass'
 
 /**
  * Inspired by Drupal 8 Twig field markup. Can use children to pass a single

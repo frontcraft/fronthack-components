@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './style.sass'
+// import './style.sass'
 
 /**
  * React component for a vertical navigation.

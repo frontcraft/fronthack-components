@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.sass'
+// import './style.sass'
 import { FormConsumer } from './Form'
 import renderInput from './renderInput'
 
@@ -63,5 +63,5 @@ FormInput.defaultProps = {
   placeholder: false,
   required: false,
 }
- 
+
 export default FormInput;

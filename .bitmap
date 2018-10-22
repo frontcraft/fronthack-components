@@ -44,7 +44,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "src/globals/style"
     },
-    "frontcraft.fronthack/components/tags@0.0.1": {
+    "frontcraft.fronthack/components/tags@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/tags/Tags.js",
@@ -72,7 +72,7 @@
         "origin": "AUTHORED",
         "mainDistFile": "dist/src/components/tags/index.js"
     },
-    "frontcraft.fronthack/components/nav-vertical@0.0.1": {
+    "frontcraft.fronthack/components/nav-vertical@0.0.2": {
         "files": [
             {
                 "relativePath": "src/components/nav-vertical/NavVertical.js",
@@ -100,7 +100,62 @@
         "origin": "AUTHORED",
         "mainDistFile": "dist/src/components/nav-vertical/index.js"
     },
-    "frontcraft.fronthack/components/form@0.0.7": {
+    "frontcraft.fronthack/components/accordion@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/Accordion/Accordion.js",
+                "test": false,
+                "name": "Accordion.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Accordion/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Accordion/index.js",
+        "trackDir": "src/components/Accordion",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/alert@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/Alert/Alert.js",
+                "test": false,
+                "name": "Alert.js"
+            },
+            {
+                "relativePath": "src/components/Alert/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Alert/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Alert/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Alert/index.js",
+        "trackDir": "src/components/Alert",
+        "origin": "AUTHORED",
+        "mainDistFile": "dist/src/components/Alert/index.js"
+    },
+    "frontcraft.fronthack/components/form@0.0.8": {
         "files": [
             {
                 "name": "Form.js",
@@ -171,62 +226,7 @@
         ],
         "originallySharedDir": "src/components/form"
     },
-    "frontcraft.fronthack/components/accordion@0.0.1": {
-        "files": [
-            {
-                "relativePath": "src/components/Accordion/Accordion.js",
-                "test": false,
-                "name": "Accordion.js"
-            },
-            {
-                "relativePath": "src/components/Accordion/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Accordion/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Accordion/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Accordion/index.js",
-        "trackDir": "src/components/Accordion",
-        "origin": "AUTHORED"
-    },
-    "frontcraft.fronthack/components/alert@0.0.1": {
-        "files": [
-            {
-                "relativePath": "src/components/Alert/Alert.js",
-                "test": false,
-                "name": "Alert.js"
-            },
-            {
-                "relativePath": "src/components/Alert/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Alert/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Alert/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Alert/index.js",
-        "trackDir": "src/components/Alert",
-        "origin": "AUTHORED",
-        "mainDistFile": "dist/src/components/Alert/index.js"
-    },
-    "frontcraft.fronthack/components/icon@0.0.1": {
+    "frontcraft.fronthack/components/icon@0.0.2": {
         "files": [
             {
                 "name": "Icon.js",
@@ -275,277 +275,7 @@
         "mainDistFile": "src/components/Icon/dist/index.js",
         "originallySharedDir": "src/components/Icon"
     },
-    "components/badge": {
-        "files": [
-            {
-                "relativePath": "src/components/Badge/Badge.js",
-                "test": false,
-                "name": "Badge.js"
-            },
-            {
-                "relativePath": "src/components/Badge/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Badge/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Badge/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Badge/index.js",
-        "trackDir": "src/components/Badge",
-        "origin": "AUTHORED"
-    },
-    "components/block": {
-        "files": [
-            {
-                "relativePath": "src/components/Block/Block.js",
-                "test": false,
-                "name": "Block.js"
-            },
-            {
-                "relativePath": "src/components/Block/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Block/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Block/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Block/index.js",
-        "trackDir": "src/components/Block",
-        "origin": "AUTHORED"
-    },
-    "components/cloudlet": {
-        "files": [
-            {
-                "relativePath": "src/components/Cloudlet/Cloudlet.js",
-                "test": false,
-                "name": "Cloudlet.js"
-            },
-            {
-                "relativePath": "src/components/Cloudlet/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Cloudlet/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Cloudlet/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Cloudlet/index.js",
-        "trackDir": "src/components/Cloudlet",
-        "origin": "AUTHORED"
-    },
-    "components/donut": {
-        "files": [
-            {
-                "relativePath": "src/components/Donut/Donut.js",
-                "test": false,
-                "name": "Donut.js"
-            },
-            {
-                "relativePath": "src/components/Donut/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Donut/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Donut/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Donut/index.js",
-        "trackDir": "src/components/Donut",
-        "origin": "AUTHORED"
-    },
-    "components/tooltip": {
-        "files": [
-            {
-                "relativePath": "src/components/Tooltip/Tooltip.js",
-                "test": false,
-                "name": "Tooltip.js"
-            },
-            {
-                "relativePath": "src/components/Tooltip/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Tooltip/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Tooltip/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Tooltip/index.js",
-        "trackDir": "src/components/Tooltip",
-        "origin": "AUTHORED"
-    },
-    "components/dropdown": {
-        "files": [
-            {
-                "relativePath": "src/components/Dropdown/Dropdown.js",
-                "test": false,
-                "name": "Dropdown.js"
-            },
-            {
-                "relativePath": "src/components/Dropdown/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Dropdown/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Dropdown/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Dropdown/index.js",
-        "trackDir": "src/components/Dropdown",
-        "origin": "AUTHORED"
-    },
-    "components/field": {
-        "files": [
-            {
-                "relativePath": "src/components/Field/Field.js",
-                "test": false,
-                "name": "Field.js"
-            },
-            {
-                "relativePath": "src/components/Field/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Field/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Field/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Field/index.js",
-        "trackDir": "src/components/Field",
-        "origin": "AUTHORED"
-    },
-    "components/breadcrumb": {
-        "files": [
-            {
-                "relativePath": "src/components/Breadcrumb/Breadcrumb.js",
-                "test": false,
-                "name": "Breadcrumb.js"
-            },
-            {
-                "relativePath": "src/components/Breadcrumb/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Breadcrumb/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Breadcrumb/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Breadcrumb/index.js",
-        "trackDir": "src/components/Breadcrumb",
-        "origin": "AUTHORED"
-    },
-    "components/button": {
-        "files": [
-            {
-                "relativePath": "src/components/Button/Button.js",
-                "test": false,
-                "name": "Button.js"
-            },
-            {
-                "relativePath": "src/components/Button/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Button/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Button/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Button/index.js",
-        "trackDir": "src/components/Button",
-        "origin": "AUTHORED"
-    },
-    "components/hamburger-nav": {
-        "files": [
-            {
-                "relativePath": "src/components/HamburgerNav/HamburgerNav.js",
-                "test": false,
-                "name": "HamburgerNav.js"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/HamburgerNav/index.js",
-        "trackDir": "src/components/HamburgerNav",
-        "origin": "AUTHORED"
-    },
-    "components/language-select": {
+    "frontcraft.fronthack/components/language-select@0.0.1": {
         "files": [
             {
                 "relativePath": "src/components/LanguageSelect/LanguageSelect.js",
@@ -572,61 +302,88 @@
         "trackDir": "src/components/LanguageSelect",
         "origin": "AUTHORED"
     },
-    "components/listing-item": {
+    "frontcraft.fronthack/components/field@0.0.1": {
         "files": [
             {
-                "relativePath": "src/components/ListingItem/ListingItem.js",
+                "relativePath": "src/components/Field/Field.js",
                 "test": false,
-                "name": "ListingItem.js"
+                "name": "Field.js"
             },
             {
-                "relativePath": "src/components/ListingItem/index.js",
+                "relativePath": "src/components/Field/index.js",
                 "test": false,
                 "name": "index.js"
             },
             {
-                "relativePath": "src/components/ListingItem/static.html",
+                "relativePath": "src/components/Field/static.html",
                 "test": false,
                 "name": "static.html"
             },
             {
-                "relativePath": "src/components/ListingItem/style.sass",
+                "relativePath": "src/components/Field/style.sass",
                 "test": false,
                 "name": "style.sass"
             }
         ],
-        "mainFile": "src/components/ListingItem/index.js",
-        "trackDir": "src/components/ListingItem",
+        "mainFile": "src/components/Field/index.js",
+        "trackDir": "src/components/Field",
         "origin": "AUTHORED"
     },
-    "components/logo": {
+    "frontcraft.fronthack/components/cloudlet@0.0.1": {
         "files": [
             {
-                "relativePath": "src/components/Logo/Logo.js",
+                "relativePath": "src/components/Cloudlet/Cloudlet.js",
                 "test": false,
-                "name": "Logo.js"
+                "name": "Cloudlet.js"
             },
             {
-                "relativePath": "src/components/Logo/index.js",
+                "relativePath": "src/components/Cloudlet/index.js",
                 "test": false,
                 "name": "index.js"
             },
             {
-                "relativePath": "src/components/Logo/static.html",
+                "relativePath": "src/components/Cloudlet/static.html",
                 "test": false,
                 "name": "static.html"
             },
             {
-                "relativePath": "src/components/Logo/style.sass",
+                "relativePath": "src/components/Cloudlet/style.sass",
                 "test": false,
                 "name": "style.sass"
             }
         ],
-        "mainFile": "src/components/Logo/index.js",
-        "trackDir": "src/components/Logo",
+        "mainFile": "src/components/Cloudlet/index.js",
+        "trackDir": "src/components/Cloudlet",
         "origin": "AUTHORED"
     },
-    "components/modal": {
+    "frontcraft.fronthack/components/hamburger-nav@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/HamburgerNav/HamburgerNav.js",
+                "test": false,
+                "name": "HamburgerNav.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/HamburgerNav/index.js",
+        "trackDir": "src/components/HamburgerNav",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/modal@0.0.1": {
         "files": [
             {
                 "relativePath": "src/components/Modal/Modal.js",
@@ -653,34 +410,115 @@
         "trackDir": "src/components/Modal",
         "origin": "AUTHORED"
     },
-    "components/nav-subway": {
+    "frontcraft.fronthack/components/logo@0.0.1": {
         "files": [
             {
-                "relativePath": "src/components/NavSubway/NavSubway.js",
+                "relativePath": "src/components/Logo/Logo.js",
                 "test": false,
-                "name": "NavSubway.js"
+                "name": "Logo.js"
             },
             {
-                "relativePath": "src/components/NavSubway/index.js",
+                "relativePath": "src/components/Logo/index.js",
                 "test": false,
                 "name": "index.js"
             },
             {
-                "relativePath": "src/components/NavSubway/static.html",
+                "relativePath": "src/components/Logo/static.html",
                 "test": false,
                 "name": "static.html"
             },
             {
-                "relativePath": "src/components/NavSubway/style.sass",
+                "relativePath": "src/components/Logo/style.sass",
                 "test": false,
                 "name": "style.sass"
             }
         ],
-        "mainFile": "src/components/NavSubway/index.js",
-        "trackDir": "src/components/NavSubway",
+        "mainFile": "src/components/Logo/index.js",
+        "trackDir": "src/components/Logo",
         "origin": "AUTHORED"
     },
-    "components/pagination": {
+    "frontcraft.fronthack/components/stepper@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Stepper/Stepper.js",
+                "test": false,
+                "name": "Stepper.js"
+            },
+            {
+                "relativePath": "src/components/Stepper/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Stepper/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Stepper/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Stepper/index.js",
+        "trackDir": "src/components/Stepper",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/badge@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Badge/Badge.js",
+                "test": false,
+                "name": "Badge.js"
+            },
+            {
+                "relativePath": "src/components/Badge/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Badge/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Badge/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Badge/index.js",
+        "trackDir": "src/components/Badge",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/donut@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Donut/Donut.js",
+                "test": false,
+                "name": "Donut.js"
+            },
+            {
+                "relativePath": "src/components/Donut/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Donut/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Donut/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Donut/index.js",
+        "trackDir": "src/components/Donut",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/pagination@0.0.1": {
         "files": [
             {
                 "relativePath": "src/components/Pagination/Pagination.js",
@@ -707,31 +545,193 @@
         "trackDir": "src/components/Pagination",
         "origin": "AUTHORED"
     },
-    "components/stepper": {
+    "frontcraft.fronthack/components/dropdown@0.0.1": {
         "files": [
             {
-                "relativePath": "src/components/Stepper/Stepper.js",
+                "relativePath": "src/components/Dropdown/Dropdown.js",
                 "test": false,
-                "name": "Stepper.js"
+                "name": "Dropdown.js"
             },
             {
-                "relativePath": "src/components/Stepper/index.js",
+                "relativePath": "src/components/Dropdown/index.js",
                 "test": false,
                 "name": "index.js"
             },
             {
-                "relativePath": "src/components/Stepper/static.html",
+                "relativePath": "src/components/Dropdown/static.html",
                 "test": false,
                 "name": "static.html"
             },
             {
-                "relativePath": "src/components/Stepper/style.sass",
+                "relativePath": "src/components/Dropdown/style.sass",
                 "test": false,
                 "name": "style.sass"
             }
         ],
-        "mainFile": "src/components/Stepper/index.js",
-        "trackDir": "src/components/Stepper",
+        "mainFile": "src/components/Dropdown/index.js",
+        "trackDir": "src/components/Dropdown",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/breadcrumb@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Breadcrumb/Breadcrumb.js",
+                "test": false,
+                "name": "Breadcrumb.js"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Breadcrumb/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Breadcrumb/index.js",
+        "trackDir": "src/components/Breadcrumb",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/listing-item@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/ListingItem/ListingItem.js",
+                "test": false,
+                "name": "ListingItem.js"
+            },
+            {
+                "relativePath": "src/components/ListingItem/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/ListingItem/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/ListingItem/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/ListingItem/index.js",
+        "trackDir": "src/components/ListingItem",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/button@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Button/Button.js",
+                "test": false,
+                "name": "Button.js"
+            },
+            {
+                "relativePath": "src/components/Button/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Button/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Button/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Button/index.js",
+        "trackDir": "src/components/Button",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/block@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Block/Block.js",
+                "test": false,
+                "name": "Block.js"
+            },
+            {
+                "relativePath": "src/components/Block/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Block/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Block/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Block/index.js",
+        "trackDir": "src/components/Block",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/nav-subway@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/NavSubway/NavSubway.js",
+                "test": false,
+                "name": "NavSubway.js"
+            },
+            {
+                "relativePath": "src/components/NavSubway/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/NavSubway/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/NavSubway/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/NavSubway/index.js",
+        "trackDir": "src/components/NavSubway",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/tooltip@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/Tooltip/Tooltip.js",
+                "test": false,
+                "name": "Tooltip.js"
+            },
+            {
+                "relativePath": "src/components/Tooltip/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Tooltip/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Tooltip/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Tooltip/index.js",
+        "trackDir": "src/components/Tooltip",
         "origin": "AUTHORED"
     },
     "version": "13.0.4"

@@ -1,5 +1,5 @@
 import React, { Component, createContext } from 'react'
-import './style.sass'
+// import './style.sass'
 import { initiateFormFields } from './helpers'
 
 const FieldsContext = createContext({});
@@ -16,7 +16,7 @@ export const FormConsumer = ({children}) => (
 )
 /**
  * This form component's Creates new context with defined fields that are
- * avaliable for all field items inside. 
+ * avaliable for all field items inside.
  * @render react
  * @name Form
  * @property {array} fields List of field names
@@ -87,5 +87,5 @@ class Form extends Component {
     )
   }
 }
- 
+
 export default Form;
