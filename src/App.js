@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
@@ -16,12 +16,15 @@ import Modal from './components/Modal';
 import NavHorizontal from './components/NavHorizontal';
 import NavSubway from './components/NavSubway';
 import Pagination from './components/Pagination';
+import Parallax, { ParallaxGroup } from './components/Parallax';
+import ProgressBar from './components/ProgressBar';
 import { Form, FormInput } from './components/form';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <ProgressBar percentage={45} />
         <NavHorizontal links={[
           {
             label: 'Home',
@@ -156,6 +159,25 @@ class App extends Component {
             initialHelp="Choose one"
           />
         </Form>
+        <Parallax>
+          <ParallaxGroup className="parallax__demo-solid">
+            <div class="parallax_demo-title">Solid base layer</div>
+          </ParallaxGroup>
+          <ParallaxGroup backLayer={
+            <Fragment>
+              <img class="full-width" src="https://placeimg.com/640/480/nature" alt="" />
+              <div class="parallax_demo-title">Back layer</div>
+            </Fragment>
+          }>
+            <div class="parallax_demo-title">Transparent base layer</div>
+          </ParallaxGroup>
+          <ParallaxGroup className="parallax__demo-solid">
+            <div class="parallax_demo-title">Solid base layer</div>
+          </ParallaxGroup>
+          <ParallaxGroup className="parallax__demo-solid">
+            <div class="parallax_demo-title">Solid base layer</div>
+          </ParallaxGroup>
+        </Parallax>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
