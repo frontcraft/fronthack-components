@@ -32,9 +32,21 @@
   padding: 10px
   background: $gray-light
   min-width: 100%
+  display: none
+  visibility: hidden
 
 
 // States
 // --------------------------------------------------
-.tabs__label.is-active
-  background-color: $gray-light
+// Pure CSS technique that activates correct tab basing on data-active-tab
+// attribute. Works with up to 7 elements. You can increase it if you need.
+@for $i from 0 through 7
+  .tabs[data-active-tab="#{$i}"]
+    .tabs__label:nth-of-type(#{$i+1})
+      background-color: $gray-light
+    .tabs__content,
+      &:nth-of-type(#{$i+1}),
+      &.is-open // State class for React where only one content is displayed at once
+        display: block
+        visibility: visible
+        background-color: $gray-light

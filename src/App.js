@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import logo from './logo.svg';
 import './style/index.sass';
 import Alert from './components/Alert';
+import Accordion from './components/Accordion';
+import Dropdown from './components/Dropdown';
 import Field from './components/Field';
 import Icon from './components/Icon';
 import Button from './components/Button';
@@ -34,6 +36,20 @@ class App extends Component {
             <div>Content of the third tab</div>
           ]}
         </Tabs>
+        <Dropdown overlay links={[
+          {
+            label: 'Profile',
+            url: '#',
+          },
+          {
+            label: 'Settings',
+            url: '#',
+          },
+          {
+            label: 'Log out',
+            url: '#',
+          },
+        ]}>Toggle dropdown</Dropdown>
         <SocialLinks url={window.location.href } />
         <Rating value={1} />
         <ProgressBar percentage={45} />
@@ -70,6 +86,16 @@ class App extends Component {
           callback={item => alert(item)}
           current={3}
         />
+        <Accordion items={[
+          {
+            title: 'First accordion item',
+            content: 'Content for the first accordion'
+          },
+          {
+            title: 'Second accordion item',
+            content: 'Content for the first accordion'
+          },
+        ]}/>
         <Modal
           size="lg"
           title="Modal title"

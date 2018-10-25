@@ -29,18 +29,18 @@ class Pagination extends Component {
     return(
       <div className="pagination">
         <div
-          class="pagination__item"
+          className="pagination__item"
           onClick={() => callback(current - 1)}
         ><Icon type="arrow-left" /></div>
-        {items.map(item =>
+        {items.map(page =>
           <div
-            onClick={() => callback(item)}
-            key={item}
-            className={bemCx('pagination__item', { active: item === current })}
-          >{item}</div>
+            onClick={() => callback(page)}
+            key={page}
+            className={bemCx('pagination__item', { active: page === current })}
+          >{page}</div>
         )}
         <div
-          class="pagination__item"
+          className="pagination__item"
           onClick={() => callback(current + 1)}
         ><Icon type="arrow-right" /></div>
       </div>

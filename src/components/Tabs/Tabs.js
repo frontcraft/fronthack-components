@@ -24,14 +24,15 @@ class Tabs extends Component {
   render() {
     const { active } = this.state
     return(
-      <div className="tabs">
+      <div className="tabs" data-active-tab={active}>
         {this.props.labels.map((label, index) =>
           <div
             class={bemCx('tabs__label', {}, { 'is-active': index === active })}
             onClick={() => this.setState({ active: index })}
+            key={index}
           >{label}</div>
         )}
-        <div className="tabs__content">{this.props.children[active]}</div>
+        <div className="tabs__content is-open">{this.props.children[active]}</div>
       </div>
     )
   }

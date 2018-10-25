@@ -47,7 +47,7 @@ class HamburgerNav extends Component {
                   {link.icon &&
                     <Icon type={link.icon} className="hamburger-nav__link-icon" />
                   }
-                  {link.url}
+                  {link.label}
                 </a>
               )}
             </nav>

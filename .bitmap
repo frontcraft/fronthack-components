@@ -100,33 +100,6 @@
         "origin": "AUTHORED",
         "mainDistFile": "dist/src/components/nav-vertical/index.js"
     },
-    "frontcraft.fronthack/components/accordion@0.0.2": {
-        "files": [
-            {
-                "relativePath": "src/components/Accordion/Accordion.js",
-                "test": false,
-                "name": "Accordion.js"
-            },
-            {
-                "relativePath": "src/components/Accordion/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Accordion/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Accordion/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Accordion/index.js",
-        "trackDir": "src/components/Accordion",
-        "origin": "AUTHORED"
-    },
     "frontcraft.fronthack/components/alert@0.0.2": {
         "files": [
             {
@@ -356,33 +329,6 @@
         "trackDir": "src/components/Cloudlet",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/hamburger-nav@0.0.1": {
-        "files": [
-            {
-                "relativePath": "src/components/HamburgerNav/HamburgerNav.js",
-                "test": false,
-                "name": "HamburgerNav.js"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/HamburgerNav/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/HamburgerNav/index.js",
-        "trackDir": "src/components/HamburgerNav",
-        "origin": "AUTHORED"
-    },
     "frontcraft.fronthack/components/modal@0.0.1": {
         "files": [
             {
@@ -516,60 +462,6 @@
         ],
         "mainFile": "src/components/Donut/index.js",
         "trackDir": "src/components/Donut",
-        "origin": "AUTHORED"
-    },
-    "frontcraft.fronthack/components/pagination@0.0.1": {
-        "files": [
-            {
-                "relativePath": "src/components/Pagination/Pagination.js",
-                "test": false,
-                "name": "Pagination.js"
-            },
-            {
-                "relativePath": "src/components/Pagination/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Pagination/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Pagination/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Pagination/index.js",
-        "trackDir": "src/components/Pagination",
-        "origin": "AUTHORED"
-    },
-    "frontcraft.fronthack/components/dropdown@0.0.1": {
-        "files": [
-            {
-                "relativePath": "src/components/Dropdown/Dropdown.js",
-                "test": false,
-                "name": "Dropdown.js"
-            },
-            {
-                "relativePath": "src/components/Dropdown/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Dropdown/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Dropdown/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Dropdown/index.js",
-        "trackDir": "src/components/Dropdown",
         "origin": "AUTHORED"
     },
     "frontcraft.fronthack/components/breadcrumb@0.0.1": {
@@ -788,7 +680,115 @@
         "trackDir": "src/components/SocialLinks",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/tabs@0.0.2": {
+    "frontcraft.fronthack/components/accordion@0.0.3": {
+        "files": [
+            {
+                "relativePath": "src/components/Accordion/Accordion.js",
+                "test": false,
+                "name": "Accordion.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Accordion/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Accordion/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Accordion/index.js",
+        "trackDir": "src/components/Accordion",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/hamburger-nav@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/HamburgerNav/HamburgerNav.js",
+                "test": false,
+                "name": "HamburgerNav.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/HamburgerNav/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/HamburgerNav/index.js",
+        "trackDir": "src/components/HamburgerNav",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/pagination@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/Pagination/Pagination.js",
+                "test": false,
+                "name": "Pagination.js"
+            },
+            {
+                "relativePath": "src/components/Pagination/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Pagination/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Pagination/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Pagination/index.js",
+        "trackDir": "src/components/Pagination",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/dropdown@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/Dropdown/Dropdown.js",
+                "test": false,
+                "name": "Dropdown.js"
+            },
+            {
+                "relativePath": "src/components/Dropdown/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Dropdown/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Dropdown/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Dropdown/index.js",
+        "trackDir": "src/components/Dropdown",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/tabs@0.0.3": {
         "files": [
             {
                 "relativePath": "src/components/Tabs/Tabs.js",

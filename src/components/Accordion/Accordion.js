@@ -30,7 +30,7 @@ class Accordion extends Component {
     return(
       <div className="accordion">
         {this.props.items.map((item, index) => (
-          <div className={`accordion__item${openedItem === index ? ' is-checked' : ''}`} key={index}>
+          <div className={`accordion__item${openedItem === index ? ' is-expanded' : ''}`} key={index}>
             <div
               className="accordion__title"
               onClick={() => this.handleClick(index)}

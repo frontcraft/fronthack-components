@@ -7,10 +7,16 @@
   <div class="hamburger-nav__wrapper">
     <nav class="hamburger-nav__menu">
       <a href="#" class="hamburger-nav__link">
-        <i class="hamburger-nav__link-icon icon icon--home" /> Home
+        <i class="hamburger-nav__link-icon icon icon--home"></i> Home
       </a>
       <a href="#" class="hamburger-nav__link">About</a>
       <a href="#" class="hamburger-nav__link">Contact</a>
     </nav>
   </div>
 </div>
+
+<script>
+  $('.hamburger-nav__icon, .hamburger-nav__overlay').click(function() {
+    $(this).parent('.hamburger-nav').toggleClass('is-visible')
+  })
+</script>

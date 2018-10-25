@@ -1,9 +1,8 @@
 <!-- Following static HTML markup is valid for this component -->
 <div class="dropdown">
-  <input class="dropdown__input" id="dropdown-toggle" type="checkbox" name="dropdown" />
-  <label class="btn btn--primary dropdown__label" for="dropdown-toggle">
+  <span class="dropdown__label">
     Open dropdown
-  </label>
+  </span>
   <div class="dropdown__inner">
     <nav class="dropdown__nav">
       <a href="#" class="dropdown__link">First dropdown link</a>
@@ -11,4 +10,11 @@
       <a href="#" class="dropdown__link">Third dropdown link</a>
     </nav>
   </div>
+  <div class="dropdown__overlay"></div>
 </div>
+
+<script>
+  $('.dropdown__label, .dropdown__overlay').click(function() {
+    $(this).parent('.dropdown').toggleClass('is-open')
+  })
+</script>

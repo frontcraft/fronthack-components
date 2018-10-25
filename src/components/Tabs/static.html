@@ -1,8 +1,8 @@
 <!-- Following static HTML markup is valid for this component -->
-<div class="tabs">
-  <div class="tabs__label is-active">First</div>
-  <div class="tabs__label">Second</div>
-  <div class="tabs__label">Third</div>
+<div class="tabs" data-active-tab="0">
+  <span class="tabs__label">First</span>
+  <span class="tabs__label">Second</span>
+  <span class="tabs__label">Third</span>
   <div class="tabs__content">
     <p>Content for the first tab</p>
   </div>
@@ -13,3 +13,9 @@
     <p>Content for the third tab</p>
   </div>
 </div>
+
+<script>
+  $('.tabs__label').click(function() {
+    $(this).parent('.tabs').attr({ 'data-active-tab': $(this).index() })
+  })
+</script>

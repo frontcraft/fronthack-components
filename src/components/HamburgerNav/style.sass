@@ -30,16 +30,19 @@
   z-index: 101
   box-shadow: 0 0 30px black
   +breakpoint(tablet)
-    right: 60vw
+    right: calc(100vw - 320px)
 
 .hamburger-nav__menu
   padding-top: 10px
+  text-align: left
+  color:
   +breakpoint(tablet)
     padding-top: 40px
 
 .hamburger-nav__link
   display: block
   padding: 10px $container-paddings
+  color: $gray-light
   &:hover,
   &:focus
     background-color: $gray-light

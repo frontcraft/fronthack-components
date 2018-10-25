@@ -34,10 +34,16 @@
 
 .accordion__content
   padding: 10px 0
+  display: none
+  visibility: hidden
 
 
 // States
 // --------------------------------------------------
-.accordion__item.is-checked .accordion__title::after
-  content: '-'
-  font-size: 45px
+.accordion__item.is-expanded
+  .accordion__title::after
+    content: '-'
+    font-size: 45px
+  .accordion__content
+    display: block
+    visibility: visible
