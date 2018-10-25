@@ -280,33 +280,6 @@
         "trackDir": "src/components/Cloudlet",
         "origin": "AUTHORED"
     },
-    "frontcraft.fronthack/components/modal@0.0.2": {
-        "files": [
-            {
-                "relativePath": "src/components/Modal/Modal.js",
-                "test": false,
-                "name": "Modal.js"
-            },
-            {
-                "relativePath": "src/components/Modal/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "src/components/Modal/static.html",
-                "test": false,
-                "name": "static.html"
-            },
-            {
-                "relativePath": "src/components/Modal/style.sass",
-                "test": false,
-                "name": "style.sass"
-            }
-        ],
-        "mainFile": "src/components/Modal/index.js",
-        "trackDir": "src/components/Modal",
-        "origin": "AUTHORED"
-    },
     "frontcraft.fronthack/components/logo@0.0.2": {
         "files": [
             {
@@ -814,6 +787,60 @@
         "origin": "IMPORTED",
         "mainDistFile": "src/components/Icon/dist/index.js",
         "originallySharedDir": "src/components/Icon"
+    },
+    "frontcraft.fronthack/components/nav-horizontal@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/NavHorizontal/NavHorizontal.js",
+                "test": false,
+                "name": "NavHorizontal.js"
+            },
+            {
+                "relativePath": "src/components/NavHorizontal/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/NavHorizontal/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/NavHorizontal/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/NavHorizontal/index.js",
+        "trackDir": "src/components/NavHorizontal",
+        "origin": "AUTHORED"
+    },
+    "frontcraft.fronthack/components/modal@0.0.3": {
+        "files": [
+            {
+                "relativePath": "src/components/Modal/Modal.js",
+                "test": false,
+                "name": "Modal.js"
+            },
+            {
+                "relativePath": "src/components/Modal/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/Modal/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/Modal/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/Modal/index.js",
+        "trackDir": "src/components/Modal",
+        "origin": "AUTHORED"
     },
     "version": "13.0.4"
 }
