@@ -12,7 +12,7 @@ import bemCx from 'bem-modifiers'
  * - br - bottom right
  * @render react
  * @name Tooltip
- * @property {string} direction - explanation
+ * @property {string} direction - Can be "tl" (default), "tr" "bl" or "br"
  * @property {string} message - A tooltip content
  * @example
  *  <Tooltip message="Hey I'm made with pure CSS" direction="tr" />

@@ -7,7 +7,7 @@ import bemCx from 'bem-modifiers'
  * Widget to display any rating from (0 to 3 points by default).
  * @render react
  * @name Rating
- * @property {string} prop - explanation
+ * @property {number} value - Rate. A number from 0 to 3
  * @example
  *  <Rating value={2} />
  */

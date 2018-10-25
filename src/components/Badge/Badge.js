@@ -5,7 +5,7 @@ import React, { Component } from 'react'
  * Shows a number of new items. To be used together with Icon component.
  * @render react
  * @name Badge
- * @property {integer} tags - Array of strings.
+ * @property {integer} number - Number displayed in badge
  * @example
  *  <Badge number={7} />
  */

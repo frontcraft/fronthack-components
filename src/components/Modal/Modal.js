@@ -6,10 +6,10 @@ import bemCx from 'bem-modifiers'
  * Animated popup window
  * @render react
  * @name Modal
- * @property {string} size - explanation
- * @property {string} title - explanation
- * @property {node} trigger - an element that will act as a trigger
- * @property {bool} isOpen - force open state with a prop
+ * @property {string} size - Can be "xs", "sm", "lg" or leave empty as default
+ * @property {string} title - Modal title
+ * @property {node} trigger - Element that will act as a trigger
+ * @property {bool} isOpen - Force open state with a prop
  * @example
  *  <Modal
  *    size="lg"

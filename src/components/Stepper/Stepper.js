@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
  * Shows progress through numbered steps
  * @render react
  * @name Stepper
- * @property {array} steps - explanation
- * @property {integer} current - active step number
+ * @property {array} steps - Names of the steps
+ * @property {integer} current - Number of highlighted step
  * @example
  *  <Stepper
  *    steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}

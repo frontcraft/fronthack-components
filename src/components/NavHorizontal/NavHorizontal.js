@@ -7,7 +7,22 @@ import React, {Component} from 'react'
  * @name NavHorizontal
  * @property {array} links - Array of objects, that has two keys with sting values - label and url.
  * @example
- *  <NavHorizontal />
+ *  <NavHorizontal
+ *    links={[
+ *      {
+ *        label: 'Home',
+ *        url: '/home',
+ *      },
+ *      {
+ *        label: 'Blog',
+ *        url: '/blog',
+ *      },
+ *      {
+ *        label: 'About',
+ *        url: '/about',
+ *      },
+ *    ]}
+ *  />
  */
 class NavHorizontal extends Component {
   render() {

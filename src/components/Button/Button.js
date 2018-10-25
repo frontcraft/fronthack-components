@@ -7,13 +7,16 @@ import bemCx from 'bem-modifiers'
  * Button in various colors and sizes
  * @render react
  * @name Button
- * @property {string} prop - explanation
+ * @property {string} variant - Can be "block", "light", "primary", "link" or leave emplty for default
+ * @property {string} size - Can be "xs", "sm", "lg" or leave emplty for default
+ * @property {function} onClick - Callback after click
+ * @property {boolean} disabled - Should button be active or not
  * @example
  *  <Button
  *    variant="primary"
  *    size="xs"
  *    className="any-class"
- *    callback={() => alert('Button callback, eg. history.push')}
+ *    onClick={() => alert('Button callback, eg. history.push')}
  *  >This is button</Button>
  */
 class Button extends Component {

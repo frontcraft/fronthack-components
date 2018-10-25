@@ -7,6 +7,7 @@ import Icon from '@bit/frontcraft.fronthack.components.icon'
  * Alert with icon and description in various states.
  * @render react
  * @name Alert
+ * @property {string} type - Can be "success", "warning", "error" or leave empty for default
  * @example
  *  <Alert message="Example message" type="success"/>
  */
@@ -20,10 +21,6 @@ class Alert extends Component {
       </div>
     )
   }
-}
-
-Alert.defaultProps = {
-  type: false,
 }
 
 export default Alert

@@ -5,9 +5,9 @@ import React, { Component } from 'react'
  * A percentage bar to show the progress based on pure CSS technique.
  * @render react
  * @name ProgressBar
- * @property {string} prop - explanation
+ * @property {integer} percentage - A number from range 1-100
  * @example
- *  <ProgressBar />
+ *  <ProgressBar percentage={45} />
  */
 class ProgressBar extends Component {
   render() {

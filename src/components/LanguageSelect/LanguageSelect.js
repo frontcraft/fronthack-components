@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  * @render react
  * @name LanguageSelect
  * @property {array} languages - objects that contains language name and callback
- * @property {current} prop - currently selected language
+ * @property {string} current - currently selected language
  * @example
  *  <LanguageSelect
  *    languages={[
