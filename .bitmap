@@ -842,5 +842,32 @@
         "trackDir": "src/components/Modal",
         "origin": "AUTHORED"
     },
+    "frontcraft.fronthack/components/owl-carousel@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/OwlCarousel/OwlCarousel.js",
+                "test": false,
+                "name": "OwlCarousel.js"
+            },
+            {
+                "relativePath": "src/components/OwlCarousel/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "src/components/OwlCarousel/static.html",
+                "test": false,
+                "name": "static.html"
+            },
+            {
+                "relativePath": "src/components/OwlCarousel/style.sass",
+                "test": false,
+                "name": "style.sass"
+            }
+        ],
+        "mainFile": "src/components/OwlCarousel/index.js",
+        "trackDir": "src/components/OwlCarousel",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
