@@ -1,4 +1,31 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Accordion
+
+### Usage
+
+`fronthack component` then `accordion`
+
+#### With React or NextJS:
+```js
+<Accordion items={[
+  {
+    title: 'First accordion item',
+    content: 'Content for the first accordion'
+  },
+  {
+    title: 'Second accordion item',
+    content: 'Content for the first accordion'
+  },
+]}/>
+```
+
+##### Properties
+
+* `items` - each object must contain a title and content that is visible when expanded
+
+
+#### With static HTML:
+
+```html
 <nav class="accordion">
   <div class="accordion__item">
     <div class="accordion__title">First accordion item</div>
@@ -16,3 +43,4 @@
     $(this).toggleClass('is-expanded')
   })
 </script>
+```

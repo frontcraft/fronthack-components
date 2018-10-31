@@ -1,23 +1,7 @@
 import React, { Component } from 'react'
 import './style.sass'
 
-/**
- * Group of collapsible horizontal panels
- * @render react
- * @name Accordion
- * @property {array} items - Array of objects, that has two keys with sting values - title and content.
- * @example
- *  <Accordion items={[
- *    {
- *      title: 'First accordion item',
- *      content: 'Content for the first accordion'
- *    },
- *    {
- *      title: 'Second accordion item',
- *      content: 'Content for the first accordion'
- *    },
- *  ]}/>
- */
+
 class Accordion extends Component {
   state = {
     openedItem: false

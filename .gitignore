@@ -24,3 +24,6 @@ yarn-error.log*
 .bit
 dist
 node_modules
+
+# storybook
+.cache
