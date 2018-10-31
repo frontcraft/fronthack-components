@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Switch between different views

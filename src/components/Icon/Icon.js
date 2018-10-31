@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Set of icons prepared by WAAT ltd. Because they are fonts, their size and color can be modified the same way like text.

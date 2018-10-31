@@ -1,5 +1,5 @@
 import React from 'react'
-// import './style.sass'
+import './style.sass'
 import { FormConsumer } from './Form'
 import renderInput from './renderInput'
 

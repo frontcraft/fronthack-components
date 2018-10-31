@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Icon from '@bit/frontcraft.fronthack.components.icon'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Element with minimalistic markup to switch between the pages

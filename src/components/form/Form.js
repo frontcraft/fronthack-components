@@ -1,5 +1,5 @@
 import React, { Component, createContext } from 'react'
-// import './style.sass'
+import './style.sass'
 import { initiateFormFields } from './helpers'
 
 const FieldsContext = createContext({});

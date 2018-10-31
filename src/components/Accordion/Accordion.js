@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Group of collapsible horizontal panels

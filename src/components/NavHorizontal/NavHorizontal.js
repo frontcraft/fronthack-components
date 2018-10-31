@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Inline navigation for primary top bar menu or footer links

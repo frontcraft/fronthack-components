@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * A circular diagram based on pure CSS technique. animation-delay value serves

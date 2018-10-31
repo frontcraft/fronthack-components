@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Menu that shows the location of current page in a site navigation context

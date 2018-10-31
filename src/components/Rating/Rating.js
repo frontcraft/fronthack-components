@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Widget to display any rating from (0 to 3 points by default).

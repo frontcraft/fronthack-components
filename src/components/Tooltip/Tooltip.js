@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Better tooltips styling inspired by this article

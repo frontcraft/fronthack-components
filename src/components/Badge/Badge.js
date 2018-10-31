@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Shows a number of new items. To be used together with Icon component.

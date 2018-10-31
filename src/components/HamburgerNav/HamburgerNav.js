@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import './style.sass'
+import './style.sass'
 import Icon from '@bit/frontcraft.fronthack.components.icon'
 
 /**

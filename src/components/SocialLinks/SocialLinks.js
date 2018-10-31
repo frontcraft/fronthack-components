@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Icon from '@bit/frontcraft.fronthack.components.icon'
-// import './style.sass'
+import './style.sass'
 
 
 /**

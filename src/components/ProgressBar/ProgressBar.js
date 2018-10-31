@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import './style.sass'
+import './style.sass'
 
 /**
  * A percentage bar to show the progress based on pure CSS technique.

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Button from '../Button'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Single item on a list of articles for example.

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import './style.sass'
+import './style.sass'
 
 /**
  * React component that displays given array as a tags.

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
-// import './style.sass'
+import './style.sass'
 
 /**
  * Parallax effect written in pure CSS. Parallax is unique component. It should
