@@ -20,7 +20,6 @@ module.exports = {
         loaders: ["style-loader", "css-loader", "sass-loader"],
         include: path.resolve(__dirname, "../")
       },
-      // add your custom rules.
     ],
   },
 };

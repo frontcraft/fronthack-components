@@ -2,9 +2,9 @@
 
 ### Usage
 
-`fronthack component` then `accordion`
+`fronthack component`, then `accordion`
 
-#### With React or NextJS:
+#### JSX example:
 ```js
 <Accordion items={[
   {
@@ -23,7 +23,7 @@
 * `items` - each object must contain a title and content that is visible when expanded
 
 
-#### With static HTML:
+#### Static HTML example:
 
 ```html
 <nav class="accordion">

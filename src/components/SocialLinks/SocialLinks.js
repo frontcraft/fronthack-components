@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Icon from '@bit/frontcraft.fronthack.components.icon'
+import Icon from '../Icon'
 import './style.sass'
 
 
