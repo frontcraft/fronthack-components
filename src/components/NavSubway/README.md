@@ -1,4 +1,36 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Accordion
+
+### Usage
+
+`fronthack component`, then `nav-subway`
+
+#### JSX example:
+
+```js
+<NavSubway links={[
+  {
+    label: 'Home',
+    url: 'home',
+  },
+  {
+    label: 'About',
+    url: 'about',
+  },
+  {
+    label: 'Contact',
+    url: 'contact',
+  },
+]} />
+```
+
+##### Properties
+
+* `links` - objects, where each contains two sting values - label and url
+
+
+#### Static HTML example:
+
+```html
 <nav class="nav-subway">
   <div class="nav-subway__item">
     <div class="nav-subway__station"></div>
@@ -17,3 +49,4 @@
     <a href="#" class="nav-subway__divnk">Events</a>
   </div>
 </nav>
+```

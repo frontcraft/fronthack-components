@@ -1,4 +1,37 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Accordion
+
+### Usage
+
+`fronthack component`, then `hamburger-nav`
+
+#### JSX example:
+
+```js
+<HamburgerNav links={[
+  {
+    label: 'Home',
+    url: 'home',
+    icon: 'home',
+  },
+  {
+    label: 'About',
+    url: 'about',
+  },
+  {
+    label: 'Contact',
+    url: 'contact',
+  },
+]} />
+```
+
+##### Properties
+
+* `links` - menu objects, where each must contain a title, url and optionally an icon type
+
+
+#### Static HTML example:
+
+```html
 <div class="hamburger-nav">
   <div class="hamburger-nav__icon">
     <i class="icon icon--menu"></i>
@@ -20,3 +53,4 @@
     $(this).parent('.hamburger-nav').toggleClass('is-visible')
   })
 </script>
+```

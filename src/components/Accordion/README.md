@@ -5,6 +5,7 @@
 `fronthack component`, then `accordion`
 
 #### JSX example:
+
 ```js
 <Accordion items={[
   {
@@ -21,7 +22,6 @@
 ##### Properties
 
 * `items` - each object must contain a title and content that is visible when expanded
-
 
 #### Static HTML example:
 

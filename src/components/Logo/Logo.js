@@ -1,13 +1,7 @@
 import React, {Component} from 'react'
 import './style.sass'
 
-/**
- * Primary branding element of any site
- * @render react
- * @name Logo
- * @example
- *  <Logo />
- */
+
 class Logo extends Component {
   render() {
     return(

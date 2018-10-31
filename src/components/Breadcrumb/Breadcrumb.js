@@ -2,14 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './style.sass'
 
-/**
- * Menu that shows the location of current page in a site navigation context
- * @render react
- * @name Breadcrumb
- * @property {string} prop - explanation
- * @example
- *  <Breadcrumb items={['Docs', 'Components API', 'Button']} />
- */
+
 class Breadcrumb extends Component {
   render() {
     return(

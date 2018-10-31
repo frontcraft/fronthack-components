@@ -1,4 +1,33 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Accordion
+
+### Usage
+
+`fronthack component`, then `listing-item`
+
+#### JSX example:
+
+```js
+<ListingItem
+  id="12345"
+  title="Featured article name"
+  date="16 October 2018"
+  description="Teaser text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+  mediaUrl="http://placehold.it/200x145"
+/>
+```
+
+##### Properties
+
+* `id` - unique item id
+* `title` - featured title
+* `date` - formatted date
+* `description` - teaser text
+* `mediaUrl` - url for the featured image
+
+
+#### Static HTML example:
+
+```html
 <div class="listing-item">
   <div class="listing-item__media">
     <img src="http://placehold.it/200x145" alt="" />
@@ -12,3 +41,4 @@
     </div>
   </div>
 </div>
+```

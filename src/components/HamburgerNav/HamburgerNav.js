@@ -3,28 +3,7 @@ import PropTypes from 'prop-types'
 import './style.sass'
 import Icon from '../Icon'
 
-/**
- * Drawer that appears from the left side of the screen.
- * @render react
- * @name HamburgerNav
- * @property {array} links - objects, that stores label, url and optional icon type
- * @example
- *  <HamburgerNav links={[
- *    {
- *      label: 'Home',
- *      url: 'home',
- *      icon: 'home',
- *    },
- *    {
- *      label: 'About',
- *      url: 'about',
- *    },
- *    {
- *      label: 'Contact',
- *      url: 'contact',
- *    },
- *  ]} />
- */
+
 class HamburgerNav extends Component {
   state = {
     show: false,

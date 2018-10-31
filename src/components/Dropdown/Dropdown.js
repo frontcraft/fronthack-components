@@ -2,28 +2,7 @@ import React, { Component } from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
-/**
- * A classic dropdown menu.
- * @render react
- * @name Dropdown
- * @property {array} links - Array of objects, that has two keys with sting values - label and url.
- * @property {boolean} overlay - Renders faded overlay that closes dropdown on click anywhere around.
- * @example
- *  <Dropdown overlay links={[
- *    {
- *      label: 'Profile',
- *      url: '#',
- *    },
- *    {
- *      label: 'Settings',
- *      url: '#',
- *    },
- *    {
- *      label: 'Log out',
- *      url: '#',
- *    },
- *  ]}>Toggle dropdown</Dropdown>
- */
+
 class Dropdown extends Component {
   state ={
     isOpen: false
