@@ -1,84 +1,68 @@
 import React, { Component, createContext } from 'react'
+import PropTypes from 'prop-types'
+import {
+  initiateFormFields,
+  processField,
+  updateFieldsRequirements,
+} from './helpers'
 import './style.sass'
-import { initiateFormFields } from './helpers'
 
 const FieldsContext = createContext({});
 const SetValueContext = createContext(() => {});
 
-export const FormConsumer = ({children}) => (
+export const FormConsumer = ({ children }) => (
   <FieldsContext.Consumer>
-    {fields =>
+    {fieldsData =>
       <SetValueContext.Consumer>
-        {setValue => children({fields, setValue})}
+        {setValue => children({fieldsData, setValue})}
       </SetValueContext.Consumer>
     }
   </FieldsContext.Consumer>
 )
+
+FormConsumer.propTypes = {
+  children: PropTypes.func.isRequired,
+}
+
 /**
  * This form component's Creates new context with defined fields that are
  * avaliable for all field items inside.
- * @render react
- * @name Form
- * @property {array} fields List of field names
- * @example
- *   <Form fields={['username', 'framework', 'color', 'car']}>
- *     <FormInput
- *       fieldname="username"
- *       label="User name"
- *       type="text"
- *       placeholder="Enter username"
- *       initialHelp="Your desired name"
- *       required
- *     />
- *     <FormInput
- *       fieldname="framework"
- *       label="Select a Framework"
- *       type="select"
- *       options={[
- *         { label: 'React', value: 'react' },
- *         { label: 'Vue', value: 'vue' },
- *         { label: 'Angluar', value: 'angluar' },
- *       ]}
- *       initialHelp="Select from the list"
- *     />
- *     <FormInput
- *       fieldname="car"
- *       label="Select cars"
- *       type="checkbox"
- *       options={[
- *         { label: 'Toyota', value: 'toyota' },
- *         { label: 'Renault', value: 'renault' },
- *         { label: 'Volkswagen', value: 'volkswagen' },
- *       ]}
- *       initialHelp="You can pick a few"
- *     />
- *     <FormInput
- *       fieldname="color"
- *       label="Pick a color"
- *       type="radio"
- *       options={[
- *         { label: 'Red', value: 'red' },
- *         { label: 'Yellow', value: 'yellow' },
- *         { label: 'Blue', value: 'blue' },
- *       ]}
- *       initialHelp="Choose one"
- *     />
- *   </Form>
  */
 class Form extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+    const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
     this.state = {
-      fields: initiateFormFields(this.props.fields)
-    };
+      fieldsData: initiateFormFields(this.props.fields, requiredFields)
+    }
   }
-  setValue(fields) {
-    this.setState({ fields });
+  setValue(fieldName, value, required, type = null) {
+    // If no fieldName is provided, reset whole form
+    if (!fieldName) {
+      const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
+      this.setState({
+        fieldsData: initiateFormFields(this.props.fields, requiredFields)
+      })
+    } else {
+      this.setState(prevState => ({
+        fieldsData: {
+          ...prevState.fieldsData,
+          ...processField(fieldName, value, required, type),
+        }
+      }))
+    }
+  }
+  componentDidUpdate(prevProps) {
+    if ((prevProps.required && this.props.required)
+    && (prevProps.required.toString() !== this.props.required.toString())
+    && !this.props.allRequired) {
+      this.setState({ fieldsData: updateFieldsRequirements(this.state.fieldsData, this.props.required)} )
+    }
   }
   render() {
     return(
       <div className="form">
-        <FieldsContext.Provider value={this.state.fields}>
+        <FieldsContext.Provider value={this.state.fieldsData}>
           <SetValueContext.Provider value={this.setValue.bind(this)}>
             {this.props.children}
           </SetValueContext.Provider>
@@ -86,6 +70,13 @@ class Form extends Component {
       </div>
     )
   }
+}
+
+Form.propTypes = {
+  fields: PropTypes.array.isRequired,
+  required: PropTypes.array,
+  allRequired: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 }
 
 export default Form;
