@@ -598,15 +598,6 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@bit/frontcraft.fronthack.components.form@file:./src/components/form":
-  version "0.0.0"
-
-"@bit/frontcraft.fronthack.components.icon@file:./src/components/Icon":
-  version "0.0.0"
-
-"@bit/frontcraft.fronthack.globals.style@file:./src/style":
-  version "0.0.0"
-
 "@emotion/cache@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-0.8.8.tgz#2c3bd1aa5fdb88f1cc2325176a3f3201739e726c"
