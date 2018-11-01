@@ -1,4 +1,23 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Social links
+
+### Usage
+
+`fronthack component`, then `social-links`
+
+#### JSX example:
+
+```js
+<SocialLinks url={window.location.href} />
+```
+
+##### Properties
+
+* `url` - an url to share
+
+
+#### Static HTML example:
+
+```html
 <nav class="social-links">
   <a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Ffronthack.com%2Ffronthack%2F" class="social-links__link" target="_blank">
     <i class="icon icon--social-facebook"></i>
@@ -13,3 +32,4 @@
     <i class="icon icon--social-linkedin"></i>
   </a>
 </nav>
+```

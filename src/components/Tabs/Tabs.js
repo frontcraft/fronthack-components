@@ -3,20 +3,7 @@ import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
-/**
- * Switch between different views
- * @render react
- * @name Tabs
- * @property {array} labels - labels of tabs
- * @example
- *  <Tabs labels={['First', 'Second', 'Third']}>
- *    {[
- *      <div>Content of the first tab</div>,
- *      <div>Content of the second tab</div>,
- *      <div>Content of the third tab</div>
- *    ]}
- *  </Tabs>
- */
+
 class Tabs extends Component {
   state = {
     active: 0,

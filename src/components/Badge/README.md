@@ -1,4 +1,4 @@
-# Accordion
+# Badge
 
 ### Usage
 
@@ -7,7 +7,7 @@
 #### JSX example:
 
 ```js
-<Badge number={7} />
+<div>Notifications <Badge number={7} /></div>
 ```
 
 ##### Properties

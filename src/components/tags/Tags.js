@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
 import './style.sass'
 
-/**
- * React component that displays given array as a tags.
- * @render react
- * @name Tags
- * @property {array} tags - Array of strings.
- * @example
- *  <Tags tags={['travel', 'nature', 'people']}/>
- */
+
 class Tags extends Component {
   render(){
     if (this.props.tags) {

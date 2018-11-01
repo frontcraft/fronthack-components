@@ -1,4 +1,4 @@
-# Accordion
+# Vertical navigation
 
 ### Usage
 

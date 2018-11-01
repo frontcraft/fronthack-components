@@ -1,4 +1,29 @@
-<!-- Copy the code from below to use this component in static HTML. -->
+# Tabs
+
+### Usage
+
+`fronthack component`, then `tabs`
+
+#### JSX example:
+
+```js
+<Tabs labels={['First', 'Second', 'Third']}>
+  {[
+    <div>Content of the first tab</div>,
+    <div>Content of the second tab</div>,
+    <div>Content of the third tab</div>
+  ]}
+</Tabs>
+```
+
+##### Properties
+
+* `labels` - labels on tabs
+
+
+#### Static HTML example:
+
+```html
 <div class="tabs" data-active-tab="0">
   <span class="tabs__label">First</span>
   <span class="tabs__label">Second</span>
@@ -19,3 +44,4 @@
     $(this).parent('.tabs').attr({ 'data-active-tab': $(this).index() })
   })
 </script>
+```

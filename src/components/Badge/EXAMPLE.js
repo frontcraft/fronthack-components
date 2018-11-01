@@ -1,4 +1,4 @@
 import React from 'react'
 import Badge from '.'
 
-export default () => <Badge number={7} />
+export default () => <div>Notifications <Badge number={7} /></div>

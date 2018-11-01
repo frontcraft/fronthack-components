@@ -3,15 +3,6 @@ import Icon from '../Icon'
 import './style.sass'
 
 
-/**
- * Social media icons. Share links might be simply an urls, which is described
- * in this article https://css-tricks.com/simple-social-sharing-links/
- * @render react
- * @name SocialLinks
- * @property {string} url - URL path to share
- * @example
- *  <SocialLinks url={window.location.href } />
- */
 class SocialLinks extends Component {
   render() {
     const { url } = this.props

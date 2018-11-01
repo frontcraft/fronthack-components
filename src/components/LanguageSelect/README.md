@@ -1,4 +1,4 @@
-# Accordion
+# Language selector
 
 ### Usage
 

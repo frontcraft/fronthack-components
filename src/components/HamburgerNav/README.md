@@ -1,4 +1,4 @@
-# Accordion
+# Hamburger navigation
 
 ### Usage
 

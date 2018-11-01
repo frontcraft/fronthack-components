@@ -1,25 +1,37 @@
-# Accordion
+# Owl Carousel
 
 ### Usage
 
-`fronthack component`, then `donut`
+`fronthack component`, then `owl-carousel`
 
 #### JSX example:
 
-```js
-<Donut percentage={43} pie />
-```
-
-##### Properties
-
-* `percentage` - value between 1-100
-* `pie` - displays chart as a full pie (without hollow inside)
+Owl Carousel is a jQuery library, so use another solutions for React and NextJS.
 
 
 #### Static HTML example:
 
 ```html
-<div class="donut" style="animation-delay: -42s">
-  <div class="donut__label">42%</div>
+<div class="owl-carousel owl-theme">
+  <div><img src="https://placeimg.com/680/320/animals" alt="" /></div>
+  <div><img src="https://placeimg.com/680/320/tech" alt="" /></div>
+  <div><img src="https://placeimg.com/680/320/nature" alt="" /></div>
 </div>
+<!-- Load OWL Carousel styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<!-- Load OWL Carousel library (after jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Initiate OWL Carousel -->
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    items: 1,
+    autoPlay: true,
+    nav: true,
+    navText: [
+      "<i class='icon icon--arrow-left'>",
+      "<i class='icon icon--arrow-right'>"
+    ]
+  });
+</script>
 ```

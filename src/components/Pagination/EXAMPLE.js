@@ -1,4 +1,10 @@
 import React from 'react'
-import Donut from '.'
+import { action } from '@storybook/addon-actions'
+import Pagination from '.'
 
-export default () => <Donut percentage={43} pie />
+export default () =>
+  <Pagination
+    pages={5}
+    callback={item => action(item)}
+    current={3}
+  />

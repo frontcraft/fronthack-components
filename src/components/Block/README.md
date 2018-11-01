@@ -1,6 +1,6 @@
 # Accordion
 
-### Usage
+### Block
 
 `fronthack component`, then `block`
 

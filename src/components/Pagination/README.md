@@ -1,25 +1,36 @@
-# Accordion
+# Pagination
 
 ### Usage
 
-`fronthack component`, then `donut`
+`fronthack component`, then `pagination`
 
 #### JSX example:
 
 ```js
-<Donut percentage={43} pie />
+<Pagination
+  pages={5}
+  callback={item => alert(item)}
+  current={3}
+/>
 ```
 
 ##### Properties
 
-* `percentage` - value between 1-100
-* `pie` - displays chart as a full pie (without hollow inside)
+* `pages` - total amount of pages
+* `callback` - operation to perform after click
+* `current` - current page number
 
 
 #### Static HTML example:
 
 ```html
-<div class="donut" style="animation-delay: -42s">
-  <div class="donut__label">42%</div>
+<div class="pagination">
+  <a href="#" class="pagination__item"><i class="icon icon--arrow-left"></i></a>
+  <a href="#" class="pagination__item">1</a>
+  <div href="#" class="pagination__item pagination__item--active">2</div>
+  <a href="#" class="pagination__item">3</a>
+  <a href="#" class="pagination__item">4</a>
+  <a href="#" class="pagination__item">5</a>
+  <a href="#" class="pagination__item"><i class="icon icon--arrow-right"></i></a>
 </div>
 ```

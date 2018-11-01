@@ -2,18 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import './style.sass'
 
-/**
- * Shows progress through numbered steps
- * @render react
- * @name Stepper
- * @property {array} steps - Names of the steps
- * @property {integer} current - Number of highlighted step
- * @example
- *  <Stepper
- *    steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
- *    current={2}
- *  />
- */
+
 class Stepper extends Component {
   render() {
     const { steps, current } = this.props

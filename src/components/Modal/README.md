@@ -1,4 +1,4 @@
-# Accordion
+# Modal
 
 ### Usage
 
