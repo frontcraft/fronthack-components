@@ -4,6 +4,9 @@ import { withReadme } from 'storybook-readme'
 
 import '../src/style/index.sass'
 
+import BasicStyles from '../src/pages/BasicStyles'
+import BasicStylesREADME from '../src/pages/BasicStylesREADME.md'
+
 import AccordionEXAMPLE from '../src/components/Accordion/EXAMPLE'
 import AccordionREADME from '../src/components/Accordion/README.md'
 import AlertEXAMPLE from '../src/components/Alert/EXAMPLE'
@@ -65,6 +68,10 @@ import TagsREADME from '../src/components/Tags/README.md'
 import TooltipEXAMPLE from '../src/components/Tooltip/EXAMPLE'
 import TooltipREADME from '../src/components/Tooltip/README.md'
 
+
+storiesOf('Basic styles',  module)
+  .addDecorator(withReadme(BasicStylesREADME))
+  .add('default', () => <BasicStyles />)
 
 storiesOf('Accordion',  module)
   .addDecorator(withReadme(AccordionREADME))
