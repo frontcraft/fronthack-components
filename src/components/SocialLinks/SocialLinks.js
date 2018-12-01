@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Icon from '../Icon'
 import './style.sass'
 
 
-class SocialLinks extends Component {
+class SocialLinks extends React.Component {
   render() {
     const { url } = this.props
     const encodedUrl = encodeURIComponent(url)

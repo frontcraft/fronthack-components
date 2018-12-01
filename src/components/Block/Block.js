@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class Block extends Component {
+class Block extends React.Component {
   render() {
     const { title, children } = this.props
     return(

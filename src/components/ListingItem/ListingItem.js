@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Button from '../Button'
 import './style.sass'
 
 
-class ListingItem extends Component {
+class ListingItem extends React.Component {
   render() {
     const {
       id,

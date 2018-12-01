@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class OwlCarousel extends Component {
+class OwlCarousel extends React.Component {
   render() {
     return(
       <p>No support for JSX</p>

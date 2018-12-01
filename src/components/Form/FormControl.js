@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { FormConsumer } from './Form'
 import Input from './Input'
@@ -6,7 +6,7 @@ import Input from './Input'
 /**
  * A single form input
  */
-class FormControl extends Component {
+class FormControl extends React.Component {
   // If default (initial) field value has changed, apply it.
   componentDidUpdate(prevProps) {
     if (this.props.initialValue && this.props.initialValue !== prevProps.initialValue) {

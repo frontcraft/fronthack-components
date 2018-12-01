@@ -28,7 +28,7 @@ FormConsumer.propTypes = {
  * This form component's Creates new context with defined fields that are
  * avaliable for all field items inside.
  */
-class Form extends Component {
+class Form extends React.Component {
   constructor(props) {
     super(props)
     const requiredFields = this.props.allRequired ? this.props.fields : this.props.required

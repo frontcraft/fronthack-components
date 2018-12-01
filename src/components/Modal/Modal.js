@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Modal extends Component {
+class Modal extends React.Component {
   state = {
     isOpen: this.props.isOpen,
   }

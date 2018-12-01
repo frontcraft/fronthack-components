@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './style.sass'
 
 
-class Breadcrumb extends Component {
+class Breadcrumb extends React.Component {
   render() {
     return(
       <div className="breadcrumb">

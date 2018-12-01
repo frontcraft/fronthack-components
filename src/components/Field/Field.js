@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Field extends Component {
+class Field extends React.Component {
   render() {
     const { label, values, children, spacing, inlineLabel } = this.props
     return(

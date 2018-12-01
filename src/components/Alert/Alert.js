@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import Icon from '../Icon'
 import './style.sass'
 
 
-class Alert extends Component {
+class Alert extends React.Component {
   render(){
     const { message, type } = this.props
     return(

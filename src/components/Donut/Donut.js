@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Donut extends Component {
+class Donut extends React.Component {
   render() {
     const { percentage, pie } = this.props
     return(

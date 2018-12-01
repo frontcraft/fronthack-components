@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class Badge extends Component {
+class Badge extends React.Component {
   render() {
     return <span className="badge">{this.props.number}</span>
   }

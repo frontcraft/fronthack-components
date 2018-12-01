@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Tabs extends Component {
+class Tabs extends React.Component {
   state = {
     active: 0,
   }

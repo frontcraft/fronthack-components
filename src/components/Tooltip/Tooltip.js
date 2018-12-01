@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Tooltip extends Component {
+class Tooltip extends React.Component {
   render() {
     const { direction, message, children } = this.props
     return(

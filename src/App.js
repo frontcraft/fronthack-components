@@ -25,7 +25,7 @@ import SocialLinks from './components/SocialLinks';
 import Tabs from './components/Tabs';
 import { Form, FormInput } from './components/form';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">

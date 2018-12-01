@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Dropdown extends Component {
+class Dropdown extends React.Component {
   state ={
     isOpen: false
   }

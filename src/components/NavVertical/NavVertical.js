@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 /**
@@ -26,7 +26,7 @@ import './style.sass'
  */
 // IMPORTANT: I DID NOT IMPORTED THIS COMPONENT FROM BIT, I JUST COPY-PASTED IT
 // FROM MY DRIVE
-class NavVertical extends Component {
+class NavVertical extends React.Component {
   render(){
     return(
       <nav className="nav-vertical">

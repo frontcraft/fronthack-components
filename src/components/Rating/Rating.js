@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Rating extends Component {
+class Rating extends React.Component {
   render() {
     const { value } = this.props
     let dots = []

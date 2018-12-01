@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class Tags extends Component {
+class Tags extends React.Component {
   render(){
     if (this.props.tags) {
       return (

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Icon from '../Icon'
 import bemCx from 'bem-modifiers'
 import './style.sass'
@@ -17,7 +17,7 @@ import './style.sass'
  *    current={3}
  *  />
  */
-class Pagination extends Component {
+class Pagination extends React.Component {
   render() {
     const { pages, callback, current } = this.props
     let items = []

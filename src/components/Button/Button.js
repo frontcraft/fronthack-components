@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Button extends Component {
+class Button extends React.Component {
   render() {
     const {
       children,

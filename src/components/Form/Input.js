@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 // import ReactQuill from 'react-quill'
 // import 'react-quill/dist/quill.snow.css'
 import { checkboxHandler } from './helpers'
 
 
-class Input extends Component {
+class Input extends React.Component {
   render() {
     const {
       fieldname,

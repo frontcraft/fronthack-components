@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class ProgressBar extends Component {
+class ProgressBar extends React.Component {
   render() {
     const { percentage } = this.props
     return(

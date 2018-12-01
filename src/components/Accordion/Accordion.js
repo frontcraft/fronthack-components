@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class Accordion extends Component {
+class Accordion extends React.Component {
   state = {
     openedItem: false
   }

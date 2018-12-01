@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
 
-class Parallax extends Component {
+class Parallax extends React.Component {
   render() {
     return(
       <div className={bemCx('parallax', { debug: this.props.debug })}>

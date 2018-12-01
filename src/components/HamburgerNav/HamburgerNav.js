@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './style.sass'
 import Icon from '../Icon'
 
 
-class HamburgerNav extends Component {
+class HamburgerNav extends React.Component {
   state = {
     show: false,
   }

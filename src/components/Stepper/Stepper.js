@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types';
 import './style.sass'
 
 
-class Stepper extends Component {
+class Stepper extends React.Component {
   render() {
     const { steps, current } = this.props
     return(

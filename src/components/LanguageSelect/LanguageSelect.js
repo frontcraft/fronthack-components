@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './style.sass'
 
 
-class LanguageSelect extends Component {
+class LanguageSelect extends React.Component {
   render() {
     const { languages, current } = this.props
     return(

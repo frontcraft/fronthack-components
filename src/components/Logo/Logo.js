@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class Logo extends Component {
+class Logo extends React.Component {
   render() {
     return(
       <img

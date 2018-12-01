@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './style.sass'
 
 /**
@@ -22,7 +22,7 @@ import './style.sass'
  *    },
  *  ]} />
  */
-class NavSubway extends Component {
+class NavSubway extends React.Component {
   render() {
     return(
       <nav className="nav-subway">

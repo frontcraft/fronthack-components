@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './style.sass'
 
 
-class NavHorizontal extends Component {
+class NavHorizontal extends React.Component {
   render() {
     return(
       <nav className="nav-horizontal">
