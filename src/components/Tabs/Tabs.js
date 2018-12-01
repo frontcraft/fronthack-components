@@ -14,7 +14,7 @@ class Tabs extends Component {
       <div className="tabs" data-active-tab={active}>
         {this.props.labels.map((label, index) =>
           <div
-            class={bemCx('tabs__label', {}, { 'is-active': index === active })}
+            className={bemCx('tabs__label', {}, { 'is-active': index === active })}
             onClick={() => this.setState({ active: index })}
             key={index}
           >{label}</div>

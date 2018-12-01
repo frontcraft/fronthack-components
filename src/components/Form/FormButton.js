@@ -9,7 +9,7 @@ import { getValues, formIsInvalid } from './helpers'
 /**
  * A button component to handle form actions, like submit or reset.
  */
-const FormButton = ({ callback, size, variant, reset, loading, children }) => (
+const FormButton = ({ callback, size, variant, reset, loading, className, children }) => (
   <FormConsumer>
     {({fieldsData, setValue}) => {
       return (
@@ -21,6 +21,7 @@ const FormButton = ({ callback, size, variant, reset, loading, children }) => (
             reset && setValue()
           }}
           disabled={formIsInvalid(fieldsData) || loading}
+          className={className}
         >
           {loading &&
             <Fragment>
