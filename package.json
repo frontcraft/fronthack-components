@@ -17,13 +17,6 @@
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
-    "eslint": "^5.10.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "2.39.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "^7.11.1",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fronthack-scripts": "^0.0.11",
@@ -57,7 +50,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -c .storybook -o docs",
-    "lint": "eslint src/components/**/*.js src/pages/*.js"
+    "lint": "eslint src/components/**/*.js --fix"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -106,10 +99,13 @@
     "@storybook/addon-links": "^4.0.2",
     "@storybook/addons": "^4.0.2",
     "@storybook/react": "^4.0.2",
+    "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "storybook-readme": "^4.0.2"
   }
