@@ -5,7 +5,7 @@ import './style.sass'
 
 class Icon extends React.Component {
   render() {
-    return <i  className={bemCx('icon', this.props.type, this.props.className)} />
+    return <i className={bemCx('icon', this.props.type, this.props.className)} />
   }
 }
 

@@ -12,69 +12,69 @@ export function processField(fieldName, value, required, type) {
   // If the value is an array, remove its empty values for safety.
   const processedValue = Array.isArray(value)
     ? value.filter(item => item.length)
-    : value;
+    : value
 
-  let validation, help = null;
+  let validation; let help = null
 
   // VALIDATION - If check will fail, set an error state and help message.
   if (required && (!processedValue || processedValue.length === 0)) {
     // If the field is required and its value is empty, set an error. Otherwise
     // continue the validation.
-    validation = "error";
-    help = "This field is required."
+    validation = 'error'
+    help = 'This field is required.'
   } else if (processedValue && processedValue.length > 0) {
     switch (type) {
       case 'text':
         // Text should be longer than 3 chars.
         if (processedValue.length < 5) {
-          validation = "error";
-          help = "Enter at least 5 characters."
+          validation = 'error'
+          help = 'Enter at least 5 characters.'
         }
-        break;
+        break
       case 'email':
         if (!validator.isEmail(value)) {
-          validation = "error";
-          help = "This is not a valid email address."
+          validation = 'error'
+          help = 'This is not a valid email address.'
         }
-        break;
+        break
       case 'url':
         if (!validator.isURL(value)) {
-          validation = "error";
-          help = "This is not a valid URL."
+          validation = 'error'
+          help = 'This is not a valid URL.'
         }
-        break;
+        break
       case 'tel':
         if (!validator.isMobilePhone(validator.trim(value, '+'))) {
-          validation = "error";
-          help = "This is not a valid phone number."
+          validation = 'error'
+          help = 'This is not a valid phone number.'
         }
-        break;
+        break
       case 'json':
         try {
-          JSON.parse(value);
-        } catch(e) {
-          validation = "error";
-          help = "This is not a valid JSON.";
+          JSON.parse(value)
+        } catch (e) {
+          validation = 'error'
+          help = 'This is not a valid JSON.'
         }
-        break;
+        break
       case 'number':
         // TODO: Should we check anything there?
-        break;
+        break
       case 'array':
         // TODO: If any item is mentioned twice, set validation error.
-        break;
+        break
       case 'object':
         // TODO: Check whether it is really a javascript object.
-        break;
+        break
       default:
-        break;
+        break
     }
   }
 
   // If there is no error and value is not empty, we can talk about success.
-  if (validation !== "error" && ((processedValue && processedValue.length > 0)
-  || (typeof value === 'object' && !Array.isArray(value)))) {
-    validation = "success";
+  if (validation !== 'error' && ((processedValue && processedValue.length > 0) ||
+  (typeof value === 'object' && !Array.isArray(value)))) {
+    validation = 'success'
   }
   return {
     [fieldName]: {
@@ -82,7 +82,7 @@ export function processField(fieldName, value, required, type) {
       validation,
       required,
       help,
-    }
+    },
   }
 }
 
@@ -96,12 +96,13 @@ export function processField(fieldName, value, required, type) {
  */
 export function initiateFormFields(fields = [], required = []) {
   return fields.reduce((acc, field) => (
-    {...acc, [field]: {
-      value: null,
-      validation: null,
-      required: required.includes(field),
-      help: null,
-    }}
+    { ...acc,
+      [field]: {
+        value: null,
+        validation: null,
+        required: required.includes(field),
+        help: null,
+      } }
   ), {})
 }
 

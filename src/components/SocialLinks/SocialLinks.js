@@ -29,15 +29,15 @@ class SocialLinks extends React.Component {
         icon: 'social-linkedin',
       },
     ]
-    return(
-      <nav className="social-links">
+    return (
+      <nav className='social-links'>
         {links.map((item, index) =>
           <a
             href={item.url}
-            class="social-links__link"
-            target="_blank"
+            className='social-links__link'
+            target='_blank'
             key={index}
-            rel="noopener noreferrer"
+            rel='noopener noreferrer'
           ><Icon type={item.icon} /></a>
         )}
       </nav>

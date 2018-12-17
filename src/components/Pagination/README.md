@@ -9,7 +9,7 @@
 ```js
 <Pagination
   pages={5}
-  callback={item => alert(item)}
+  onClick={item => alert(item)}
   current={3}
 />
 ```
@@ -17,7 +17,7 @@
 ##### Properties
 
 * `pages` - total amount of pages
-* `callback` - operation to perform after click
+* `onClick` - callback to perform after click
 * `current` - current page number
 
 

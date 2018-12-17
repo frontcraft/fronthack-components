@@ -6,9 +6,9 @@ import './style.sass'
 class Donut extends React.Component {
   render() {
     const { percentage, pie } = this.props
-    return(
-      <div className={bemCx('donut', { pie: pie })} style={{animationDelay: `-${percentage}s`}}>
-        <div className="donut__label">{percentage}%</div>
+    return (
+      <div className={bemCx('donut', { pie: pie })} style={{ animationDelay: `-${percentage}s` }}>
+        <div className='donut__label'>{percentage}%</div>
       </div>
     )
   }

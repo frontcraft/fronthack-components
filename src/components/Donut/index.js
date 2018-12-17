@@ -1,1 +1,1 @@
-export { default } from './Donut';
+export { default } from './Donut'

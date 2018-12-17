@@ -1,4 +1,4 @@
-import React, { Component, createContext } from 'react'
+import React, { createContext } from 'react'
 import PropTypes from 'prop-types'
 import {
   initiateFormFields,
@@ -7,14 +7,14 @@ import {
 } from './helpers'
 import './style.sass'
 
-const FieldsContext = createContext({});
-const SetValueContext = createContext(() => {});
+const FieldsContext = createContext({})
+const SetValueContext = createContext(() => {})
 
 export const FormConsumer = ({ children }) => (
   <FieldsContext.Consumer>
     {fieldsData =>
       <SetValueContext.Consumer>
-        {setValue => children({fieldsData, setValue})}
+        {setValue => children({ fieldsData, setValue })}
       </SetValueContext.Consumer>
     }
   </FieldsContext.Consumer>
@@ -33,7 +33,7 @@ class Form extends React.Component {
     super(props)
     const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
     this.state = {
-      fieldsData: initiateFormFields(this.props.fields, requiredFields)
+      fieldsData: initiateFormFields(this.props.fields, requiredFields),
     }
   }
   setValue(fieldName, value, required, type = null) {
@@ -41,27 +41,27 @@ class Form extends React.Component {
     if (!fieldName) {
       const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
       this.setState({
-        fieldsData: initiateFormFields(this.props.fields, requiredFields)
+        fieldsData: initiateFormFields(this.props.fields, requiredFields),
       })
     } else {
       this.setState(prevState => ({
         fieldsData: {
           ...prevState.fieldsData,
           ...processField(fieldName, value, required, type),
-        }
+        },
       }))
     }
   }
   componentDidUpdate(prevProps) {
-    if ((prevProps.required && this.props.required)
-    && (prevProps.required.toString() !== this.props.required.toString())
-    && !this.props.allRequired) {
-      this.setState({ fieldsData: updateFieldsRequirements(this.state.fieldsData, this.props.required)} )
+    if ((prevProps.required && this.props.required) &&
+    (prevProps.required.toString() !== this.props.required.toString()) &&
+    !this.props.allRequired) {
+      this.setState({ fieldsData: updateFieldsRequirements(this.state.fieldsData, this.props.required) })
     }
   }
   render() {
-    return(
-      <div className="form">
+    return (
+      <div className='form'>
         <FieldsContext.Provider value={this.state.fieldsData}>
           <SetValueContext.Provider value={this.setValue.bind(this)}>
             {this.props.children}
@@ -79,4 +79,4 @@ Form.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Form;
+export default Form

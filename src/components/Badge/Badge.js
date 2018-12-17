@@ -4,7 +4,7 @@ import './style.sass'
 
 class Badge extends React.Component {
   render() {
-    return <span className="badge">{this.props.number}</span>
+    return <span className='badge'>{this.props.number}</span>
   }
 }
 

@@ -14,7 +14,7 @@ class Button extends React.Component {
       disabled,
       className,
     } = this.props
-    return(
+    return (
       <div
         className={bemCx('btn', {
           [variant]: variant,
@@ -30,7 +30,7 @@ class Button extends React.Component {
 Button.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   onClick: PropTypes.func,
   variant: PropTypes.string,

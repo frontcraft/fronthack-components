@@ -37,18 +37,18 @@ class FormControl extends React.Component {
     !fieldsData[fieldname] && console.error(`Field "${fieldname}" is not defined in props of the parent Form component. Define Form props as on example: <Form fields={['${fieldname}']}>.`)
     // Force label shrink or keep default behavior
     const { value, validation, required } = fieldsData[fieldname]
-    const currentValue = value !== null ? value : initialValue ? initialValue : ''
+    const currentValue = value !== null ? value : initialValue || ''
     const help = fieldsData[fieldname].help ? fieldsData[fieldname].help : initialHelp
 
-    return(
+    return (
       <div
         className={`form__item${validation ? ` has-${validation}` : ''}${className ? ` ${className}` : ''}`}
         disabled={disabled}
       >
-        { label && ['checkbox', 'radio'].includes(type) ?
-          <span className="form__label">{label}</span>
-        : label &&
-          <label className="form__label" htmlFor={fieldname}>{label}</label>
+        { label && ['checkbox', 'radio'].includes(type)
+          ? <span className='form__label'>{label}</span>
+          : label &&
+          <label className='form__label' htmlFor={fieldname}>{label}</label>
         }
         <Input
           fieldname={fieldname}
@@ -59,10 +59,10 @@ class FormControl extends React.Component {
           options={options}
         />
         { addon &&
-          <div className="form__addon">{addon}</div>
+          <div className='form__addon'>{addon}</div>
         }
         { help &&
-          <span className="form__help">{help}</span>
+          <span className='form__help'>{help}</span>
         }
       </div>
     )

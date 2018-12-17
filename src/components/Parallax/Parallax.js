@@ -3,10 +3,9 @@ import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-
 class Parallax extends React.Component {
   render() {
-    return(
+    return (
       <div className={bemCx('parallax', { debug: this.props.debug })}>
         {this.props.children}
       </div>
@@ -20,5 +19,5 @@ export default Parallax
 export const ParallaxGroup = ({ children, backLayer, className }) =>
   <div className={bemCx('parallax__group', { 'with-backlayer': backLayer })}>
     <div className={bemCx('parallax__baselayer', {}, className)}>{children}</div>
-    {backLayer && <div className="parallax__backlayer">{backLayer}</div>}
+    {backLayer && <div className='parallax__backlayer'>{backLayer}</div>}
   </div>

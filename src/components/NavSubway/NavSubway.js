@@ -24,15 +24,15 @@ import './style.sass'
  */
 class NavSubway extends React.Component {
   render() {
-    return(
-      <nav className="nav-subway">
-      {this.props.links.map((link, index) =>
-        <div className="nav-subway__item" key={index}>
-          <div className="nav-subway__station"></div>
-          <a href={link.url} className="nav-subway__link">{link.label}</a>
-        </div>
-      )}
-    </nav>
+    return (
+      <nav className='nav-subway'>
+        {this.props.links.map((link, index) =>
+          <div className='nav-subway__item' key={index}>
+            <div className='nav-subway__station' />
+            <a href={link.url} className='nav-subway__link'>{link.label}</a>
+          </div>
+        )}
+      </nav>
     )
   }
 }

@@ -5,26 +5,26 @@ import './style.sass'
 
 class Dropdown extends React.Component {
   state ={
-    isOpen: false
+    isOpen: false,
   }
   render() {
     const { links, children, overlay } = this.props
     const { isOpen } = this.state
-    return(
-      <div className={bemCx('dropdown', [], {'is-open': isOpen})}>
+    return (
+      <div className={bemCx('dropdown', [], { 'is-open': isOpen })}>
         <span
-          className="dropdown__label"
-          onClick={() => this.setState({isOpen: !isOpen})}
+          className='dropdown__label'
+          onClick={() => this.setState({ isOpen: !isOpen })}
         >{children}</span>
-        <div className="dropdown__inner">
-          <nav className="dropdown__nav">
+        <div className='dropdown__inner'>
+          <nav className='dropdown__nav'>
             {links.map((link, index) => (
-              <a href={link.url} className="dropdown__link" key={index}>{link.label}</a>
+              <a href={link.url} className='dropdown__link' key={index}>{link.label}</a>
             ))}
           </nav>
         </div>
         { (overlay && isOpen) &&
-          <div className="dropdown__overlay" onClick={() => this.setState({isOpen: false})}/>
+          <div className='dropdown__overlay' onClick={() => this.setState({ isOpen: false })} />
         }
       </div>
     )

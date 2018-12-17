@@ -6,6 +6,6 @@ export default () =>
     {[
       <div>Content of the first tab</div>,
       <div>Content of the second tab</div>,
-      <div>Content of the third tab</div>
+      <div>Content of the third tab</div>,
     ]}
   </Tabs>

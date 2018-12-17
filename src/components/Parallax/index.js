@@ -1,1 +1,1 @@
-export { default, ParallaxGroup } from './Parallax';
+export { default, ParallaxGroup } from './Parallax'

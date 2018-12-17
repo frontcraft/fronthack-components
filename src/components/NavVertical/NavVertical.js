@@ -27,11 +27,11 @@ import './style.sass'
 // IMPORTANT: I DID NOT IMPORTED THIS COMPONENT FROM BIT, I JUST COPY-PASTED IT
 // FROM MY DRIVE
 class NavVertical extends React.Component {
-  render(){
-    return(
-      <nav className="nav-vertical">
+  render() {
+    return (
+      <nav className='nav-vertical'>
         {this.props.links.map((link, index) => (
-          <a href={link.url} key={index} className="nav-vertical__link">{link.label}</a>
+          <a href={link.url} key={index} className='nav-vertical__link'>{link.label}</a>
         ))}
       </nav>
     )

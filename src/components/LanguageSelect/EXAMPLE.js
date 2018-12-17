@@ -14,5 +14,5 @@ export default () =>
         callback: () => action('Callback. It can be history.push or anything'),
       },
     ]}
-    current="English"
+    current='English'
   />

@@ -31,38 +31,38 @@ class Input extends React.Component {
       case 'month':
       case 'week':
       case 'time':
-        return(
+        return (
           <input
-            className="form__input"
+            className='form__input'
             name={fieldname}
             type={type}
             placeholder={placeholder}
             onChange={e => setValue(fieldname, e.target.value, required, type)}
-            value={value ? value : ''}
+            value={value || ''}
           />
         )
 
-      // case 'wysiwyg':
-      //   return(
-      //     <ReactQuill
-      //       value={value}
-      //       onChange={value => setValue(fieldname, value, required, 'text')}
-      //       modules={{
-      //         toolbar: [
-      //           [{ 'header': [1, 2, false] }],
-      //           ['bold', 'italic', 'underline', 'blockquote'],
-      //           [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-      //           ['link', 'image'],
-      //         ],
-      //       }}
-      //       placeholder="Write your story. You’ve got lots of room, so say what you need to say."
-      //     />
-      //   )
+        // case 'wysiwyg':
+        //   return(
+        //     <ReactQuill
+        //       value={value}
+        //       onChange={value => setValue(fieldname, value, required, 'text')}
+        //       modules={{
+        //         toolbar: [
+        //           [{ 'header': [1, 2, false] }],
+        //           ['bold', 'italic', 'underline', 'blockquote'],
+        //           [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+        //           ['link', 'image'],
+        //         ],
+        //       }}
+        //       placeholder="Write your story. You’ve got lots of room, so say what you need to say."
+        //     />
+        //   )
 
       case 'select':
         return (
           <select
-            className="form__input"
+            className='form__input'
             name={fieldname}
             value={value}
             onChange={e => setValue(fieldname, e.target.value, required)}
@@ -81,9 +81,9 @@ class Input extends React.Component {
           const optionValue = (typeof option === 'string') ? option : option.value
           const checked = (value && value.includes(optionValue))
           return (
-            <label className="form__checkbox" key={index}>
+            <label className='form__checkbox' key={index}>
               <input
-                type="checkbox"
+                type='checkbox'
                 name={fieldname}
                 checked={checked}
                 onChange={() => {
@@ -97,9 +97,9 @@ class Input extends React.Component {
 
       case 'radio':
         return options.map((option, index) => (
-          <label className="form__radio" key={index}>
+          <label className='form__radio' key={index}>
             <input
-              type="radio"
+              type='radio'
               name={fieldname}
               value={option.value}
               checked={option.value === value}

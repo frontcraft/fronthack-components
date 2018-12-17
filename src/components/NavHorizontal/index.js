@@ -1,1 +1,1 @@
-export { default } from './NavHorizontal';
+export { default } from './NavHorizontal'

@@ -5,11 +5,11 @@ import './style.sass'
 
 
 class Alert extends React.Component {
-  render(){
+  render() {
     const { message, type } = this.props
-    return(
+    return (
       <div className={bemCx('alert', type)}>
-        <div className="alert__icon"><Icon type="warning" /></div>
+        <div className='alert__icon'><Icon type='warning' /></div>
         {message}
       </div>
     )

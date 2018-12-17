@@ -10,10 +10,10 @@ class Rating extends React.Component {
     let dots = []
     let i = 1
     while (i <= 3) {
-      dots.push(<div className="rating__dot"></div>)
+      dots.push(<div className='rating__dot' />)
       i++
     }
-    return(
+    return (
       <div className={bemCx('rating', { [value]: value })}>{dots}</div>
     )
   }

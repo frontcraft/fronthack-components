@@ -6,16 +6,15 @@ import './style.sass'
 class Field extends React.Component {
   render() {
     const { label, values, children, spacing, inlineLabel } = this.props
-    return(
-      <div className={bemCx('field', {spacing, 'inline-label': inlineLabel})}>
-        <div className="field__label">{label}:</div>
-        <div className="field__items">
-          {children ?
-            <div className="field__item">{children}</div>
-          :
-            values.map((value, index) => (
-            <div className="field__item" key={index}>{value}</div>
-          ))}
+    return (
+      <div className={bemCx('field', { spacing, 'inline-label': inlineLabel })}>
+        <div className='field__label'>{label}:</div>
+        <div className='field__items'>
+          {children
+            ? <div className='field__item'>{children}</div>
+            : values.map((value, index) => (
+              <div className='field__item' key={index}>{value}</div>
+            ))}
         </div>
       </div>
     )

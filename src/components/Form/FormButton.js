@@ -11,7 +11,7 @@ import { getValues, formIsInvalid } from './helpers'
  */
 const FormButton = ({ callback, size, variant, reset, loading, className, children }) => (
   <FormConsumer>
-    {({fieldsData, setValue}) => {
+    {({ fieldsData, setValue }) => {
       return (
         <Button
           size={size}
@@ -26,10 +26,10 @@ const FormButton = ({ callback, size, variant, reset, loading, className, childr
           {loading &&
             <Fragment>
               <ReactLoading
-                type="spinningBubbles"
+                type='spinningBubbles'
                 width={18}
                 height={18}
-                color="#9e9e9e"
+                color='#9e9e9e'
               />&nbsp;
             </Fragment>
           }

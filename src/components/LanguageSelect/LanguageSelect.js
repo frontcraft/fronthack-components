@@ -6,8 +6,8 @@ import './style.sass'
 class LanguageSelect extends React.Component {
   render() {
     const { languages, current } = this.props
-    return(
-      <div className="language-select">
+    return (
+      <div className='language-select'>
         {languages.map((language, index) =>
           <span
             className={`language-select__link${(current === language.name) ? ' is-active' : ''}`}

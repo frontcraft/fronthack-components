@@ -3,15 +3,15 @@ import './style.sass'
 
 
 class Tags extends React.Component {
-  render(){
+  render() {
     if (this.props.tags) {
       return (
-        <div className="tags">
+        <div className='tags'>
           {this.props.tags.map((tag, index) => (
-            <span key={index} className="tags__tag">{tag}</span>
+            <span key={index} className='tags__tag'>{tag}</span>
           ))}
         </div>
-      );
+      )
     }
     return null
   }

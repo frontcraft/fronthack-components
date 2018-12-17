@@ -1,4 +1,4 @@
 import React from 'react'
 import Icon from '.'
 
-export default () => <Icon type="home" />
+export default () => <Icon type='home' />

@@ -4,21 +4,21 @@ import Parallax, { ParallaxGroup } from '.'
 
 export default () =>
   <Parallax>
-    <ParallaxGroup className="parallax__demo-solid">
-      <div class="parallax_demo-title">Solid base layer</div>
+    <ParallaxGroup className='parallax__demo-solid'>
+      <div className='parallax_demo-title'>Solid base layer</div>
     </ParallaxGroup>
     <ParallaxGroup backLayer={
       <Fragment>
-        <img class="full-width" src="https://placeimg.com/640/480/nature" alt="" />
-        <div class="parallax_demo-title">Back layer</div>
+        <img className='full-width' src='https://placeimg.com/640/480/nature' alt='' />
+        <div className='parallax_demo-title'>Back layer</div>
       </Fragment>
     }>
-      <div class="parallax_demo-title">Transparent base layer</div>
+      <div className='parallax_demo-title'>Transparent base layer</div>
     </ParallaxGroup>
-    <ParallaxGroup className="parallax__demo-solid">
-      <div class="parallax_demo-title">Solid base layer</div>
+    <ParallaxGroup className='parallax__demo-solid'>
+      <div className='parallax_demo-title'>Solid base layer</div>
     </ParallaxGroup>
-    <ParallaxGroup className="parallax__demo-solid">
-      <div class="parallax_demo-title">Solid base layer</div>
+    <ParallaxGroup className='parallax__demo-solid'>
+      <div className='parallax_demo-title'>Solid base layer</div>
     </ParallaxGroup>
   </Parallax>

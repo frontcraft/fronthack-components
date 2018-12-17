@@ -1,1 +1,1 @@
-export { default } from './OwlCarousel';
+export { default } from './OwlCarousel'

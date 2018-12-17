@@ -19,30 +19,30 @@ import './style.sass'
  */
 class Pagination extends React.Component {
   render() {
-    const { pages, callback, current } = this.props
+    const { pages, onClick, current } = this.props
     let items = []
     let i = 1
     while (i < pages) {
       items.push(i)
       i++
     }
-    return(
-      <div className="pagination">
+    return (
+      <div className='pagination'>
         <div
-          className="pagination__item"
-          onClick={() => callback(current - 1)}
-        ><Icon type="arrow-left" /></div>
+          className='pagination__item'
+          onClick={() => onClick(current - 1)}
+        ><Icon type='arrow-left' /></div>
         {items.map(page =>
           <div
-            onClick={() => callback(page)}
+            onClick={() => onClick(page)}
             key={page}
             className={bemCx('pagination__item', { active: page === current })}
           >{page}</div>
         )}
         <div
-          className="pagination__item"
-          onClick={() => callback(current + 1)}
-        ><Icon type="arrow-right" /></div>
+          className='pagination__item'
+          onClick={() => onClick(current + 1)}
+        ><Icon type='arrow-right' /></div>
       </div>
     )
   }

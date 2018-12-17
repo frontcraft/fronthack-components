@@ -10,8 +10,8 @@ class Tabs extends React.Component {
   }
   render() {
     const { active } = this.state
-    return(
-      <div className="tabs" data-active-tab={active}>
+    return (
+      <div className='tabs' data-active-tab={active}>
         {this.props.labels.map((label, index) =>
           <div
             className={bemCx('tabs__label', {}, { 'is-active': index === active })}
@@ -19,7 +19,7 @@ class Tabs extends React.Component {
             key={index}
           >{label}</div>
         )}
-        <div className="tabs__content is-open">{this.props.children[active]}</div>
+        <div className='tabs__content is-open'>{this.props.children[active]}</div>
       </div>
     )
   }
