@@ -61,6 +61,7 @@
 * `fields` - array of field names of all fields that will be avaliable in form
 * `required` - array of field names that should be required
 * `allRequired` - in case where all fields should be required, use this prop instead of defining them in `required` array
+* `callbackOnChange` - perform callback with field values on every form change. Alternative to submit buttons
 
 ##### FormControl props
 

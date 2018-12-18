@@ -1,9 +1,11 @@
-import React, { createContext } from 'react'
+import React, { Component, createContext } from 'react'
 import PropTypes from 'prop-types'
+import { debounce } from 'throttle-debounce'
 import {
   initiateFormFields,
   processField,
   updateFieldsRequirements,
+  getValues,
 } from './helpers'
 import './style.sass'
 
@@ -28,30 +30,40 @@ FormConsumer.propTypes = {
  * This form component's Creates new context with defined fields that are
  * avaliable for all field items inside.
  */
-class Form extends React.Component {
+class Form extends Component {
   constructor(props) {
     super(props)
-    const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
+    const requiredFields = props.allRequired ? props.fields : props.required
+    this.callbackOnChangeThrottled = debounce(500, props.callbackOnChange)
     this.state = {
-      fieldsData: initiateFormFields(this.props.fields, requiredFields),
+      fieldsData: initiateFormFields(props.fields, requiredFields),
     }
   }
+
   setValue(fieldName, value, required, type = null) {
-    // If no fieldName is provided, reset whole form
+    const { fields, allRequired, callbackOnChange } = this.props
+
     if (!fieldName) {
-      const requiredFields = this.props.allRequired ? this.props.fields : this.props.required
+      // If no fieldName is provided, reset whole form
+      const requiredFields = allRequired ? fields : required
       this.setState({
-        fieldsData: initiateFormFields(this.props.fields, requiredFields),
+        fieldsData: initiateFormFields(fields, requiredFields),
       })
     } else {
-      this.setState(prevState => ({
-        fieldsData: {
+      this.setState(prevState => {
+        const fieldsData = {
           ...prevState.fieldsData,
           ...processField(fieldName, value, required, type),
-        },
-      }))
+        }
+        if (callbackOnChange) {
+          // If callbackOnChange prop is present, run it on every form change.
+          this.callbackOnChangeThrottled(getValues(fieldsData))
+        }
+        return { fieldsData }
+      })
     }
   }
+
   componentDidUpdate(prevProps) {
     if ((prevProps.required && this.props.required) &&
     (prevProps.required.toString() !== this.props.required.toString()) &&
@@ -59,9 +71,11 @@ class Form extends React.Component {
       this.setState({ fieldsData: updateFieldsRequirements(this.state.fieldsData, this.props.required) })
     }
   }
+
   render() {
+    const { className } = this.props
     return (
-      <div className='form'>
+      <div className={`form${className ? ` ${className}` : ''}`}>
         <FieldsContext.Provider value={this.state.fieldsData}>
           <SetValueContext.Provider value={this.setValue.bind(this)}>
             {this.props.children}
@@ -77,6 +91,7 @@ Form.propTypes = {
   required: PropTypes.array,
   allRequired: PropTypes.bool,
   children: PropTypes.node.isRequired,
+  callbackOnChange: PropTypes.func,
 }
 
 export default Form

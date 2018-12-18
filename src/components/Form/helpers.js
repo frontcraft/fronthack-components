@@ -3,10 +3,10 @@ import validator from 'validator'
 
 /**
  * Process the data from given field and prepare it for form mutation.
- * @property {object} fieldsData Object that contains data of all fields
- * @property {string} fieldName Unique identifier of the field
- * @property {string|number|array|object} value Value received from the field
- * @property {string} type Type of the field that defines a method of validation
+ * @param {object} fieldsData Object that contains data of all fields
+ * @param {string} fieldName Unique identifier of the field
+ * @param {string|number|array|object} value Value received from the field
+ * @param {string} type Type of the field that defines a method of validation
  */
 export function processField(fieldName, value, required, type) {
   // If the value is an array, remove its empty values for safety.
@@ -21,14 +21,24 @@ export function processField(fieldName, value, required, type) {
     // If the field is required and its value is empty, set an error. Otherwise
     // continue the validation.
     validation = 'error'
-    help = 'This field is required.'
+    help = 'Dies ist ein Pflichtfeld'
   } else if (processedValue && processedValue.length > 0) {
     switch (type) {
       case 'text':
         // Text should be longer than 3 chars.
         if (processedValue.length < 5) {
           validation = 'error'
-          help = 'Enter at least 5 characters.'
+          help = 'Geben Sie mindestens 5 Zeichen ein.'
+        }
+        break
+      case 'name':
+        // No special rule for name input.
+        break
+      case 'password':
+        // Password should be at least 6 characters long.
+        if (processedValue.length < 6) {
+          validation = 'error'
+          help = 'Das Kennwort sollte mindestens 6 Zeichen lang sein'
         }
         break
       case 'email':
@@ -47,6 +57,20 @@ export function processField(fieldName, value, required, type) {
         if (!validator.isMobilePhone(validator.trim(value, '+'))) {
           validation = 'error'
           help = 'This is not a valid phone number.'
+        }
+        break
+      case 'textarea':
+        // Text should be longer than 15 chars.
+        if (processedValue.length < 15) {
+          validation = 'error'
+          help = 'Geben Sie mindestens 15 Zeichen ein.'
+        }
+        break
+      case 'wysiwyg':
+        // Text should be longer than 15 chars.
+        if (processedValue.length < 15) {
+          validation = 'error'
+          help = 'Geben Sie mindestens 15 Zeichen ein.'
         }
         break
       case 'json':
@@ -89,10 +113,8 @@ export function processField(fieldName, value, required, type) {
 
 /**
  * Returns a form object with initial null values from provided field names.
- * @property {array} fields List of all field names
- * @property {array} required List of names of all required fields
- * @example
- *   initiateFormFields('username', 'email')
+ * @param {array} fields List of all field names
+ * @param {array} required List of names of all required fields
  */
 export function initiateFormFields(fields = [], required = []) {
   return fields.reduce((acc, field) => (
@@ -109,18 +131,20 @@ export function initiateFormFields(fields = [], required = []) {
 
 /**
  * Resets valdiation states and values of all fields in a form.
- * @property {object} fieldsData Object that contains data of all fields
- * @property {array} required List of names of all required fields
+ * @param {object} fieldsData Object that contains data of all fields
+ * @param {array} required List of names of all required fields
  */
 export function updateFieldsRequirements(fieldsData, required) {
   let updatedFieldsData = {}
   Object.keys(fieldsData).forEach(key => {
-    const { value, validation, help } = fieldsData[key]
+    const { value, help } = fieldsData[key]
+    const isRequired = required.includes(key)
     updatedFieldsData[key] = {
       value,
-      validation,
+      // If the field is not on new list, validation must be cleaned up.
+      validation: (fieldsData[key].validation === 'error' && !isRequired) ? null : fieldsData[key].validation,
       help,
-      required: required.includes(key),
+      required: isRequired,
     }
   })
   return updatedFieldsData
@@ -146,7 +170,7 @@ export function checkboxHandler(checked, value, previousValue) {
 
 /**
  * Checks whether the whole form is valid or not.
- * @property {object} fieldsData Object that contains data of all fields
+ * @param {object} fieldsData Object that contains data of all fields
  * @param {array} fieldKeys fields to check against. Otherwise it checks whole form.
  */
 export function formIsInvalid(fieldsData, fieldKeys = []) {
@@ -169,7 +193,7 @@ export function formIsInvalid(fieldsData, fieldKeys = []) {
 
 /**
  * Get values from all fields and organize them into API friendly format.
- * @property {object} fieldsData Object that contains data of all fields
+ * @param {object} fieldsData Object that contains data of all fields
  */
 export function getValues(fieldsData) {
   let values = {}
@@ -177,4 +201,17 @@ export function getValues(fieldsData) {
     values[key] = fieldsData[key].value
   })
   return values
+}
+
+/**
+ * Converts the image url to image data object that is suitable for prepopulating
+ * the image upload field with existing data.
+ * @param {string} imageUrl Url of image
+ */
+export function imageUrltoImageData(imageUrl) {
+  return {
+    name: imageUrl.split('/').pop(),
+    data: imageUrl,
+    type: 'image',
+  }
 }

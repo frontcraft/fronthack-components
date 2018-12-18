@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import ReactLoading from 'react-loading'
+import { NotificationManager } from 'react-notifications'
 import Button from '../Button'
 import { FormConsumer } from './Form'
 import { getValues, formIsInvalid } from './helpers'
@@ -17,10 +18,18 @@ const FormButton = ({ callback, size, variant, reset, loading, className, childr
           size={size}
           variant={variant}
           onClick={() => {
-            callback && callback(getValues(fieldsData))
-            reset && setValue()
+            if (formIsInvalid(fieldsData)) {
+              // Trigger valdiation check of all fields.
+              Object.keys(fieldsData).forEach(key => {
+                setValue(key, fieldsData[key].value, fieldsData[key].required, fieldsData[key].type)
+              })
+              NotificationManager.error('Füllen Sie alle erforderlichen Felder aus')
+            } else {
+              callback && callback(getValues(fieldsData))
+              reset && setValue()
+            }
           }}
-          disabled={formIsInvalid(fieldsData) || loading}
+          disabled={loading}
           className={className}
         >
           {loading &&
@@ -29,7 +38,7 @@ const FormButton = ({ callback, size, variant, reset, loading, className, childr
                 type='spinningBubbles'
                 width={18}
                 height={18}
-                color='#9e9e9e'
+                color='#ffffff'
               />&nbsp;
             </Fragment>
           }

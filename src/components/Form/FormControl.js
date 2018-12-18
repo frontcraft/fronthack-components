@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import bemCx from 'bem-modifiers'
 import { FormConsumer } from './Form'
-import Input from './Input'
+import FormInput from './FormInput'
 
 /**
  * A single form input
  */
-class FormControl extends React.Component {
-  // If default (initial) field value has changed, apply it.
+class FormControl extends Component {
   componentDidUpdate(prevProps) {
+    // If default field value has changed, change the current value.
     if (this.props.initialValue && this.props.initialValue !== prevProps.initialValue) {
       const { fieldname, initialValue, fieldsData, type, setValue } = this.props
       setValue(fieldname, initialValue, fieldsData[fieldname].required, type)
     }
   }
   componentDidMount() {
+    // Appply default field value.
     if (this.props.initialValue) {
       const { fieldname, initialValue, fieldsData, type, setValue } = this.props
       setValue(fieldname, initialValue, fieldsData[fieldname].required, type)
@@ -24,44 +26,53 @@ class FormControl extends React.Component {
     const {
       fieldname,
       label,
-      type,
-      initialValue,
-      initialHelp,
-      options,
-      addon,
-      disabled,
+      placeholder,
       className,
+      addon,
+      initialHelp,
+      initialValue,
       fieldsData,
-      setValue,
+      disabled,
+      inlineLabel,
+      tiny,
+      large,
+      ...otherProps
     } = this.props
+
     !fieldsData[fieldname] && console.error(`Field "${fieldname}" is not defined in props of the parent Form component. Define Form props as on example: <Form fields={['${fieldname}']}>.`)
-    // Force label shrink or keep default behavior
+
     const { value, validation, required } = fieldsData[fieldname]
     const currentValue = value !== null ? value : initialValue || ''
     const help = fieldsData[fieldname].help ? fieldsData[fieldname].help : initialHelp
 
     return (
       <div
-        className={`form__item${validation ? ` has-${validation}` : ''}${className ? ` ${className}` : ''}`}
+        className={bemCx('form__item', {
+          'inline-label': inlineLabel,
+          'tiny': tiny,
+          'lg': large,
+        }, {
+          [`has-${validation}`]: validation,
+          className: className,
+        })}
         disabled={disabled}
       >
-        { label && ['checkbox', 'radio'].includes(type)
+        { label && ['checkbox', 'radio'].includes(this.props.type)
           ? <span className='form__label'>{label}</span>
           : label &&
           <label className='form__label' htmlFor={fieldname}>{label}</label>
         }
-        <Input
+        <FormInput
           fieldname={fieldname}
-          type={type}
           value={currentValue}
           required={required}
-          setValue={setValue}
-          options={options}
+          placeholder={placeholder || undefined}
+          {...otherProps}
         />
-        { addon &&
+        {addon &&
           <div className='form__addon'>{addon}</div>
         }
-        { help &&
+        {help &&
           <span className='form__help'>{help}</span>
         }
       </div>
@@ -84,7 +95,12 @@ FormControl.propTypes = {
   initialValue: PropTypes.any,
   initialHelp: PropTypes.string,
   options: PropTypes.array,
+  min: PropTypes.number,
+  max: PropTypes.number,
+  multiple: PropTypes.bool,
   disabled: PropTypes.bool,
+  inlineLabel: PropTypes.bool,
+  tiny: PropTypes.bool,
 }
 
 const withFormConsumer = (Component) => {
