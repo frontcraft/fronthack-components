@@ -197,7 +197,7 @@ class FormInput extends Component {
               value={option.value}
               id={`${fieldname}${index}`}
               checked={option.value === value}
-              className={checked ? 'is-checked' : ''} // Better IE support
+              className={option.value === value ? 'is-checked' : ''} // Better IE support
               onChange={e => setValue(fieldname, e.target.value, required)}
             /> {option.label}
           </label>

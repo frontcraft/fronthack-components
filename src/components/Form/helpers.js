@@ -21,14 +21,14 @@ export function processField(fieldName, value, required, type) {
     // If the field is required and its value is empty, set an error. Otherwise
     // continue the validation.
     validation = 'error'
-    help = 'Dies ist ein Pflichtfeld'
+    help = 'This field is required.'
   } else if (processedValue && processedValue.length > 0) {
     switch (type) {
       case 'text':
         // Text should be longer than 3 chars.
         if (processedValue.length < 5) {
           validation = 'error'
-          help = 'Geben Sie mindestens 5 Zeichen ein.'
+          help = 'This field should have at least 5 characters.'
         }
         break
       case 'name':
@@ -38,7 +38,7 @@ export function processField(fieldName, value, required, type) {
         // Password should be at least 6 characters long.
         if (processedValue.length < 6) {
           validation = 'error'
-          help = 'Das Kennwort sollte mindestens 6 Zeichen lang sein'
+          help = 'Password should be at least 6 characters long.'
         }
         break
       case 'email':
@@ -63,14 +63,14 @@ export function processField(fieldName, value, required, type) {
         // Text should be longer than 15 chars.
         if (processedValue.length < 15) {
           validation = 'error'
-          help = 'Geben Sie mindestens 15 Zeichen ein.'
+          help = 'Text should be longer than 15 characters.'
         }
         break
       case 'wysiwyg':
         // Text should be longer than 15 chars.
         if (processedValue.length < 15) {
           validation = 'error'
-          help = 'Geben Sie mindestens 15 Zeichen ein.'
+          help = 'Text should be longer than 15 characters.'
         }
         break
       case 'json':
@@ -78,7 +78,7 @@ export function processField(fieldName, value, required, type) {
           JSON.parse(value)
         } catch (e) {
           validation = 'error'
-          help = 'This is not a valid JSON.'
+          help = 'Enter a valid JSON.'
         }
         break
       case 'number':
