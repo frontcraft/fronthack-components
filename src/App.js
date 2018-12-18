@@ -33,7 +33,7 @@ class App extends React.Component {
           {[
             <div>Content of the first tab</div>,
             <div>Content of the second tab</div>,
-            <div>Content of the third tab</div>
+            <div>Content of the third tab</div>,
           ]}
         </Tabs>
         <Dropdown overlay links={[
@@ -89,13 +89,13 @@ class App extends React.Component {
         <Accordion items={[
           {
             title: 'First accordion item',
-            content: 'Content for the first accordion'
+            content: 'Content for the first accordion',
           },
           {
             title: 'Second accordion item',
-            content: 'Content for the first accordion'
+            content: 'Content for the first accordion',
           },
-        ]}/>
+        ]} />
         <Modal
           size='lg'
           title='Modal title'
@@ -126,7 +126,7 @@ class App extends React.Component {
           ]}
           current='English'
         />
-        <Alert message='Example message' type='success'/>
+        <Alert message='Example message' type='success' />
         <Stepper
           steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
           current={2}
@@ -146,13 +146,13 @@ class App extends React.Component {
             url: 'contact',
           },
         ]} />
-        <div>Test<Badge number={7}/></div>
-        <div><Icon type='bell' /><Badge number={7}/></div>
+        <div>Test<Badge number={7} /></div>
+        <div><Icon type='bell' /><Badge number={7} /></div>
         <Field label='Field label' spacing values={[
           'Multiple value',
           'Another value',
           'Third value',
-        ]}/>
+        ]} />
         <Field label='Field label' inlineLabel>Single value</Field>
         <Form fields={['username', 'framework', 'color', 'car']}>
           <FormControl
@@ -224,8 +224,8 @@ class App extends React.Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

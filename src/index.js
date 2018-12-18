@@ -4,7 +4,7 @@ import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+registerServiceWorker();
 
 // This is an entrypoint for the Fronthack development scripts. If you remove
 // it, you will loose the ability to use a following tools: design overlay and
