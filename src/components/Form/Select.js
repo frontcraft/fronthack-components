@@ -31,7 +31,7 @@ Select.propTypes = {
   setValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.objectOf({ label: PropTypes.string, value: PropTypes.string }),
+    PropTypes.objectOf(PropTypes.string),
   ])),
 }
 

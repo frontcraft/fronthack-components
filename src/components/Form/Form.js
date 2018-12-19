@@ -9,6 +9,9 @@ import {
 } from './helpers'
 import './style.sass'
 
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/no-did-update-set-state */
+
 const FieldsContext = createContext({})
 const SetValueContext = createContext(() => {})
 

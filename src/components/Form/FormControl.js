@@ -73,7 +73,7 @@ FormControl.propTypes = {
   addon: PropTypes.string,
   help: PropTypes.string,
   disabled: PropTypes.bool,
-  validation: PropTypes.string,
+  validation: PropTypes.oneOf(['success', 'error']),
   inlineLabel: PropTypes.bool,
   tiny: PropTypes.bool,
   large: PropTypes.bool,
