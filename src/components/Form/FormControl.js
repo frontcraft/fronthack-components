@@ -65,11 +65,6 @@ class FormControl extends React.Component {
   }
 }
 
-
-FormControl.defaultProps = {
-  type: 'text',
-}
-
 FormControl.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
@@ -87,6 +82,7 @@ FormControl.propTypes = {
   setValue: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 }
+
 
 const withFormControl = (Component) => {
   return ({

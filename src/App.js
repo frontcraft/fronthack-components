@@ -23,7 +23,14 @@ import Button from './components/Button'
 // import Rating from './components/Rating'
 // import SocialLinks from './components/SocialLinks'
 // import Tabs from './components/Tabs'
-import { Form, FormInput } from './components/Form'
+import {
+  Form,
+  FormInput,
+  Input,
+  TextArea,
+  Wysiwyg,
+  Select,
+} from './components/Form'
 
 class App extends React.Component {
   state = {
@@ -35,13 +42,15 @@ class App extends React.Component {
         <Form
           fields={[
             'username',
+            'content',
+            'wysiwyg',
             'framework',
             'color',
             'car',
           ]}
           required={['username']}
         >
-          <FormInput
+          <Input
             name='username'
             label='User name'
             type='text'
@@ -49,10 +58,19 @@ class App extends React.Component {
             initialValue='Michal'
             initialHelp='Required field'
           />
-          <FormInput
+          <TextArea
+            name='content'
+            label='Content'
+            placeholder='Enter content'
+          />
+          <Wysiwyg
+            name='wysiwyg'
+            label='Content'
+            placeholder='Enter content'
+          />
+          <Select
             name='framework'
             label='Select a Framework'
-            type='select'
             options={[
               { label: 'React', value: 'react' },
               { label: 'Vue', value: 'vue' },

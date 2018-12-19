@@ -4,7 +4,6 @@ import Icon from '../Icon'
 import Button from '../Button'
 import withFormControl from './FormControl'
 import { checkboxHandler } from './helpers'
-import AsyncComponent from '../../containers/AsyncComponent'
 
 
 class FormInput extends Component {
@@ -28,86 +27,6 @@ class FormInput extends Component {
     } = this.props
 
     switch (type) {
-      case 'text':
-      case 'name': // Abstract type for custom validation rule, see processField()
-      case 'email':
-      case 'password':
-      case 'url':
-      case 'tel':
-      case 'number':
-      case 'search':
-      case 'file':
-      case 'date':
-      case 'datetime-local':
-      case 'month':
-      case 'week':
-      case 'time':
-        return (
-          <input
-            className='form__input'
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            onChange={e => setValue(name, e.target.value, required, type)}
-            value={value || ''}
-          />
-        )
-
-      case 'textarea':
-        return (
-          <textarea
-            className='form__input'
-            name={name}
-            type='textarea'
-            rows='5'
-            placeholder={placeholder}
-            onChange={e => setValue(name, e.target.value, required, type)}
-            value={value || ''}
-          />
-        )
-
-      case 'wysiwyg':
-        return (
-          <AsyncComponent
-            componentProvider={() =>
-              import('react-quill').then(module => module.default)
-            }
-            componentProps={{
-              value: value,
-              onChange: value => setValue(name, value, required, type),
-              modules: {
-                clipboard: {
-                  matchVisual: false,
-                },
-                toolbar: [
-                  ['bold', 'italic', 'underline', 'blockquote'],
-                  [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                  ['link'],
-                ],
-              },
-              placeholder: placeholder,
-            }}
-          />
-        )
-
-      case 'select':
-        return (
-          <select
-            className='form__input'
-            name={name}
-            value={value}
-            onChange={e => setValue(name, e.target.value, required)}
-          >
-            {(!value || !required) && <option value='' disabled={required}>{required ? 'All' : 'Select'}</option>}
-            {options.map((item, index) =>
-              <option
-                key={index}
-                value={(typeof item === 'string') ? item : item.value}
-              >{(typeof item === 'string') ? item : item.label}</option>
-            )}
-          </select>
-        )
-
       case 'multiselect':
         return (
           <Fragment>
