@@ -1,50 +1,41 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import { FormConsumer } from './Form'
-import FormInput from './FormInput'
 
-/**
- * A single form input
- */
-class FormControl extends Component {
+
+class FormControl extends React.Component {
   componentDidUpdate(prevProps) {
     // If default field value has changed, change the current value.
     if (this.props.initialValue && this.props.initialValue !== prevProps.initialValue) {
-      const { fieldname, initialValue, fieldsData, type, setValue } = this.props
-      setValue(fieldname, initialValue, fieldsData[fieldname].required, type)
+      const { name, initialValue, required, type, setValue } = this.props
+      setValue(name, initialValue, required, type)
     }
   }
+
   componentDidMount() {
     // Appply default field value.
     if (this.props.initialValue) {
-      const { fieldname, initialValue, fieldsData, type, setValue } = this.props
-      setValue(fieldname, initialValue, fieldsData[fieldname].required, type)
+      const { name, initialValue, required, type, setValue } = this.props
+      setValue(name, initialValue, required, type)
     }
   }
+
   render() {
     const {
-      fieldname,
+      name,
       label,
-      placeholder,
+      type,
       className,
       addon,
-      initialHelp,
-      initialValue,
-      fieldsData,
+      help,
       disabled,
+      validation,
       inlineLabel,
       tiny,
       large,
-      ...otherProps
+      children,
     } = this.props
-
-    !fieldsData[fieldname] && console.error(`Field "${fieldname}" is not defined in props of the parent Form component. Define Form props as on example: <Form fields={['${fieldname}']}>.`)
-
-    const { value, validation, required } = fieldsData[fieldname]
-    const currentValue = value !== null ? value : initialValue || ''
-    const help = fieldsData[fieldname].help ? fieldsData[fieldname].help : initialHelp
-
     return (
       <div
         className={bemCx('form__item', {
@@ -57,22 +48,16 @@ class FormControl extends Component {
         })}
         disabled={disabled}
       >
-        { label && ['checkbox', 'radio'].includes(this.props.type)
+        { label && ['checkbox', 'radio'].includes(type)
           ? <span className='form__label'>{label}</span>
           : label &&
-          <label className='form__label' htmlFor={fieldname}>{label}</label>
+          <label className='form__label' htmlFor={name}>{label}</label>
         }
-        <FormInput
-          fieldname={fieldname}
-          value={currentValue}
-          required={required}
-          placeholder={placeholder || undefined}
-          {...otherProps}
-        />
-        {addon &&
+        {children}
+        { addon &&
           <div className='form__addon'>{addon}</div>
         }
-        {help &&
+        { help &&
           <span className='form__help'>{help}</span>
         }
       </div>
@@ -80,35 +65,77 @@ class FormControl extends Component {
   }
 }
 
+
 FormControl.defaultProps = {
   type: 'text',
-  placeholder: false,
-  bottomMargin: false,
-  fullWidth: false,
-  disabled: false,
 }
 
 FormControl.propTypes = {
-  fieldname: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   label: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  initialValue: PropTypes.any,
-  initialHelp: PropTypes.string,
-  options: PropTypes.array,
-  min: PropTypes.number,
-  max: PropTypes.number,
-  multiple: PropTypes.bool,
+  type: PropTypes.string,
+  className: PropTypes.string,
+  addon: PropTypes.string,
+  help: PropTypes.string,
   disabled: PropTypes.bool,
+  validation: PropTypes.string,
   inlineLabel: PropTypes.bool,
   tiny: PropTypes.bool,
+  large: PropTypes.bool,
+  initialValue: PropTypes.any,
+  required: PropTypes.bool,
+  setValue: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
-const withFormConsumer = (Component) => {
-  return (props) => (
+const withFormControl = (Component) => {
+  return ({
+    type,
+    label,
+    addon,
+    className,
+    initialValue,
+    initialHelp,
+    name,
+    tiny,
+    large,
+    ...otherProps
+  }) =>
     <FormConsumer>
-      {context => <Component {...context} {...props} />}
+      {({ fieldsData, setValue }) => {
+        if (!fieldsData[name]) {
+          return null
+        }
+        const { value, validation, required, help } = fieldsData[name]
+        const commonProps = {
+          type,
+          required,
+          setValue,
+        }
+        const formControlProps = {
+          name,
+          validation,
+          label,
+          className,
+          addon,
+          help: help || initialHelp,
+          tiny,
+          large,
+          ...commonProps,
+        }
+        const inputProps = {
+          name,
+          value: value !== null ? value : initialValue || '',
+          ...commonProps,
+          ...otherProps,
+        }
+        return (
+          <FormControl {...formControlProps}>
+            <Component {...inputProps} />
+          </FormControl>
+        )
+      }}
     </FormConsumer>
-  )
 }
 
-export default withFormConsumer(FormControl)
+export default withFormControl

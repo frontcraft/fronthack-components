@@ -10,7 +10,7 @@ class Rating extends React.Component {
     let dots = []
     let i = 1
     while (i <= 3) {
-      dots.push(<div className='rating__dot' />)
+      dots.push(<div className='rating__dot' key={i} />)
       i++
     }
     return (

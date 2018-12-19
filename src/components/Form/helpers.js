@@ -4,11 +4,11 @@ import validator from 'validator'
 /**
  * Process the data from given field and prepare it for form mutation.
  * @param {object} fieldsData Object that contains data of all fields
- * @param {string} fieldName Unique identifier of the field
+ * @param {string} name Unique identifier of the field
  * @param {string|number|array|object} value Value received from the field
  * @param {string} type Type of the field that defines a method of validation
  */
-export function processField(fieldName, value, required, type) {
+export function processField(name, value, required, type) {
   // If the value is an array, remove its empty values for safety.
   const processedValue = Array.isArray(value)
     ? value.filter(item => item.length)
@@ -101,7 +101,7 @@ export function processField(fieldName, value, required, type) {
     validation = 'success'
   }
   return {
-    [fieldName]: {
+    [name]: {
       value: processedValue,
       validation,
       required,
@@ -141,7 +141,7 @@ export function updateFieldsRequirements(fieldsData, required) {
     const isRequired = required.includes(key)
     updatedFieldsData[key] = {
       value,
-      // If the field is not on new list, validation must be cleaned up.
+      // If the field is not on required anymore, validation must be cleaned up.
       validation: (fieldsData[key].validation === 'error' && !isRequired) ? null : fieldsData[key].validation,
       help,
       required: isRequired,

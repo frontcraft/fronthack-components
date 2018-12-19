@@ -40,11 +40,11 @@ class Form extends Component {
     }
   }
 
-  setValue(fieldName, value, required, type = null) {
+  setValue(name, value, required, type = null) {
     const { fields, allRequired, callbackOnChange } = this.props
 
-    if (!fieldName) {
-      // If no fieldName is provided, reset whole form
+    if (!name) {
+      // If no field name is provided, reset whole form
       const requiredFields = allRequired ? fields : required
       this.setState({
         fieldsData: initiateFormFields(fields, requiredFields),
@@ -53,7 +53,7 @@ class Form extends Component {
       this.setState(prevState => {
         const fieldsData = {
           ...prevState.fieldsData,
-          ...processField(fieldName, value, required, type),
+          ...processField(name, value, required, type),
         }
         if (callbackOnChange) {
           // If callbackOnChange prop is present, run it on every form change.

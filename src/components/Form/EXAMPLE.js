@@ -1,13 +1,13 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import { Form, FormControl, FormButton } from '.'
+import { Form, FormInput, FormButton } from '.'
 
 export default () =>
   <Form
     fields={['username', 'framework', 'car', 'color']}
     required={['username', 'framework']}
   >
-    <FormControl
+    <FormInput
       fieldname='username'
       label='User name'
       type='text'
@@ -15,7 +15,7 @@ export default () =>
       initialHelp='Your desired name'
       // initialValue="Initial value"
     />
-    <FormControl
+    <FormInput
       fieldname='framework'
       label='Select a Framework'
       type='select'
@@ -26,7 +26,7 @@ export default () =>
       ]}
       initialHelp='Select from the list'
     />
-    <FormControl
+    <FormInput
       fieldname='car'
       label='Select cars'
       type='checkbox'
@@ -37,7 +37,7 @@ export default () =>
       ]}
       initialHelp='You can pick a few'
     />
-    <FormControl
+    <FormInput
       fieldname='color'
       label='Pick a color'
       type='radio'

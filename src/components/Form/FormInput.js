@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import Button from '../Button'
+import withFormControl from './FormControl'
 import { checkboxHandler } from './helpers'
 import AsyncComponent from '../../containers/AsyncComponent'
 
@@ -12,7 +13,7 @@ class FormInput extends Component {
   }
   render() {
     const {
-      fieldname,
+      name,
       type,
       value,
       required,
@@ -44,10 +45,10 @@ class FormInput extends Component {
         return (
           <input
             className='form__input'
-            name={fieldname}
+            name={name}
             type={type}
             placeholder={placeholder}
-            onChange={e => setValue(fieldname, e.target.value, required, type)}
+            onChange={e => setValue(name, e.target.value, required, type)}
             value={value || ''}
           />
         )
@@ -56,11 +57,11 @@ class FormInput extends Component {
         return (
           <textarea
             className='form__input'
-            name={fieldname}
+            name={name}
             type='textarea'
             rows='5'
             placeholder={placeholder}
-            onChange={e => setValue(fieldname, e.target.value, required, type)}
+            onChange={e => setValue(name, e.target.value, required, type)}
             value={value || ''}
           />
         )
@@ -73,7 +74,7 @@ class FormInput extends Component {
             }
             componentProps={{
               value: value,
-              onChange: value => setValue(fieldname, value, required, type),
+              onChange: value => setValue(name, value, required, type),
               modules: {
                 clipboard: {
                   matchVisual: false,
@@ -93,9 +94,9 @@ class FormInput extends Component {
         return (
           <select
             className='form__input'
-            name={fieldname}
+            name={name}
             value={value}
-            onChange={e => setValue(fieldname, e.target.value, required)}
+            onChange={e => setValue(name, e.target.value, required)}
           >
             {(!value || !required) && <option value='' disabled={required}>{required ? 'All' : 'Select'}</option>}
             {options.map((item, index) =>
@@ -136,7 +137,7 @@ class FormInput extends Component {
                     return <div
                       key={index}
                       className={`form__multiselect-option${checked ? ' is-checked' : ''}`}
-                      onClick={() => setValue(fieldname, checkboxHandler(!checked, optionValue, value), required)}
+                      onClick={() => setValue(name, checkboxHandler(!checked, optionValue, value), required)}
                     >{optionLabel}{checked && <Icon type='ok' />}</div>
                   })}
                 </div>
@@ -151,15 +152,15 @@ class FormInput extends Component {
           const optionValue = (typeof option === 'string') ? option : option.value
           const checked = (value && value.includes(optionValue))
           return (
-            <label className='form__checkbox' key={index} htmlFor={`${fieldname}${index}`}>
+            <label className='form__checkbox' key={index} htmlFor={`${name}${index}`}>
               <input
                 type='checkbox'
-                name={`${fieldname}${index}`}
-                id={`${fieldname}${index}`}
+                name={`${name}${index}`}
+                id={`${name}${index}`}
                 checked={checked}
                 onChange={() => {
                   const finalValue = checkboxHandler(!checked, optionValue, value)
-                  setValue(fieldname, finalValue, required, 'array')
+                  setValue(name, finalValue, required, 'array')
                 }}
               /> {optionLabel}
             </label>
@@ -178,7 +179,7 @@ class FormInput extends Component {
                   className={`form__checkimages-input${checked ? ' is-checked' : ''}`}
                   onClick={() => {
                     const finalValue = multiple ? checkboxHandler(!checked, option.value, value) : option.value
-                    setValue(fieldname, finalValue, required)
+                    setValue(name, finalValue, required)
                   }}>
                   <img src={option.image} />
                   {optionLabel}
@@ -190,15 +191,15 @@ class FormInput extends Component {
 
       case 'radio':
         return options.map((option, index) => (
-          <label className='form__radio' key={index} htmlFor={`${fieldname}${index}`}>
+          <label className='form__radio' key={index} htmlFor={`${name}${index}`}>
             <input
               type='radio'
-              name={fieldname}
+              name={name}
               value={option.value}
-              id={`${fieldname}${index}`}
+              id={`${name}${index}`}
               checked={option.value === value}
               className={option.value === value ? 'is-checked' : ''} // Better IE support
-              onChange={e => setValue(fieldname, e.target.value, required)}
+              onChange={e => setValue(name, e.target.value, required)}
             /> {option.label}
           </label>
         ))
@@ -208,11 +209,11 @@ class FormInput extends Component {
           <input
             className='form__range-input'
             type='range'
-            name={fieldname}
+            name={name}
             value={value || 0}
             min={min}
             max={max}
-            onChange={e => setValue(fieldname, Math.floor(e.target.value / step) * step, required)}
+            onChange={e => setValue(name, Math.floor(e.target.value / step) * step, required)}
           />
           <div className='form__range-value'>
             {value ? `${value} ${unit}` : `0 ${unit}`}
@@ -226,7 +227,7 @@ class FormInput extends Component {
               <input
                 accept='image/*'
                 className='form__file-input'
-                id={fieldname}
+                id={name}
                 type='file'
                 onChange={e => {
                   const fileReader = new FileReader()
@@ -235,7 +236,7 @@ class FormInput extends Component {
                   fileReader.readAsDataURL(e.target.files[0])
                   fileReader.onload = () => {
                     const data = fileReader.result
-                    setValue(fieldname, {
+                    setValue(name, {
                       name,
                       type: fileType.split('/')[0],
                       data,
@@ -244,7 +245,7 @@ class FormInput extends Component {
                   }
                 }}
               />
-              <label htmlFor={fieldname}>
+              <label htmlFor={name}>
                 <Button size='sm' variant='primary'>
                   Upload {placeholder || 'image'}
                 </Button>
@@ -263,7 +264,7 @@ class FormInput extends Component {
               <Button
                 size='sm'
                 variant='primary'
-                onClick={() => setValue(fieldname, '', required, type)}
+                onClick={() => setValue(name, '', required, type)}
               >Delete {placeholder || 'image'}</Button>
             </div>
         )
@@ -276,11 +277,11 @@ class FormInput extends Component {
 }
 
 FormInput.propTypes = {
-  fieldname: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   value: PropTypes.any,
   setValue: PropTypes.func.isRequired,
   options: PropTypes.array,
 }
 
-export default FormInput
+export default withFormControl(FormInput)

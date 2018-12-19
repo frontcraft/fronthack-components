@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './style.sass'
 
 
@@ -13,10 +12,6 @@ class Breadcrumb extends React.Component {
       </div>
     )
   }
-}
-
-Breadcrumb.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string).isRequried,
 }
 
 export default Breadcrumb

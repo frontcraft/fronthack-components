@@ -1,39 +1,99 @@
-import React, { Fragment } from 'react'
-import logo from './logo.svg'
+import React from 'react'
+// import logo from './logo.svg'
 import './style/index.sass'
-import Alert from './components/Alert'
-import Accordion from './components/Accordion'
-import Dropdown from './components/Dropdown'
-import Field from './components/Field'
-import Icon from './components/Icon'
+// import Alert from './components/Alert'
+// import Accordion from './components/Accordion'
+// import Dropdown from './components/Dropdown'
+// import Field from './components/Field'
+// import Icon from './components/Icon'
 import Button from './components/Button'
-import Badge from './components/Badge'
-import HamburgerNav from './components/HamburgerNav'
-import Stepper from './components/Stepper'
-import LanguageSelect from './components/LanguageSelect'
-import ListingItem from './components/ListingItem'
-import Breadcrumb from './components/Breadcrumb'
-import Logo from './components/Logo'
-import Modal from './components/Modal'
-import NavHorizontal from './components/NavHorizontal'
-import NavSubway from './components/NavSubway'
-import Pagination from './components/Pagination'
-import Parallax, { ParallaxGroup } from './components/Parallax'
-import ProgressBar from './components/ProgressBar'
-import Rating from './components/Rating'
-import SocialLinks from './components/SocialLinks'
-import Tabs from './components/Tabs'
-import { Form, FormControl } from './components/Form'
+// import Badge from './components/Badge'
+// import HamburgerNav from './components/HamburgerNav'
+// import Stepper from './components/Stepper'
+// import LanguageSelect from './components/LanguageSelect'
+// import ListingItem from './components/ListingItem'
+// import Breadcrumb from './components/Breadcrumb'
+// import Logo from './components/Logo'
+// import Modal from './components/Modal'
+// import NavHorizontal from './components/NavHorizontal'
+// import NavSubway from './components/NavSubway'
+// import Pagination from './components/Pagination'
+// import Parallax, { ParallaxGroup } from './components/Parallax'
+// import ProgressBar from './components/ProgressBar'
+// import Rating from './components/Rating'
+// import SocialLinks from './components/SocialLinks'
+// import Tabs from './components/Tabs'
+import { Form, FormInput } from './components/Form'
 
 class App extends React.Component {
+  state = {
+    framework: 'vue',
+  }
   render() {
     return (
       <div className='App'>
-        <Tabs labels={['First', 'Second', 'Third']}>
+        <Form
+          fields={[
+            'username',
+            'framework',
+            'color',
+            'car',
+          ]}
+          required={['username']}
+        >
+          <FormInput
+            name='username'
+            label='User name'
+            type='text'
+            placeholder='Enter username'
+            initialValue='Michal'
+            initialHelp='Required field'
+          />
+          <FormInput
+            name='framework'
+            label='Select a Framework'
+            type='select'
+            options={[
+              { label: 'React', value: 'react' },
+              { label: 'Vue', value: 'vue' },
+              { label: 'Angluar', value: 'angluar' },
+            ]}
+            initialValue={this.state.framework}
+            initialHelp='Select from the list'
+          />
+          <FormInput
+            name='car'
+            label='Select cars'
+            type='checkbox'
+            options={[
+              { label: 'Toyota', value: 'toyota' },
+              { label: 'Renault', value: 'renault' },
+              { label: 'Volkswagen', value: 'volkswagen' },
+            ]}
+            initialHelp='You can pick a few'
+          />
+          <FormInput
+            name='color'
+            label='Pick a color'
+            type='radio'
+            options={[
+              { label: 'Red', value: 'red' },
+              { label: 'Yellow', value: 'yellow' },
+              { label: 'Blue', value: 'blue' },
+            ]}
+            initialHelp='Choose one'
+          />
+        </Form>
+        <Button
+          onClick={() => this.setState({
+            framework: 'react',
+          })}
+        >Change to React</Button>
+        {/* <Tabs labels={['First', 'Second', 'Third']}>
           {[
-            <div>Content of the first tab</div>,
-            <div>Content of the second tab</div>,
-            <div>Content of the third tab</div>,
+            <div key='1'>Content of the first tab</div>,
+            <div key='2'>Content of the second tab</div>,
+            <div key='3'>Content of the third tab</div>,
           ]}
         </Tabs>
         <Dropdown overlay links={[
@@ -154,49 +214,6 @@ class App extends React.Component {
           'Third value',
         ]} />
         <Field label='Field label' inlineLabel>Single value</Field>
-        <Form fields={['username', 'framework', 'color', 'car']}>
-          <FormControl
-            fieldname='username'
-            label='User name'
-            type='text'
-            placeholder='Enter username'
-            initialHelp='Required field'
-            required
-          />
-          <FormControl
-            fieldname='framework'
-            label='Select a Framework'
-            type='select'
-            options={[
-              { label: 'React', value: 'react' },
-              { label: 'Vue', value: 'vue' },
-              { label: 'Angluar', value: 'angluar' },
-            ]}
-            initialHelp='Select from the list'
-          />
-          <FormControl
-            fieldname='car'
-            label='Select cars'
-            type='checkbox'
-            options={[
-              { label: 'Toyota', value: 'toyota' },
-              { label: 'Renault', value: 'renault' },
-              { label: 'Volkswagen', value: 'volkswagen' },
-            ]}
-            initialHelp='You can pick a few'
-          />
-          <FormControl
-            fieldname='color'
-            label='Pick a color'
-            type='radio'
-            options={[
-              { label: 'Red', value: 'red' },
-              { label: 'Yellow', value: 'yellow' },
-              { label: 'Blue', value: 'blue' },
-            ]}
-            initialHelp='Choose one'
-          />
-        </Form>
         <Parallax>
           <ParallaxGroup className='parallax__demo-solid'>
             <div className='parallax_demo-title'>Solid base layer</div>
@@ -222,7 +239,7 @@ class App extends React.Component {
         </header>
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> */}
       </div>
     )
   }
