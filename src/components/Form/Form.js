@@ -65,6 +65,7 @@ class Form extends Component {
         return { fieldsData }
       })
     }
+    console.log(this.state.fieldsData)
   }
 
   componentDidUpdate(prevProps) {

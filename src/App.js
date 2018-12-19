@@ -25,11 +25,16 @@ import Button from './components/Button'
 // import Tabs from './components/Tabs'
 import {
   Form,
-  FormInput,
   Input,
   TextArea,
   Wysiwyg,
   Select,
+  MultiSelect,
+  Checkbox,
+  Radio,
+  CheckImages,
+  Range,
+  ImageUpload,
 } from './components/Form'
 
 class App extends React.Component {
@@ -38,15 +43,19 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className='App'>
+      <div className='container'>
         <Form
           fields={[
             'username',
             'content',
             'wysiwyg',
             'framework',
+            'framework-multi',
+            'framework-images',
             'color',
             'car',
+            'range',
+            'image',
           ]}
           required={['username']}
         >
@@ -79,10 +88,29 @@ class App extends React.Component {
             initialValue={this.state.framework}
             initialHelp='Select from the list'
           />
-          <FormInput
+          <MultiSelect
+            name='framework-multi'
+            label='Select Frameworks'
+            options={[
+              { label: 'React', value: 'react' },
+              { label: 'Vue', value: 'vue' },
+              { label: 'Angluar', value: 'angluar' },
+            ]}
+            initialHelp='Select from the list'
+          />
+          <CheckImages
+            name='framework-images'
+            label='Select Frameworks'
+            options={[
+              { image: 'https://placehold.it/20x20', label: 'React', value: 'react' },
+              { image: 'https://placehold.it/20x20', label: 'Vue', value: 'vue' },
+              { image: 'https://placehold.it/20x20', label: 'Angluar', value: 'angluar' },
+            ]}
+            initialHelp='Select from the list'
+          />
+          <Checkbox
             name='car'
             label='Select cars'
-            type='checkbox'
             options={[
               { label: 'Toyota', value: 'toyota' },
               { label: 'Renault', value: 'renault' },
@@ -90,16 +118,25 @@ class App extends React.Component {
             ]}
             initialHelp='You can pick a few'
           />
-          <FormInput
+          <Radio
             name='color'
             label='Pick a color'
-            type='radio'
             options={[
               { label: 'Red', value: 'red' },
               { label: 'Yellow', value: 'yellow' },
               { label: 'Blue', value: 'blue' },
             ]}
             initialHelp='Choose one'
+          />
+          <Range
+            name='range'
+            label='Select amount'
+            initialHelp='Select amount between range'
+            step={10}
+          />
+          <ImageUpload
+            name='image'
+            label='Upload image'
           />
         </Form>
         <Button
