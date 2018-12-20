@@ -18,6 +18,7 @@ $tooltip-triangle-size: 6px
 
   &:before, &:after
     opacity: 0
+    visibility: hidden
     z-index: 98
     +breakpoint(phone, phone)
       display: none
@@ -49,6 +50,7 @@ $tooltip-triangle-size: 6px
   &:hover
     &:before, &:after
       opacity: 1
+      visibility: visible
 
 
 
