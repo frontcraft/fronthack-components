@@ -2,7 +2,7 @@
 
 ### Usage
 
-`fronthack component`, then `button`
+`fronthack component`, then `social-sign-up`
 
 #### JSX example:
 

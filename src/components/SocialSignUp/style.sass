@@ -1,0 +1,55 @@
+@import '../../style/variables'
+@import '../../style/mixins'
+
+// Social sign up
+//
+// Buttons for log in with social media platforms
+
+
+// Block
+// --------------------------------------------------
+.social-sign-up
+  display: flex
+  flex-direction: column
+  align-items: center
+
+// Elements
+// --------------------------------------------------
+.social-sign-up__label
+  font-size: 14px
+  line-height: normal
+  color: $gray-base
+  margin-bottom: 24px
+  font-weight: $regular
+
+.social-sign-up__button
+  width: 245px
+  height: 48px
+  box-sizing: border-box
+  font-size: 14px
+  white-space: nowrap
+  padding: 0 12px
+  border-radius: 4px
+  margin-bottom: 9px
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.social-sign-up__icon
+  margin-right: 19px
+
+// Modifiers
+// --------------------------------------------------
+.social-sign-up__button--facebook
+  background-color: #395692
+  color: white
+  &:hover
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.30)
+
+.social-sign-up__button--google
+  background-color: white
+  color: #3d4348
+  &:hover
+    +box-shadow
+  .social-sign-up__icon
+    margin: 0 9px 0 -10px

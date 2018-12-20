@@ -59,6 +59,8 @@ import RatingEXAMPLE from '../src/components/Rating/EXAMPLE'
 import RatingREADME from '../src/components/Rating/README.md'
 import SocialLinksEXAMPLE from '../src/components/SocialLinks/EXAMPLE'
 import SocialLinksREADME from '../src/components/SocialLinks/README.md'
+import SocialSignUpEXAMPLE from '../src/components/SocialSignUp/EXAMPLE'
+import SocialSignUpREADME from '../src/components/SocialSignUp/README.md'
 import StepperEXAMPLE from '../src/components/Stepper/EXAMPLE'
 import StepperREADME from '../src/components/Stepper/README.md'
 import TabsEXAMPLE from '../src/components/Tabs/EXAMPLE'
@@ -69,127 +71,131 @@ import TooltipEXAMPLE from '../src/components/Tooltip/EXAMPLE'
 import TooltipREADME from '../src/components/Tooltip/README.md'
 
 
-storiesOf('Basic styles',  module)
+storiesOf('Basic styles', module)
   .addDecorator(withReadme(BasicStylesREADME))
   .add('default', () => <BasicStyles />)
 
-storiesOf('Accordion',  module)
+storiesOf('Accordion', module)
   .addDecorator(withReadme(AccordionREADME))
   .add('default', () => <AccordionEXAMPLE />)
 
-storiesOf('Alert',  module)
+storiesOf('Alert', module)
   .addDecorator(withReadme(AlertREADME))
   .add('default', () => <AlertEXAMPLE />)
 
-storiesOf('Badge',  module)
+storiesOf('Badge', module)
   .addDecorator(withReadme(BadgeREADME))
   .add('default', () => <BadgeEXAMPLE />)
 
-storiesOf('Block',  module)
+storiesOf('Block', module)
   .addDecorator(withReadme(BlockREADME))
   .add('default', () => <BlockEXAMPLE />)
 
-storiesOf('Breadcrumb',  module)
+storiesOf('Breadcrumb', module)
   .addDecorator(withReadme(BreadcrumbREADME))
   .add('default', () => <BreadcrumbEXAMPLE />)
 
-storiesOf('Button',  module)
+storiesOf('Button', module)
   .addDecorator(withReadme(ButtonREADME))
   .add('default', () => <ButtonEXAMPLE />)
 
-storiesOf('Cloudlet',  module)
+storiesOf('Cloudlet', module)
   .addDecorator(withReadme(CloudletREADME))
   .add('default', () => <CloudletEXAMPLE />)
 
-storiesOf('Donut',  module)
+storiesOf('Donut', module)
   .addDecorator(withReadme(DonutREADME))
   .add('default', () => <DonutEXAMPLE />)
 
-storiesOf('Dropdown',  module)
+storiesOf('Dropdown', module)
   .addDecorator(withReadme(DropdownREADME))
   .add('default', () => <DropdownEXAMPLE />)
 
-storiesOf('Field',  module)
+storiesOf('Field', module)
   .addDecorator(withReadme(FieldREADME))
   .add('default', () => <FieldEXAMPLE />)
 
 
-storiesOf('Form',  module)
+storiesOf('Form', module)
   .addDecorator(withReadme(FormREADME))
   .add('default', () => <FormEXAMPLE />)
 
-storiesOf('HamburgerNav',  module)
+storiesOf('HamburgerNav', module)
   .addDecorator(withReadme(HamburgerNavREADME))
   .add('default', () => <HamburgerNavEXAMPLE />)
 
-storiesOf('Icon',  module)
+storiesOf('Icon', module)
   .addDecorator(withReadme(IconREADME))
   .add('default', () => <IconEXAMPLE />)
 
-  storiesOf('LanguageSelect',  module)
+storiesOf('LanguageSelect', module)
   .addDecorator(withReadme(LanguageSelectREADME))
   .add('default', () => <LanguageSelectEXAMPLE />)
 
-storiesOf('ListingItem',  module)
+storiesOf('ListingItem', module)
   .addDecorator(withReadme(ListingItemREADME))
   .add('default', () => <ListingItemEXAMPLE />)
 
-storiesOf('Logo',  module)
+storiesOf('Logo', module)
   .addDecorator(withReadme(LogoREADME))
   .add('default', () => <LogoEXAMPLE />)
 
-storiesOf('Modal',  module)
+storiesOf('Modal', module)
   .addDecorator(withReadme(ModalREADME))
   .add('default', () => <ModalEXAMPLE />)
 
-storiesOf('NavHorizontal',  module)
+storiesOf('NavHorizontal', module)
   .addDecorator(withReadme(NavHorizontalREADME))
   .add('default', () => <NavHorizontalEXAMPLE />)
 
-storiesOf('NavVertical',  module)
+storiesOf('NavVertical', module)
   .addDecorator(withReadme(NavVerticalREADME))
   .add('default', () => <NavVerticalEXAMPLE />)
 
-storiesOf('NavSubway',  module)
+storiesOf('NavSubway', module)
   .addDecorator(withReadme(NavSubwayREADME))
   .add('default', () => <NavSubwayEXAMPLE />)
 
-storiesOf('OwlCarousel',  module)
+storiesOf('OwlCarousel', module)
   .addDecorator(withReadme(OwlCarouselREADME))
   .add('default', () => <OwlCarouselEXAMPLE />)
 
-storiesOf('Pagination',  module)
+storiesOf('Pagination', module)
   .addDecorator(withReadme(PaginationREADME))
   .add('default', () => <PaginationEXAMPLE />)
 
-storiesOf('Parallax',  module)
+storiesOf('Parallax', module)
   .addDecorator(withReadme(ParallaxREADME))
   .add('default', () => <ParallaxEXAMPLE />)
 
-storiesOf('ProgressBar',  module)
+storiesOf('ProgressBar', module)
   .addDecorator(withReadme(ProgressBarREADME))
   .add('default', () => <ProgressBarEXAMPLE />)
 
-storiesOf('Rating',  module)
+storiesOf('Rating', module)
   .addDecorator(withReadme(RatingREADME))
   .add('default', () => <RatingEXAMPLE />)
 
-storiesOf('SocialLinks',  module)
+storiesOf('SocialLinks', module)
   .addDecorator(withReadme(SocialLinksREADME))
   .add('default', () => <SocialLinksEXAMPLE />)
 
-storiesOf('Stepper',  module)
+storiesOf('SocialSignUp', module)
+  .addDecorator(withReadme(SocialSignUpREADME))
+  .add('default', () => <SocialSignUpEXAMPLE />)
+
+storiesOf('Stepper', module)
   .addDecorator(withReadme(StepperREADME))
   .add('default', () => <StepperEXAMPLE />)
 
-storiesOf('Tabs',  module)
+storiesOf('Tabs', module)
   .addDecorator(withReadme(TabsREADME))
   .add('default', () => <TabsEXAMPLE />)
 
-storiesOf('Tags',  module)
+storiesOf('Tags', module)
   .addDecorator(withReadme(TagsREADME))
   .add('default', () => <TagsEXAMPLE />)
 
-storiesOf('Tooltip',  module)
+storiesOf('Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
   .add('default', () => <TooltipEXAMPLE />)
