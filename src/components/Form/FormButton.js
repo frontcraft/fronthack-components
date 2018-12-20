@@ -23,7 +23,7 @@ const FormButton = ({ callback, size, variant, reset, loading, className, childr
               Object.keys(fieldsData).forEach(key => {
                 setValue(key, fieldsData[key].value, fieldsData[key].required, fieldsData[key].type)
               })
-              NotificationManager.error('Füllen Sie alle erforderlichen Felder aus')
+              NotificationManager.error('Form contains errors. Check all fields.')
             } else {
               callback && callback(getValues(fieldsData))
               reset && setValue()
