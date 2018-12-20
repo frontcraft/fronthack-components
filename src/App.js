@@ -15,7 +15,7 @@ import Button from './components/Button'
 // import Breadcrumb from './components/Breadcrumb'
 // import Logo from './components/Logo'
 // import Modal from './components/Modal'
-// import NavHorizontal from './components/NavHorizontal'
+import NavHorizontal from './components/NavHorizontal'
 // import NavSubway from './components/NavSubway'
 // import Pagination from './components/Pagination'
 // import Parallax, { ParallaxGroup } from './components/Parallax'
@@ -167,11 +167,11 @@ class App extends React.Component {
         ]}>Toggle dropdown</Dropdown>
         <SocialLinks url={window.location.href} />
         <Rating value={1} />
-        <ProgressBar percentage={45} />
+        <ProgressBar percentage={45} /> */}
         <NavHorizontal links={[
           {
             label: 'Home',
-            url: 'home',
+            url: '/',
           },
           {
             label: 'About',
@@ -182,7 +182,7 @@ class App extends React.Component {
             url: 'contact',
           },
         ]} />
-        <NavSubway links={[
+        {/* <NavSubway links={[
           {
             label: 'Home',
             url: 'home',

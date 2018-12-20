@@ -6,26 +6,35 @@
 //
 // Inline navigation for primary top bar menu or footer links
 
+$nav-horizontal-gutter: 40px
 
 // Block
 // --------------------------------------------------
 .nav-horizontal
   font-size: 14px
-  line-height: 24px
+  line-height: normal
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-left: -$nav-horizontal-gutter / 2
+  +breakpoint(desktop)
+    margin-left: -$nav-horizontal-gutter
 
 
 // Elements
 // --------------------------------------------------
 .nav-horizontal__link
-  display: block
-  padding: 15px 0
   text-align: center
+  color: $gray-base
+  padding: 22px 0
+  margin-left: $nav-horizontal-gutter / 2
   +breakpoint(desktop)
-    display: inline-block
-    padding: 38px 0
-    & + &
-      margin-left: 37px
+    margin-left: $nav-horizontal-gutter
   &:hover
-    color: $brand-primary
-  img
-    vertical-align: middle
+    color: lighten($gray-base, 25%)
+
+
+// States
+// --------------------------------------------------
+.nav-horizontal__link.is-active
+  font-weight: $bold
