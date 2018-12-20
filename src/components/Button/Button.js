@@ -4,28 +4,24 @@ import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Button extends React.Component {
-  render() {
-    const {
-      children,
-      onClick,
-      variant,
-      size,
-      disabled,
-      className,
-    } = this.props
-    return (
-      <div
-        className={bemCx('btn', {
-          [variant]: variant,
-          [size]: size,
-          disabled: disabled,
-        }, { [className]: className })}
-        onClick={onClick}
-      >{children}</div>
-    )
-  }
-}
+const Button = ({
+  children,
+  onClick,
+  variant,
+  size,
+  block,
+  disabled,
+  className,
+}) =>
+  <div
+    className={bemCx('btn', {
+      [variant]: variant,
+      [size]: size,
+      block: block,
+      disabled: disabled,
+    }, { [className]: className })}
+    onClick={onClick}
+  >{children}</div>
 
 Button.propTypes = {
   children: PropTypes.oneOfType([
@@ -33,8 +29,18 @@ Button.propTypes = {
     PropTypes.node,
   ]),
   onClick: PropTypes.func,
-  variant: PropTypes.string,
-  size: PropTypes.string,
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'danger',
+    'link',
+  ]),
+  size: PropTypes.oneOf([
+    'xs',
+    'sm',
+    'lg',
+  ]),
+  block: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,
 }

@@ -9,28 +9,25 @@
 // --------------------------------------------------
 .btn
   background: transparent
-  padding: 11px 25px
+  padding: 8px 18px
   font-family: $font-family-base
-  font-weight: $bold
   font-size: $font-size-base
-  letter-spacing: 0.05em
-  border: 2px solid
-  border-radius: 30px
+  line-height: normal
+  border-radius: 4px
   white-space: nowrap
   cursor: pointer
-  display: inline-block
+  display: inline-flex
   width: auto
   height: auto
   box-sizing: border-box
-  color: $text-color
-  border-color: $text-color
-  background-color: transparent
+  color: white
+  background-color: $gray-dark
   &:hover, &:focus
     text-decoration: none
     transition: color 250ms, border-color 250ms, background 250ms
     color: white
-    border-color: $text-color
-    background-color: $text-color
+    border-color: $brand-secondary
+    background-color: lighten($gray-dark, 10%)
 
 .btn + .btn
   margin-left: 15px
@@ -47,47 +44,47 @@
     margin: 25px 0 0
 
 .btn--xs
-  padding: 3px 10px 4px
+  font-weight: $regular
+  padding: 3px 10px 8px
+  border-radius: 0
 
 .btn--sm
-  padding: 7px 20px 9px
+  font-size: 13px
+  font-weight: $regular
+  padding: 5px 13px
 
 .btn--lg
-  padding: 15px 35px
-  border-radius: 30px
-
-.btn--light
-  color: white
-  border-color: white
-  background-color: transparent
-  &:hover, &:focus
-    color: $text-color
-    border-color: white
-    background-color: white
-    font-weight: $bold
+  padding: 10px 45px
 
 .btn--primary
   color: white
-  border-color: $brand-primary
   background-color: $brand-primary
   &:hover, &:focus
-    color: $brand-primary
-    border-color: $brand-primary
-    background-color: transparent
-    font-weight: $bold
+    background-color: lighten($brand-primary, 10%)
+
+.btn--secondary
+  color: white
+  background-color: $brand-secondary
+  &:hover, &:focus
+    background-color: lighten($brand-secondary, 10%)
+
+.btn--danger
+  color: white
+  border-color: $red
+  background-color: $red
+  &:hover, &:focus
+    border-color: lighten($red, 10%)
+    background-color: lighten($red, 10%)
 
 .btn--link
   border: none
   padding-left: 0
   padding-right: 0
-  color: $brand-primary
-  border-color: $brand-primary
+  color: $brand-secondary
   background-color: transparent
   &:hover, &:focus
-    color: $brand-primary
-    border-color: $brand-primary
+    color: lighten($brand-secondary, 10%)
     background-color: transparent
-    text-decoration: underline
 
 .btn--disabled,
 .btn[disabled]
