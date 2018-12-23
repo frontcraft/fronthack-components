@@ -2,10 +2,6 @@ import React from 'react'
 import './style.sass'
 
 
-class Badge extends React.Component {
-  render() {
-    return <span className='badge'>{this.props.number}</span>
-  }
-}
+const Badge = ({ number }) => <span className='badge'>{number}</span>
 
 export default Badge

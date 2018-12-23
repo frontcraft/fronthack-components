@@ -3,15 +3,10 @@ import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Parallax extends React.Component {
-  render() {
-    return (
-      <div className={bemCx('parallax', { debug: this.props.debug })}>
-        {this.props.children}
-      </div>
-    )
-  }
-}
+const Parallax = ({ children, debug }) =>
+  <div className={bemCx('parallax', { debug: debug })}>
+    {children}
+  </div>
 
 export default Parallax
 

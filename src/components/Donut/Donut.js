@@ -3,19 +3,9 @@ import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Donut extends React.Component {
-  render() {
-    const { percentage, pie } = this.props
-    return (
-      <div className={bemCx('donut', { pie: pie })} style={{ animationDelay: `-${percentage}s` }}>
-        <div className='donut__label'>{percentage}%</div>
-      </div>
-    )
-  }
-}
-
-Donut.defaultProps = {
-  pie: false,
-}
+const Donut = ({ percentage, pie }) =>
+  <div className={bemCx('donut', { pie: pie })} style={{ animationDelay: `-${percentage}s` }}>
+    <div className='donut__label'>{percentage}%</div>
+  </div>
 
 export default Donut
