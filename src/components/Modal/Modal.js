@@ -5,7 +5,17 @@ import './style.sass'
 
 class Modal extends React.Component {
   state = {
-    isOpen: this.props.isOpen,
+    isOpen: false,
+  }
+  componentDidMount() {
+    if (typeof this.props.isOpen !== 'undefined' && this.props.isOpen) {
+      this.setState({ isOpen: true })
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.isOpen === prevState.isOpen && this.props.isOpen !== this.state.isOpen) {
+      this.setState({ isOpen: this.props.isOpen })
+    }
   }
   render() {
     const { children, size, title, trigger } = this.props
