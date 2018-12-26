@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, addDecorator } from '@storybook/react'
 import { withReadme } from 'storybook-readme'
 
 import '../src/style/index.sass'
@@ -79,6 +79,11 @@ import TagsREADME from '../src/components/Tags/README.md'
 import TooltipEXAMPLE from '../src/components/Tooltip/EXAMPLE'
 import TooltipREADME from '../src/components/Tooltip/README.md'
 
+addDecorator((storyFn) => (
+  <div style={{ padding: '20px' }}>
+    { storyFn() }
+  </div>
+))
 
 storiesOf('Docs/Introduction', module)
   .add('default', () => <DocsIntroduction />)
