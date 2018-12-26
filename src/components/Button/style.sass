@@ -44,9 +44,10 @@
     margin: 25px 0 0
 
 .btn--xs
+  font-size: 13px
   font-weight: $regular
-  padding: 3px 10px 8px
-  border-radius: 0
+  padding: 3px 6px
+  border-radius: 2px
 
 .btn--sm
   font-size: 13px
@@ -75,6 +76,22 @@
   &:hover, &:focus
     border-color: lighten($red, 10%)
     background-color: lighten($red, 10%)
+
+.btn--success
+  color: white
+  border-color: $green
+  background-color: $green
+  &:hover, &:focus
+    border-color: lighten($green, 10%)
+    background-color: lighten($green, 10%)
+
+.btn--warning
+  color: white
+  border-color: $yellow
+  background-color: $yellow
+  &:hover, &:focus
+    border-color: lighten($yellow, 10%)
+    background-color: lighten($yellow, 10%)
 
 .btn--link
   border: none

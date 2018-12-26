@@ -7,7 +7,12 @@
 #### JSX example:
 
 ```js
-<SocialSignUp label='Log in using social media account' />
+<Button
+  variant='primary'
+  size='xs'
+  className='any-class'
+  onClick={() => action('Button callback, eg. history.push')}
+>Button label</Button>
 ```
 
 ##### Properties
