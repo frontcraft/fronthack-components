@@ -20,17 +20,25 @@
 // --------------------------------------------------
 .tabs__label
   cursor: pointer
-  margin: 0
-  background: $gray-dark
+  background-color: $brand-primary
   color: white
-  padding: 5px 10px
-  margin-right: 2px
+  padding: 11px 10px
+  margin-right: 5px
+  border-top: 4px solid $brand-primary
   overflow: hidden
+  flex: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  &:hover
+    border-color: lighten($brand-primary, 10%)
+    background-color: lighten($brand-primary, 10%)
 
 .tabs__content
   width: 100%
-  padding: 10px
-  background: $gray-light
+  padding: 10px 0 0
+  background-color: $almost-white
   min-width: 100%
   display: none
   visibility: hidden
@@ -42,11 +50,13 @@
 // attribute. Works with up to 7 elements. You can increase it if you need.
 @for $i from 0 through 7
   .tabs[data-active-tab="#{$i}"]
+    // Active tab styling
     .tabs__label:nth-of-type(#{$i+1})
-      background-color: $gray-light
+      background-color: $almost-white
+      color: $brand-primary
+    // Active content styling
     .tabs__content,
       &:nth-of-type(#{$i+1}),
       &.is-open // State class for React where only one content is displayed at once
         display: block
         visibility: visible
-        background-color: $gray-light
