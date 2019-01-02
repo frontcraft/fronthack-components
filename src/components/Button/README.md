@@ -26,5 +26,5 @@
 #### Static HTML example:
 
 ```html
-Does not have static HTML version
+<a class="btn">Default button</a>
 ```
