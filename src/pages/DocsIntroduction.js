@@ -9,13 +9,15 @@ export default () => <div>
 
   <h2>Generate and hack</h2>
 
-  <p>Fronthack utilizes the <strong>Generate and hack</strong> approach. What is the meaning behind that? The world of design systems and npm packages provides us a variety of ready to use components, which makes things easier to setup, but in most cases styling them in a way that corresponds to our designs might be a bit triky. Usually you import a component from its npm package and that complicates its customization. Some of design systems enforce designer to use imposed styles. Fronthack is style agnostic. Suggested components are very basic and easy to modify. Just generate a component from Fronthack repository of templates, then modify it as you like. That what is called "generate and hack".</p>
+  <p>Fronthack utilizes the <strong>Generate and hack</strong> approach. What is the meaning behind that? The world of design systems and npm packages provides us a variety of ready to use components, which makes things easier to setup, but in most cases styling them in a way that corresponds to our designs might be a bit triky. Usually you import a component from its npm package and that complicates its customization. Some of design systems enforce designer to use imposed styles. Fronthack is style agnostic. Suggested components are very generic and easy to modify.</p>
+
+  <p>Just generate a component from Fronthack repository of templates, then modify it as you like. That what is called "generate and hack".</p>
 
   <h2>What Fronthack includes?</h2>
 
   <ul>
     <li>A boilerplate for three types of projects (React, Next.js or static HTML) with Webpack or Gulp under the hood.</li>
-    <li>Styles written in Sass.</li>
+    <li>Styles written in Sass, with BEM convention to avoid naming conflicts.</li>
     <li>Library of ready components which you add to your project and modify.</li>
     <li>Global Sass variables used by all components, that gives them common sense of style.</li>
     <li>Tool that allows you to display designs under the HTML code in a browser.</li>

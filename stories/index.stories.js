@@ -86,13 +86,13 @@ addDecorator((storyFn) => (
 ))
 
 storiesOf('Docs/Introduction', module)
-  .add('default', () => <DocsIntroduction />)
+  .add('Read', () => <DocsIntroduction />)
 
 storiesOf('Docs/Theory of good HTML and CSS', module)
-  .add('default', () => <DocsThery />)
+  .add('Read', () => <DocsThery />)
 
 storiesOf('Docs/Requirements', module)
-  .add('default', () => <DocsRequirements />)
+  .add('Read', () => <DocsRequirements />)
 
 storiesOf('Docs/First project setup', module)
   .add('Static', () => <DocsFirstProject />)
@@ -105,7 +105,7 @@ storiesOf('Docs/File structure', module)
   .add('Next', () => <DocsFileStructure />)
 
 storiesOf('Docs/Recognition of designs', module)
-  .add('default', () => <DocsDesigns />)
+  .add('Read', () => <DocsDesigns />)
 
 storiesOf('Docs/Coding first page', module)
   .add('Static', () => <DocsFirstPage />)
