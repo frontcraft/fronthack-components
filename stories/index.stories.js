@@ -8,7 +8,9 @@ import DocsDeployment from '../src/pages/DocsDeployment'
 import DocsDesigns from '../src/pages/DocsDesigns'
 import DocsFileStructure from '../src/pages/DocsFileStructure'
 import DocsFirstPage from '../src/pages/DocsFirstPage'
-import DocsFirstProject from '../src/pages/DocsFirstProject'
+import DocsProjectSetupStatic from '../src/pages/DocsProjectSetupStatic'
+import DocsProjectSetupReact from '../src/pages/DocsProjectSetupReact'
+import DocsProjectSetupNext from '../src/pages/DocsProjectSetupNext'
 import DocsFurther from '../src/pages/DocsFurther'
 import DocsIntroduction from '../src/pages/DocsIntroduction'
 import DocsRequirements from '../src/pages/DocsRequirements'
@@ -95,9 +97,9 @@ storiesOf('Docs/Requirements', module)
   .add('Read', () => <DocsRequirements />)
 
 storiesOf('Docs/First project setup', module)
-  .add('Static', () => <DocsFirstProject />)
-  .add('React', () => <DocsFirstProject />)
-  .add('Next', () => <DocsFirstProject />)
+  .add('Static HTML', () => <DocsProjectSetupStatic />)
+  .add('React', () => <DocsProjectSetupReact />)
+  .add('Next', () => <DocsProjectSetupNext />)
 
 storiesOf('Docs/File structure', module)
   .add('Static', () => <DocsFileStructure />)
