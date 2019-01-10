@@ -6,7 +6,9 @@ import '../src/style/index.sass'
 
 import DocsDeployment from '../src/pages/DocsDeployment'
 import DocsDesigns from '../src/pages/DocsDesigns'
-import DocsFileStructure from '../src/pages/DocsFileStructure'
+import DocsFileStructureStatic from '../src/pages/DocsFileStructureStatic'
+import DocsFileStructureReact from '../src/pages/DocsFileStructureReact'
+import DocsFileStructureNext from '../src/pages/DocsFileStructureNext'
 import DocsFirstPage from '../src/pages/DocsFirstPage'
 import DocsProjectSetupStatic from '../src/pages/DocsProjectSetupStatic'
 import DocsProjectSetupReact from '../src/pages/DocsProjectSetupReact'
@@ -102,9 +104,9 @@ storiesOf('Docs/First project setup', module)
   .add('Next', () => <DocsProjectSetupNext />)
 
 storiesOf('Docs/File structure', module)
-  .add('Static', () => <DocsFileStructure />)
-  .add('React', () => <DocsFileStructure />)
-  .add('Next', () => <DocsFileStructure />)
+  .add('Static HTML', () => <DocsFileStructureStatic />)
+  .add('React', () => <DocsFileStructureReact />)
+  .add('Next', () => <DocsFileStructureNext />)
 
 storiesOf('Docs/Recognition of designs', module)
   .add('Read', () => <DocsDesigns />)
