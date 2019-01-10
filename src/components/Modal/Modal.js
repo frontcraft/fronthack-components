@@ -1,6 +1,7 @@
 import React from 'react'
 import bemCx from 'bem-modifiers'
 import './style.sass'
+import Icon from '../Icon'
 
 
 class Modal extends React.Component {
@@ -29,6 +30,10 @@ class Modal extends React.Component {
           <div className='modal__inner'>
             {title && <div className='modal__title'>{title}</div>}
             <div className='modal__content'>{children}</div>
+            <div
+              className='modal__close'
+              onClick={() => this.setState({ isOpen: false })}
+            ><Icon type='x' /></div>
           </div>
         }
         { this.state.isOpen &&

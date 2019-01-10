@@ -209,9 +209,12 @@ export function getValues(fieldsData) {
  * @param {string} imageUrl Url of image
  */
 export function imageUrltoImageData(imageUrl) {
-  return {
-    name: imageUrl.split('/').pop(),
-    data: imageUrl,
-    type: 'image',
+  if (imageUrl) {
+    return {
+      name: imageUrl.split('/').pop(),
+      data: imageUrl,
+      type: 'image',
+    }
   }
+  return null
 }
