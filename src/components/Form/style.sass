@@ -250,9 +250,7 @@ select.form__input,
     left: 0 !important
 
 .form__file-input-wrapper
-  display: flex
-  flex-direction: column
-  align-items: center
+  text-align: center
   padding: 20px
   background-color: lighten($form-item-border-color, 0.1)
   max-width: 300px
@@ -261,9 +259,10 @@ select.form__input,
   display: none
 
 .form__file-input-image
+  display: block
   background-color: white
   padding: 5px
-  margin-bottom: 5px
+  margin: 0 auto 10px
   max-width: 100%
 
 .form__file-input-filename
