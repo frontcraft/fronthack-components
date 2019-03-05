@@ -126,7 +126,9 @@
  * social-facebook
  * social-flickr
  * social-gplus
+ * social-instagram
  * social-linkedin
+ * social-snapchat
  * social-twitter
  * social-youtube
  * stack
