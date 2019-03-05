@@ -26,7 +26,6 @@ class FormControl extends React.Component {
     const {
       name,
       label,
-      type,
       className,
       addon,
       help,
@@ -49,9 +48,9 @@ class FormControl extends React.Component {
         })}
         disabled={disabled}
       >
-        { label && ['checkbox', 'radio'].includes(type)
+        { label && ['Checkboxes', 'Radio'].includes(children.type.name)
           ? <span className='form__label'>{label}</span>
-          : label &&
+          : (label && children.type.name !== 'Checkbox') &&
           <label className='form__label' htmlFor={name}>{label}</label>
         }
         {children}
@@ -105,14 +104,13 @@ const withFormControl = (Component) => {
         }
         const { value, validation, required, help } = fieldsData[name]
         const commonProps = {
-          type,
+          label,
           required,
           setValue,
         }
         const formControlProps = {
           name,
           validation,
-          label,
           className,
           addon,
           help: help || initialHelp,

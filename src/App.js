@@ -31,6 +31,7 @@ import {
   Select,
   MultiSelect,
   Checkbox,
+  Checkboxes,
   Radio,
   CheckImages,
   Range,
@@ -61,6 +62,7 @@ class App extends React.Component {
             'range',
             'image',
             'people',
+            'published',
           ]}
           required={['username']}
         >
@@ -121,6 +123,10 @@ class App extends React.Component {
             initialHelp='Select from the list'
           />
           <Checkbox
+            name='published'
+            label='Published'
+          />
+          <Checkboxes
             name='car'
             label='Select cars'
             options={[
