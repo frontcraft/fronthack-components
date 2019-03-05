@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         // Enable Sass support
-        test: /\.(scss|sass)$/,
+        test: /\.(css|scss|sass)$/,
         loaders: ["style-loader", "css-loader", "sass-loader"],
         include: path.resolve(__dirname, "../")
       },
