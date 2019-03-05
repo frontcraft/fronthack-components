@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import withFormControl from './FormControl'
 import AsyncComponent from '../../containers/AsyncComponent'
+import 'react-quill/dist/quill.snow.css'
 
 
 const Wysiwyg = ({

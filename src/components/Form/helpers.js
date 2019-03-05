@@ -11,7 +11,7 @@ import validator from 'validator'
 export function processField(name, value, required, type) {
   // If the value is an array, remove its empty values for safety.
   const processedValue = Array.isArray(value)
-    ? value.filter(item => item.length)
+    ? value.filter(item => Number.isInteger(item) || item instanceof Object || item.length)
     : value
 
   let validation; let help = null
@@ -59,6 +59,14 @@ export function processField(name, value, required, type) {
           help = 'This is not a valid phone number.'
         }
         break
+
+      case 'postcode':
+        if (!validator.isPostalCode(value, 'DE')) {
+          validation = 'error'
+          help = 'This is not a valid postal code.'
+        }
+        break
+
       case 'textarea':
         // Text should be longer than 15 chars.
         if (processedValue.length < 15) {

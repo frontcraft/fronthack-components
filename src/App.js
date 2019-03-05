@@ -35,6 +35,10 @@ import {
   CheckImages,
   Range,
   ImageUpload,
+  FormRow,
+  FormActions,
+  FormButton,
+  MultiFormInput,
 } from './components/Form'
 
 class App extends React.Component {
@@ -56,6 +60,7 @@ class App extends React.Component {
             'car',
             'range',
             'image',
+            'people',
           ]}
           required={['username']}
         >
@@ -77,27 +82,34 @@ class App extends React.Component {
             label='Content'
             placeholder='Enter content'
           />
-          <Select
-            name='framework'
-            label='Select a Framework'
-            options={[
-              { label: 'React', value: 'react' },
-              { label: 'Vue', value: 'vue' },
-              { label: 'Angluar', value: 'angluar' },
-            ]}
-            initialValue={this.state.framework}
-            initialHelp='Select from the list'
+          <MultiFormInput
+            name='people'
+            label='People'
+            form={<PeopleForm />}
           />
-          <MultiSelect
-            name='framework-multi'
-            label='Select Frameworks'
-            options={[
-              { label: 'React', value: 'react' },
-              { label: 'Vue', value: 'vue' },
-              { label: 'Angluar', value: 'angluar' },
-            ]}
-            initialHelp='Select from the list'
-          />
+          <FormRow>
+            <Select
+              name='framework'
+              label='Select a Framework'
+              options={[
+                { label: 'React', value: 'react' },
+                { label: 'Vue', value: 'vue' },
+                { label: 'Angluar', value: 'angluar' },
+              ]}
+              initialValue={this.state.framework}
+              initialHelp='Select from the list'
+            />
+            <MultiSelect
+              name='framework-multi'
+              label='Select Frameworks'
+              options={[
+                { label: 'React', value: 'react' },
+                { label: 'Vue', value: 'vue' },
+                { label: 'Angluar', value: 'angluar' },
+              ]}
+              initialHelp='Select from the list'
+            />
+          </FormRow>
           <CheckImages
             name='framework-images'
             label='Select Frameworks'
@@ -138,12 +150,15 @@ class App extends React.Component {
             name='image'
             label='Upload image'
           />
+          <FormActions>
+            <FormButton callback={fields => console.log(fields)}>Submit</FormButton>
+          </FormActions>
         </Form>
         <Button
           onClick={() => this.setState({
             framework: 'react',
           })}
-        >Change to React</Button>
+        >Change framework to React</Button>
         {/* <Tabs labels={['First', 'Second', 'Third']}>
           {[
             <div key='1'>Content of the first tab</div>,
@@ -301,3 +316,23 @@ class App extends React.Component {
 }
 
 export default App
+
+
+const PeopleForm = ({ fields, onChange }) =>
+  <Form
+    fields={['firstname', 'lastname']}
+    callbackOnChange={udpatedFields => onChange(udpatedFields)}
+  >
+    <FormRow>
+      <Input
+        name='firstname'
+        label='First name'
+        initialValue='Jan'
+      />
+      <Input
+        name='lastname'
+        label='Last name'
+        initialValue='Miszkiel'
+      />
+    </FormRow>
+  </Form>

@@ -33,12 +33,15 @@ const Checkbox = ({
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   required: PropTypes.bool,
   setValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.shape({ label: PropTypes.string, value: PropTypes.string }),
+    PropTypes.shape({
+      label: PropTypes.node,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    }),
   ])),
 }
 

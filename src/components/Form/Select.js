@@ -5,6 +5,7 @@ import withFormControl from './FormControl'
 const Select = ({
   name,
   value,
+  placeholder,
   required,
   setValue,
   options,
@@ -15,7 +16,9 @@ const Select = ({
     value={value}
     onChange={e => setValue(name, e.target.value, required)}
   >
-    {(!value || !required) && <option value='' disabled={required}>{required ? 'Select' : 'All'}</option>}
+    {(!value || !required) && <option value='' disabled={required}>
+      {placeholder || (required ? 'Select' : 'All')}
+    </option>}
     {options.map((item, index) =>
       <option
         key={index}
@@ -27,6 +30,7 @@ const Select = ({
 Select.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
+  placeholder: PropTypes.string,
   required: PropTypes.bool,
   setValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([

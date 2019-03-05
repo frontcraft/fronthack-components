@@ -7,7 +7,8 @@ import { FormConsumer } from './Form'
 class FormControl extends React.Component {
   componentDidUpdate(prevProps) {
     // If default field value has changed, change the current value.
-    if (this.props.initialValue && this.props.initialValue !== prevProps.initialValue) {
+    if ((this.props.initialValue && this.props.initialValue !== prevProps.initialValue) ||
+    (prevProps.initialValue && !this.props.initialValue)) {
       const { name, initialValue, required, type, setValue } = this.props
       setValue(name, initialValue, required, type)
     }
@@ -117,6 +118,7 @@ const withFormControl = (Component) => {
           help: help || initialHelp,
           tiny,
           large,
+          initialValue,
           ...commonProps,
         }
         const inputProps = {

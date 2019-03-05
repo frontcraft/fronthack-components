@@ -40,6 +40,7 @@ Input.propTypes = {
     'month',
     'week',
     'time',
+    'postcode',
   ]),
   value: PropTypes.any,
   placeholder: PropTypes.string,
