@@ -23,24 +23,23 @@ import NavHorizontal from './components/NavHorizontal'
 // import Rating from './components/Rating'
 // import SocialLinks from './components/SocialLinks'
 // import Tabs from './components/Tabs'
-import {
-  Form,
+import Form, {
   Input,
   TextArea,
-  Wysiwyg,
   Select,
   MultiSelect,
   Checkbox,
   Checkboxes,
   Radio,
   CheckImages,
-  Range,
+  Slider,
   ImageUpload,
   FormRow,
   FormActions,
   FormButton,
   MultiFormInput,
-} from './components/Form'
+} from 'react-standalone-form'
+
 
 class App extends React.Component {
   state = {
@@ -52,8 +51,8 @@ class App extends React.Component {
         <Form
           fields={[
             'username',
+            'age',
             'content',
-            'wysiwyg',
             'framework',
             'framework-multi',
             'framework-images',
@@ -64,7 +63,7 @@ class App extends React.Component {
             'people',
             'published',
           ]}
-          required={['username']}
+          required={['username', 'framework-images']}
         >
           <Input
             name='username'
@@ -73,21 +72,27 @@ class App extends React.Component {
             placeholder='Enter username'
             initialValue='Michal'
             initialHelp='Required field'
+            narrow
+          />
+          <Input
+            name='age'
+            label='Age'
+            type='number'
+            placeholder='Enter username'
+            initialHelp='A longer, very describtive helper text'
+            narrow
           />
           <TextArea
             name='content'
             label='Content'
             placeholder='Enter content'
-          />
-          <Wysiwyg
-            name='wysiwyg'
-            label='Content'
-            placeholder='Enter content'
+            narrow
           />
           <MultiFormInput
             name='people'
             label='People'
             form={<PeopleForm />}
+            narrow
           />
           <FormRow>
             <Select
@@ -100,6 +105,7 @@ class App extends React.Component {
               ]}
               initialValue={this.state.framework}
               initialHelp='Select from the list'
+              narrow
             />
             <MultiSelect
               name='framework-multi'
@@ -110,6 +116,7 @@ class App extends React.Component {
                 { label: 'Angluar', value: 'angluar' },
               ]}
               initialHelp='Select from the list'
+              narrow
             />
           </FormRow>
           <CheckImages
@@ -121,10 +128,12 @@ class App extends React.Component {
               { image: 'https://placehold.it/20x20', label: 'Angluar', value: 'angluar' },
             ]}
             initialHelp='Select from the list'
+            narrow
           />
           <Checkbox
             name='published'
             label='Published'
+            small
           />
           <Checkboxes
             name='car'
@@ -135,6 +144,8 @@ class App extends React.Component {
               { label: 'Volkswagen', value: 'volkswagen' },
             ]}
             initialHelp='You can pick a few'
+            small
+            inline
           />
           <Radio
             name='color'
@@ -145,16 +156,20 @@ class App extends React.Component {
               { label: 'Blue', value: 'blue' },
             ]}
             initialHelp='Choose one'
+            inline
+            small
           />
-          <Range
+          <Slider
             name='range'
             label='Select amount'
             initialHelp='Select amount between range'
             step={10}
+            narrow
           />
           <ImageUpload
             name='image'
             label='Upload image'
+            narrow
           />
           <FormActions>
             <FormButton callback={fields => console.log(fields)}>Submit</FormButton>
@@ -289,7 +304,7 @@ class App extends React.Component {
           'Another value',
           'Third value',
         ]} />
-        <Field label='Field label' inlineLabel>Single value</Field>
+        <Field label='Field label' narrow>Single value</Field>
         <Parallax>
           <ParallaxGroup className='parallax__demo-solid'>
             <div className='parallax_demo-title'>Solid base layer</div>

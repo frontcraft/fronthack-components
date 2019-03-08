@@ -1,40 +1,161 @@
-@import '../../style/mixins'
-@import '../../style/variables'
+// Variables
+//
+//
+
+// $turquoise: #1fc59c
+// $green: #00a651
+// $yellow: #ffd429
+// $red: #e50038
+
+// //* Branding colors assigment
+// $brand-primary: $turquoise
+
+// $body-bg: white
+
+// $font-size-xsmall: 12px
+// $font-size-small: 14px
+// $regular: 300
+
+// // Extra small screen / phone
+// $screen-xs-min: 0
+
+// // Small screen / tablet
+// $screen-sm-min: 768px
+
+// // Medium screen / desktop
+// $screen-md-min: 1000px
+
+// // Large screen / wide desktop
+// $screen-lg-min: 1400px
+
+// // So media queries don't overlap when required, provide a maximum
+// $screen-xs-max: $screen-sm-min - 1
+// $screen-sm-max: $screen-md-min - 1
+// $screen-md-max: $screen-lg-min - 1
+
+
+
+// Mixins
+//
+//
+
+// Clearfix prevents overflowing of floated elements.
+// =clearfix
+//   &:after
+//     content: ""
+//     display: table
+//     clear: both
+
+// Form item input height.
+// =input-height($height)
+//   .form__input
+//     height: $height
+//     line-height: $height - $height / 3
+//     padding-top: $height / 6
+//     padding-bottom: $height / 6
+//     &[type=file]
+//       line-height: $height * 0.45
+//   select.form__input:not([multiple])
+//     background-position: calc(100% - 15px) $height / 2 - 2px, calc(100% - 10px) $height / 2 - 2px
+
+// Breakpoints
+=breakpoint($min: null, $max: null)
+  // Declare breakpoint value variables
+  $min-width: null !default
+  $max-width: null !default
+  // Always interpret min value since it is cardinal.
+  @if $min == lg or $min == wide-desktop
+    $min-width: $screen-lg-min
+  @else if $min == md or $min == desktop
+    $min-width: $screen-md-min
+  @else if $min == sm or $min == tablet
+    $min-width: $screen-sm-min
+  @else if $min == xs or $min == phone
+    $min-width: $screen-xs-min
+  @else
+    // Iinterpret also pixel value.
+    $min-width: $min
+  // Interpret also max value if defined.
+  @if $max
+    @if $max == md or $max == desktop
+      $max-width: $screen-md-max
+    @else if $max == sm or $max == tablet
+      $max-width: $screen-sm-max
+    @else if $max == xs or $max == phone
+      $max-width: $screen-xs-max
+    @else
+      // Iinterpret also pixel value.
+      $max-width: $max
+    // Render min and max breakpoint if both are defined
+    @media (min-width: $min-width) and (max-width: $max-width)
+      @content
+  @else
+    // Else render only min breakpoint
+    @media (min-width: $min-width)
+      @content
+
+// Style input placeholder
+=placeholder
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+
+// Full page overlay
+// =overlay($darken: true)
+//   position: fixed
+//   top: 0
+//   right: 0
+//   bottom: 0
+//   left: 0
+//   z-index: 100
+//   @if $darken
+//     background-color: transparentize($gray-base, 0.8)
+
+// =max-rows($rows)
+//   overflow: hidden
+//   display: -webkit-box
+//   -webkit-line-clamp: $rows
+//   -webkit-box-orient: vertical
+
+
 
 // Form framework
 //
 // Importing of this file will return a fully operational CSS for building forms
 
-$form-item-width: 100%
-$form-item-height: 40px
-$form-item-lg-height: 48px
-$form-item-margin: 30px
-$form-item-font-size: 16px
-$form-item-color: $gray-dark
-$form-item-border-color: $gray-lighter
-$form-item-bg-color: white
-$form-item-inline-label-width: 130px
-$form-item-tiny-input-width: 140px
+// $form-item-width: 100%
+// $form-item-height: 40px
+// $form-item-lg-height: 48px
+// $form-item-margin: 30px
+// $form-item-font-size: 16px
+// $form-item-color: #3d4348
+// $form-item-border-color: #e6edf4
+// $form-item-bg-color: white
+// $form-item-inline-label-width: 130px
+// $form-item-tiny-input-width: 140px
 
 
 
 // Block
 // --------------------------------------------------
-.form
-  margin: 0
+// .form
+//   margin: 0
 
 
 
 // Elements
 // --------------------------------------------------
-.form__item
-  margin: 0 0 $form-item-margin
-  position: relative
-  width: $form-item-width
-  overflow: visible
-  box-sizing: border-box
-  max-width: 100%
-  +input-height($form-item-height)
+// .form__item
+  // margin: 0 0 $form-item-margin
+  // position: relative
+  // width: $form-item-width
+  // overflow: visible
+  // box-sizing: border-box
+  // max-width: 100%
+  // +input-height($form-item-height)
 // Table layout integration
 td, th
   &.form__item
@@ -43,350 +164,350 @@ td, th
     vertical-align: middle
 
 
-.form__label
-  display: block
-  margin: 0 0 10px
-  font-size: 14px
-  line-height: normal
-  text-transform: none
-  text-align: left
-  font-weight: $regular
+// .form__label
+//   display: block
+//   margin: 0 0 10px
+//   font-size: 14px
+//   line-height: normal
+//   text-transform: none
+//   text-align: left
+//   font-weight: $regular
 
 
-.form__actions
-  margin-top: $form-item-margin * 2
-  line-height: normal
-  +clearfix
-  +breakpoint(tablet)
-    display: flex
-    justify-content: flex-end
-    align-items: center
-    & > * + *
-      margin-left: 20px
-    .form__item
-      margin-bottom: 0
+// .form__actions
+//   margin-top: $form-item-margin * 2
+//   line-height: normal
+//   +clearfix
+//   +breakpoint(tablet)
+//     display: flex
+//     justify-content: flex-end
+//     align-items: center
+//     & > * + *
+//       margin-left: 20px
+//     .form__item
+//       margin-bottom: 0
 
 
-.form__input
-  width: 100%
-  margin: 0
-  border: 1px solid $form-item-border-color
-  border-radius: 6px
-  box-sizing: border-box
-  font-size: $form-item-font-size
-  transition: all 200ms ease-in
-  background-color: $form-item-bg-color
-  padding-left: 10px
-  padding-right: 10px
-  color: $form-item-color
-  +placeholder
-    color: $form-item-color
-textarea.form__input
-  height: auto !important
-  resize: vertical
-.form__input[type=number]
-  -moz-appearance: textfield
-  appearance: textfield
-  &::-webkit-inner-spin-button
-    -webkit-appearance: none
-select.form__input,
-.form__input--multiselect
-  padding-right: 30px
-  cursor: pointer
-  // Remove default caret
-  -webkit-appearance: none
-  &::-ms-expand
-    display: none
-  // Custom caret
-  &:not([multiple])
-    background:
-      image: linear-gradient(45deg, transparent 50%, lighten($form-item-border-color, 0.1)), linear-gradient(135deg, lighten($form-item-border-color, 0.1) 50%, transparent 50%)
-      size: 5px 5px, 5px 5px
-      repeat: no-repeat
-  &[multiple]
-    height: auto
-  &:-webkit-autofill
-    background-color: $body-bg !important
-    transition: background-color 5000s ease-in-out 0s
+// .form__input
+//   width: 100%
+//   margin: 0
+//   border: 1px solid $form-item-border-color
+//   border-radius: 6px
+//   box-sizing: border-box
+//   font-size: $form-item-font-size
+//   transition: all 200ms ease-in
+//   background-color: $form-item-bg-color
+//   padding-left: 10px
+//   padding-right: 10px
+//   color: $form-item-color
+//   +placeholder
+//     color: $form-item-color
+// textarea.form__input
+//   height: auto !important
+//   resize: vertical
+// .form__input[type=number]
+//   -moz-appearance: textfield
+//   appearance: textfield
+//   &::-webkit-inner-spin-button
+//     -webkit-appearance: none
+// select.form__input,
+// .form__input--multiselect
+//   padding-right: 30px
+//   cursor: pointer
+//   // Remove default caret
+//   -webkit-appearance: none
+//   &::-ms-expand
+//     display: none
+//   // Custom caret
+//   &:not([multiple])
+//     background:
+//       image: linear-gradient(45deg, transparent 50%, lighten($form-item-border-color, 0.1)), linear-gradient(135deg, lighten($form-item-border-color, 0.1) 50%, transparent 50%)
+//       size: 5px 5px, 5px 5px
+//       repeat: no-repeat
+//   &[multiple]
+//     height: auto
+//   &:-webkit-autofill
+//     background-color: $body-bg !important
+//     transition: background-color 5000s ease-in-out 0s
 
-.form__multiselect-value
-  padding: 3px 5px
-  background-color: $form-item-border-color
-  border-radius: 2px
-  & + &
-    margin-left: 5px
+// .form__multiselect-value
+//   padding: 3px 5px
+//   background-color: $form-item-border-color
+//   border-radius: 2px
+//   & + &
+//     margin-left: 5px
 
-.form__multiselect
-  position: absolute
-  top: 100%
-  left: 0
-  right: 0
-  height: $form-item-height * 5
-  border: 1px solid $form-item-border-color
-  background-color: white
-  z-index: 101
-  overflow-y: scroll
+// .form__multiselect
+//   position: absolute
+//   top: 100%
+//   left: 0
+//   right: 0
+//   height: $form-item-height * 5
+//   border: 1px solid $form-item-border-color
+//   background-color: white
+//   z-index: 101
+//   overflow-y: scroll
 
-.form__multiselect-option
-  padding: 3px 5px
-  cursor: pointer
-  display: flex
-  justify-content: space-between
-  &:hover
-    background-color: lighten($form-item-border-color, 0.1)
-  &.is-checked
-    background-color: lighten($form-item-border-color, 0.1)
+// .form__multiselect-option
+//   padding: 3px 5px
+//   cursor: pointer
+//   display: flex
+//   justify-content: space-between
+//   &:hover
+//     background-color: lighten($form-item-border-color, 0.1)
+//   &.is-checked
+//     background-color: lighten($form-item-border-color, 0.1)
 
-.form__multiselect-overlay
-  +overlay(false)
+// .form__multiselect-overlay
+//   +overlay(false)
 
-.form__range-input
-  padding: 0
-  -webkit-appearance: none
-  display: flex
-  width: 100%
-  cursor: pointer
-  height: $form-item-height
-  margin-bottom: -5px
-  background-color: transparent
-  &:focus
-    outline: none
-  &::-webkit-slider-runnable-track
-    background-color: $form-item-border-color
-    box-shadow: 0 0 60px 15px white
-    height: 6px
-  &::-webkit-slider-thumb
-    width: 12px
-    height: 12px
-    border-radius: 6px
-    margin-top: -3px
-    background-color: $brand-secondary
-    border: none
-    -webkit-appearance: none
+// .form__range-input
+//   padding: 0
+//   -webkit-appearance: none
+//   display: flex
+//   width: 100%
+//   cursor: pointer
+//   height: $form-item-height
+//   margin-bottom: -5px
+//   background-color: transparent
+//   &:focus
+//     outline: none
+//   &::-webkit-slider-runnable-track
+//     background-color: $form-item-border-color
+//     box-shadow: 0 0 60px 15px white
+//     height: 6px
+//   &::-webkit-slider-thumb
+//     width: 12px
+//     height: 12px
+//     border-radius: 6px
+//     margin-top: -3px
+//     background-color: $brand-primary
+//     border: none
+//     -webkit-appearance: none
 
-.form__range-value
-  color: $form-item-color
-  font-size: 13px
-  text-align: right
-  white-space: nowrap
-  position: absolute
-  top: -3px
-  right: 0
-  left: 0
+// .form__range-value
+//   color: $form-item-color
+//   font-size: 13px
+//   text-align: right
+//   white-space: nowrap
+//   position: absolute
+//   top: -3px
+//   right: 0
+//   left: 0
 
-.form__radio
-  display: block
-  cursor: pointer
-.form__checkbox
-  display: flex
-  position: relative
-  text-align: left
-  align-items: flex-start
-  cursor: pointer
-  input
-    margin: .1em 10px 0 0
-    position: relative
-    &::before
-      content: ''
-      display: block
-      position: absolute
-      width: 14px
-      height: 14px
-      top: 0
-      left: 0
-      background-color: $form-item-bg-color
-      cursor: pointer
-      border: 2px solid lighten($form-item-border-color, 0.1)
-      border-radius: 2px
-    &:checked
-      &::before
-        background-color: $brand-primary
-        border: 2px solid $brand-primary
-      &::after
-        content: '✓'
-        display: block
-        font-family: monospace
-        position: absolute
-        width: 16px
-        height: 16px
-        line-height: 16px
-        top: 1px
-        left: 1px
-        font-size: 18px
-        text-align: center
-        color: white
-        cursor: pointer
+// .form__radio
+//   display: block
+//   cursor: pointer
+// .form__checkbox
+//   display: flex
+//   position: relative
+//   text-align: left
+//   align-items: flex-start
+//   cursor: pointer
+//   input
+//     margin: .1em 10px 0 0
+//     position: relative
+//     &::before
+//       content: ''
+//       display: block
+//       position: absolute
+//       width: 14px
+//       height: 14px
+//       top: 0
+//       left: 0
+//       background-color: $form-item-bg-color
+//       cursor: pointer
+//       border: 2px solid lighten($form-item-border-color, 0.1)
+//       border-radius: 2px
+//     &:checked
+//       &::before
+//         background-color: $brand-primary
+//         border: 2px solid $brand-primary
+//       &::after
+//         content: '✓'
+//         display: block
+//         font-family: monospace
+//         position: absolute
+//         width: 16px
+//         height: 16px
+//         line-height: 16px
+//         top: 1px
+//         left: 1px
+//         font-size: 18px
+//         text-align: center
+//         color: white
+//         cursor: pointer
 
-.form__checkimages
-  display: flex
-  align-items: center
-  .form__checkimages-input
-    flex: 65px 0 0
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-    font-size: 9px
-    font-weight: $regular
-    line-height: normal
-    margin-top: 15px
-    padding: 0 1px
-    color: $form-item-color
-    cursor: pointer lighten
-    position: relative
-    z-index: 1
-    img
-      margin-bottom: 12px
-    &.is-checked::before
-      content: ''
-      position: absolute
-      top: -5px
-      right: 1px
-      bottom: -5px
-      left: 1px
-      background-color: $form-item-border-color
-      border-radius: 6px
-      border: 1px dashed lighten($form-item-color, 15%)
-      z-index: -1
-  & ~ .form__help
-    left: 0 !important
+// .form__checkimages
+//   display: flex
+//   align-items: center
+//   .form__checkimages-input
+//     flex: 65px 0 0
+//     display: flex
+//     flex-direction: column
+//     align-items: center
+//     justify-content: space-between
+//     font-size: 9px
+//     font-weight: $regular
+//     line-height: normal
+//     margin-top: 15px
+//     padding: 0 1px
+//     color: $form-item-color
+//     cursor: pointer lighten
+//     position: relative
+//     z-index: 1
+//     img
+//       margin-bottom: 12px
+//     &.is-checked::before
+//       content: ''
+//       position: absolute
+//       top: -5px
+//       right: 1px
+//       bottom: -5px
+//       left: 1px
+//       background-color: $form-item-border-color
+//       border-radius: 6px
+//       border: 1px dashed lighten($form-item-color, 15%)
+//       z-index: -1
+//   & ~ .form__help
+//     left: 0 !important
 
-.form__file-input-wrapper
-  text-align: center
-  padding: 20px
-  background-color: lighten($form-item-border-color, 0.1)
-  max-width: 300px
+// .form__file-input-wrapper
+//   text-align: center
+//   padding: 20px
+//   background-color: lighten($form-item-border-color, 0.1)
+//   max-width: 300px
 
-.form__file-input
-  display: none
+// .form__file-input
+//   display: none
 
-.form__file-input-image
-  display: block
-  background-color: white
-  padding: 5px
-  margin: 0 auto 10px
-  max-width: 100%
+// .form__file-input-image
+//   display: block
+//   background-color: white
+//   padding: 5px
+//   margin: 0 auto 10px
+//   max-width: 100%
 
-.form__file-input-filename
-  max-width: 100%
-  overflow: hidden
-  text-overflow: ellipsis
-  margin-bottom: 10px
-  font-size: 11px
-  color: $form-item-color
-  line-height: normal
-  text-align: center
-  +max-rows(1)
+// .form__file-input-filename
+//   max-width: 100%
+//   overflow: hidden
+//   text-overflow: ellipsis
+//   margin-bottom: 10px
+//   font-size: 11px
+//   color: $form-item-color
+//   line-height: normal
+//   text-align: center
+//   +max-rows(1)
 
-.form__help
-  position: absolute
-  top: 100%
-  display: block
-  margin: 0
-  font-size: $font-size-xsmall
-  line-height: normal
-  color: $form-item-color
-
-
-.form__addon
-  position: absolute
-  bottom: 0
-  font-size: 12px
+// .form__help
+//   position: absolute
+//   top: 100%
+//   display: block
+//   margin: 0
+//   font-size: $font-size-xsmall
+//   line-height: normal
+//   color: $form-item-color
 
 
-.form__row
-  +breakpoint(tablet)
-    display: flex
-    align-items: flex-end
-    margin-bottom: $form-item-margin
-    .form__item
-      margin-bottom: 0
-    & > * + *
-      margin-left: 50px
+// .form__addon
+//   position: absolute
+//   bottom: 0
+//   font-size: 12px
 
-.form__multi-form-input
-  display: flex
-  & + &
-    margin-top: $form-item-margin
-  & > *:first-child
-    flex-grow: 1
 
-.form__multi-form-delete
-  background:
-    image: none
-    color: $form-item-border-color
-  color: white
-  font-size: $form-item-font-size
-  padding: 5px
-  margin-left: 15px
-  border: none
-  cursor: pointer
-  +breakpoint(tablet)
-    margin-left: 30px
-  &:hover
-    background-color: lighten($form-item-border-color, 2%)
+// .form__row
+//   +breakpoint(tablet)
+//     display: flex
+//     align-items: flex-end
+//     margin-bottom: $form-item-margin
+//     .form__item
+//       margin-bottom: 0
+//     & > * + *
+//       margin-left: 50px
+
+// .form__multi-form-input
+//   display: flex
+//   & + &
+//     margin-top: $form-item-margin
+//   & > *:first-child
+//     flex-grow: 1
+
+// .form__multi-form-delete
+//   background:
+//     image: none
+//     color: $form-item-border-color
+//   color: white
+//   font-size: $form-item-font-size
+//   padding: 5px
+//   margin-left: 15px
+//   border: none
+//   cursor: pointer
+//   +breakpoint(tablet)
+//     margin-left: 30px
+//   &:hover
+//     background-color: lighten($form-item-border-color, 2%)
 
 
 // Modifiers
 // --------------------------------------------------
-.form__item--lg
-  +input-height($form-item-lg-height)
-  & + &
-    margin-top: -$form-item-margin + 14px
+// .form__item--lg
+//   +input-height($form-item-lg-height)
+//   & + &
+//     margin-top: -$form-item-margin + 14px
 
-.form__item--inline
-  width: 100%
-  .form__checkbox,
-  .form__radio
-    display: inline-block
-    white-space: nowrap
-    margin-right: 20px
-    &:last-of-type
-      margin-left: 0
+// .form__item--inline
+//   width: 100%
+//   .form__checkbox,
+//   .form__radio
+//     display: inline-block
+//     white-space: nowrap
+//     margin-right: 20px
+//     &:last-of-type
+//       margin-left: 0
 
-.form__item--inline-label
-  +breakpoint(tablet)
-    display: flex
-    flex-direction: column
-    width: 100%
-    .form__label
-      order: -1
-      margin: 0
-    +breakpoint(tablet)
-      align-items: center
-      justify-content: space-between
-      flex-direction: row
-      .form__label
-        margin-right: 10px
-        min-width: $form-item-inline-label-width
-        max-width: $form-item-inline-label-width
-        white-space: nowrap
-      .form__input,
-      .form__checkbox,
-      .form__radio,
-      .form__checkimages
-        flex-basis: calc(100% - #{$form-item-inline-label-width + 10px})
-      .form__checkimages
-        justify-content: space-between
-      .form__help
-        left: $form-item-inline-label-width + 10px
+// .form__item--inline-label
+//   +breakpoint(tablet)
+//     display: flex
+//     flex-direction: column
+//     width: 100%
+//     .form__label
+//       order: -1
+//       margin: 0
+//     +breakpoint(tablet)
+//       align-items: center
+//       justify-content: space-between
+//       flex-direction: row
+//       .form__label
+//         margin-right: 10px
+//         min-width: $form-item-inline-label-width
+//         max-width: $form-item-inline-label-width
+//         white-space: nowrap
+//       .form__input,
+//       .form__checkbox,
+//       .form__radio,
+//       .form__checkimages
+//         flex-basis: calc(100% - #{$form-item-inline-label-width + 10px})
+//       .form__checkimages
+//         justify-content: space-between
+//       .form__help
+//         left: $form-item-inline-label-width + 10px
 
 
-.form__item--tiny
-  .form__checkbox
-    font-size: 12px
-    line-height: 17px
-  +breakpoint(tablet)
-    .form__input
-      max-width: $form-item-tiny-input-width
-    .form__help
-      left: auto
-      right: 0
-      width: $form-item-tiny-input-width
-    &.form__item--inline-label
-      .form__label
-        min-width: calc(100% - $form-item-tiny-input-width - 10px)
-        max-width: calc(100% - $form-item-tiny-input-width - 10px)
+// .form__item--tiny
+//   .form__checkbox
+//     font-size: 12px
+//     line-height: 17px
+//   +breakpoint(tablet)
+//     .form__input
+//       max-width: $form-item-tiny-input-width
+//     .form__help
+//       left: auto
+//       right: 0
+//       width: $form-item-tiny-input-width
+//     &.form__item--inline-label
+//       .form__label
+//         min-width: calc(100% - $form-item-tiny-input-width - 10px)
+//         max-width: calc(100% - $form-item-tiny-input-width - 10px)
 
 
 .form__item--alt
@@ -450,46 +571,46 @@ select.form__input,
 
 // States
 // --------------------------------------------------
-.form__input:focus
-  border: 1px solid $brand-primary
-  box-shadow: none
-  outline-width: 0
-  & ~ .form__label
-    color: inherit !important
+// .form__input:focus
+//   border: 1px solid $brand-primary
+//   box-shadow: none
+//   outline-width: 0
+//   & ~ .form__label
+//     color: inherit !important
 
 
-*[disabled]
-  opacity: 0.5
-  cursor: not-allowed
-input[disabled],
-textarea[disabled],
-select[disabled],
-*[disabled] input,
-*[disabled] textarea,
-*[disabled] select,
-*[disabled] .form__checkbox,
-*[disabled] .form__radio
-  pointer-events: none
+// *[disabled]
+//   opacity: 0.5
+//   cursor: not-allowed
+// input[disabled],
+// textarea[disabled],
+// select[disabled],
+// *[disabled] input,
+// *[disabled] textarea,
+// *[disabled] select,
+// *[disabled] .form__checkbox,
+// *[disabled] .form__radio
+//   pointer-events: none
 
-.form__item.has-success
-  .form__label,
-  // .form__checkbox,
-  // .form__radio,
-  .form__addon,
-  .form__help
-    color: darken($green, 5%)
-  .form__input:not(:focus)
-    border-color: lighten($green, 10%)
+// .form__item.has-success
+//   .form__label,
+//   // .form__checkbox,
+//   // .form__radio,
+//   .form__addon,
+//   .form__help
+//     color: darken($green, 5%)
+//   .form__input:not(:focus)
+//     border-color: lighten($green, 10%)
 
 
-.form__item.has-error
-  .form__label,
-  .form__addon,
-  .form__help,
-  .form__checkbox,
-  .form__radio,
-  .form__checkimages-input
-    color: darken($red, 15%)
-  .form__input:not(:focus)
-    border-color: lighten($red, 15%)
-    background-color: lighten($red, 53%)
+// .form__item.has-error
+//   .form__label,
+//   .form__addon,
+//   .form__help,
+//   .form__checkbox,
+//   .form__radio,
+//   .form__checkimages-input
+//     color: darken($red, 15%)
+//   .form__input:not(:focus)
+//     border-color: lighten($red, 15%)
+//     background-color: lighten($red, 53%)
