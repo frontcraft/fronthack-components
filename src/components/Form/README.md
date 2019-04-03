@@ -4,83 +4,11 @@
 
 `fronthack component`, then `form`
 
-#### JSX example:
+The advanced Fronthack React Form component has been promoted to a standalone npm package. To use it on a project, do following:
 
-
-```js
-<Form
-  fields={['username', 'framework', 'car', 'color']}
-  required={['username', 'framework']}
->
-  <FormControl
-    fieldname="username"
-    label="User name"
-    type="text"
-    placeholder="Enter username"
-    initialHelp="Your desired name"
-  />
-  <FormControl
-    fieldname="framework"
-    label="Select a Framework"
-    type="select"
-    options={[
-      { label: 'React', value: 'react' },
-      { label: 'Vue', value: 'vue' },
-      { label: 'Angluar', value: 'angluar' },
-    ]}
-    initialHelp="Select from the list"
-  />
-  <FormControl
-    fieldname="car"
-    label="Select cars"
-    type="checkbox"
-    options={[
-      { label: 'Toyota', value: 'toyota' },
-      { label: 'Renault', value: 'renault' },
-      { label: 'Volkswagen', value: 'volkswagen' },
-    ]}
-    initialHelp="You can pick a few"
-  />
-  <FormControl
-    fieldname="color"
-    label="Pick a color"
-    type="radio"
-    options={[
-      { label: 'Red', value: 'red' },
-      { label: 'Yellow', value: 'yellow' },
-      { label: 'Blue', value: 'blue' },
-    ]}
-    initialHelp="Choose one"
-  />
-  <FormButton callback={action()}>Submit</FormButton>
-</Form>
 ```
-
-##### Form props
-
-* `fields` - array of field names of all fields that will be avaliable in form
-* `required` - array of field names that should be required
-* `allRequired` - in case where all fields should be required, use this prop instead of defining them in `required` array
-* `callbackOnChange` - perform callback with field values on every form change. Alternative to submit buttons
-
-##### FormControl props
-
-* `fieldname` - unique identifier of the field
-* `label` - label to be displayed above the field
-* `type` - type of the input
-* `placeholder` - placeholder content
-* `initialValue` - initial value of the field
-* `initialHelp` - help text
-* `options` - avaliable options (for some types of inputs)
-* `addon` - content or icon near the right edge of the field
-
-##### FormButton props
-
-* `callback` - operation to perform after click. It provides an object with field values that can be used for API calls
-* `size` - button size (see Button component)
-* `variant` - button variant (see Button component)
-* `reset` - whether clicking on a button should reset the form values or not
-* `loading` - enable loading state
+yarn add react-standalone-form
+```
 
 #### Static HTML example:
 

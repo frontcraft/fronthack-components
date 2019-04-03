@@ -32,7 +32,7 @@ import Form, {
   Checkbox,
   Checkboxes,
   Radio,
-  CheckImages,
+  ImageSelect,
   Slider,
   ImageUpload,
   FormRow,
@@ -40,11 +40,11 @@ import Form, {
   FormButton,
   MultiFormInput,
   Switch,
+  Switches,
 } from 'react-standalone-form'
 
 import 'core-js/fn/string/starts-with'
 import 'core-js/fn/array/includes'
-
 
 class App extends React.Component {
   state = {
@@ -58,12 +58,14 @@ class App extends React.Component {
             fields={[
               'username',
               'age',
+              'date',
               'content',
               'framework',
               'framework-multi',
               'framework-images',
               'color',
               'car',
+              'switches',
               'range',
               'image',
               'people',
@@ -78,16 +80,24 @@ class App extends React.Component {
               type='text'
               placeholder='Enter username'
               initialValue='Michal'
-              initialHelp='Required field'
+              help='Required field'
               inlineLabel
               large
+              min={4}
             />
             <Input
               name='age'
               label='Age'
               type='number'
               placeholder='Enter username'
-              initialHelp='A longer, very describtive helper text'
+              help='A longer, very describtive helper text'
+              inlineLabel
+              large
+            />
+            <Input
+              name='date'
+              label='Date'
+              type='date'
               inlineLabel
               large
             />
@@ -97,16 +107,18 @@ class App extends React.Component {
               placeholder='Enter content'
               inlineLabel
               large
+              min={15}
             />
             <MultiFormInput
               name='people'
               label='People'
-              form={<PeopleForm />}
-              moreComponent={Button}
+              form={PeopleForm}
+              // moreComponent={Button}
               moreComponentProps={{ variant: 'link' }}
               moreLabel='Add new person'
               variant='link'
               inlineLabel
+              initialValue={[{ firstname: 'Michal', lastname: 'Kokocinski' }]}
               large
             />
             <FormRow>
@@ -119,7 +131,7 @@ class App extends React.Component {
                   { label: 'Angluar', value: 'angluar' },
                 ]}
                 initialValue={this.state.framework}
-                initialHelp='Select from the list'
+                help='Select from the list'
                 inlineLabel
                 large
               />
@@ -131,20 +143,21 @@ class App extends React.Component {
                   { label: 'Vue', value: 'vue' },
                   { label: 'Angluar', value: 'angluar' },
                 ]}
-                initialHelp='Select from the list'
+                help='Select from the list'
                 inlineLabel
                 large
               />
             </FormRow>
-            <CheckImages
+            <ImageSelect
               name='framework-images'
               label='Select Frameworks'
               options={[
-                { image: 'https://placehold.it/20x20', label: 'React', value: 'react' },
-                { image: 'https://placehold.it/20x20', label: 'Vue', value: 'vue' },
-                { image: 'https://placehold.it/20x20', label: 'Angluar', value: 'angluar' },
+                { image: 'https://placehold.it/20x20', value: 'react' },
+                { image: 'https://placehold.it/20x20', value: 'vue' },
+                { image: 'https://placehold.it/20x20', value: 'angluar' },
               ]}
-              initialHelp='Select from the list'
+              multiple
+              help='Select from the list'
               inlineLabel
               large
             />
@@ -158,7 +171,7 @@ class App extends React.Component {
             <Switch
               name='switch'
               label='Switch'
-              content='Content for switch'
+              text='Content for switch'
               inlineLabel
             />
             <Checkboxes
@@ -169,7 +182,18 @@ class App extends React.Component {
                 { label: 'Renault', value: 'renault' },
                 { label: 'Volkswagen', value: 'volkswagen' },
               ]}
-              initialHelp='You can pick a few'
+              help='You can pick a few'
+              inlineLabel
+            />
+            <Switches
+              name='switches'
+              label='Switches'
+              options={[
+                { label: 'Toyota', value: 'toyota' },
+                { label: 'Renault', value: 'renault' },
+                { label: 'Volkswagen', value: 'volkswagen' },
+              ]}
+              help='You can pick a few'
               inlineLabel
             />
             <Radio
@@ -180,7 +204,7 @@ class App extends React.Component {
                 { label: 'Yellow', value: 'yellow' },
                 { label: 'Blue', value: 'blue' },
               ]}
-              initialHelp='Choose one'
+              help='Choose one'
               inline
               large
               inlineLabel
@@ -188,7 +212,7 @@ class App extends React.Component {
             <Slider
               name='range'
               label='Select amount'
-              initialHelp='Select amount between range'
+              help='Select amount between range'
               step={10}
               large
               inlineLabel
@@ -199,9 +223,10 @@ class App extends React.Component {
               inlineLabel
             />
             <FormActions>
+              <FormButton reset>Reset</FormButton>
               <FormButton
                 callback={fields => console.log(fields)}
-                component={Button}
+                // component={Button}
               >Submit</FormButton>
             </FormActions>
           </Form>
@@ -379,12 +404,12 @@ const PeopleForm = ({ fields, onChange }) =>
       <Input
         name='firstname'
         label='First name'
-        initialValue='Jan'
+        initialValue={fields.firstname}
       />
       <Input
         name='lastname'
         label='Last name'
-        initialValue='Miszkiel'
+        initialValue={fields.lastname}
       />
     </FormRow>
   </Form>
