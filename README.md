@@ -14,17 +14,13 @@ in real-life environment
 
 ### Deployment
 
-To deploy a styleguide to https://frontcraft.github.io/fronthack-components/index.html,
+To deploy a storybook to https://frontcraft.github.io/fronthack-components/index.html,
 run a following command:
 
 ```
-yarn build-storybook
+yarn deploy-storybook
 ```
-
-then push the changes to master branch. They will be autimatically deployed as
-GitHub Pages.
 
 Fronthack CLI uses the latest version of files in this repository, so if you
 introduce a changes in any component, Fronthack will treat them as a source of
-truth after they are pushed/merged to `master` branch.
-
+truth after they will by pushed/merged to a `master` branch.
