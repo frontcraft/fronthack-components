@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 
 
@@ -11,22 +12,48 @@ class Accordion extends React.Component {
   }
   render() {
     const { openedItem } = this.state
+    const { children } = this.props
     return (
       <div className='accordion'>
-        {this.props.items.map((item, index) => (
-          <div className={`accordion__item${openedItem === index ? ' is-expanded' : ''}`} key={index}>
-            <div
-              className='accordion__title'
-              onClick={() => this.handleClick(index)}
-            >{item.title}</div>
-            { openedItem === index &&
-              <div className='accordion__content'>{item.content}</div>
-            }
-          </div>
-        ))}
+        {Array.isArray(children) && children.map((child, index) => ({
+          ...child,
+          props: {
+            ...child.props,
+            openedItem,
+            index,
+            handleClick: () => this.handleClick(index),
+          },
+        }))}
       </div>
     )
   }
 }
 
+Accordion.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+}
+
 export default Accordion
+
+
+export const AccordionItem = ({
+  title,
+  children,
+  openedItem,
+  index,
+  handleClick,
+}) =>
+  <div
+    className={`accordion__item${openedItem === index ? ' is-expanded' : ''}`}
+    key={index}
+  >
+    <div className='accordion__title' onClick={() => handleClick()}>{title}</div>
+    {openedItem === index &&
+      <div className='accordion__content'>{children}</div>
+    }
+  </div>
+
+AccordionItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+}

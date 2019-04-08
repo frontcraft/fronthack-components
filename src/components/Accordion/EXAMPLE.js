@@ -1,14 +1,12 @@
 import React from 'react'
-import Accordion from '.'
+import Accordion, { AccordionItem } from '.'
 
 export default () =>
-  <Accordion items={[
-    {
-      title: 'First accordion item',
-      content: 'Content for the first accordion',
-    },
-    {
-      title: 'Second accordion item',
-      content: 'Content for the first accordion',
-    },
-  ]} />
+  <Accordion>
+    <AccordionItem title='First accordion item'>
+      Content for a first item
+    </AccordionItem>
+    <AccordionItem title='Second accordion item'>
+      Content for a second item
+    </AccordionItem>
+  </Accordion>

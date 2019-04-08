@@ -2,7 +2,7 @@ import React from 'react'
 // import logo from './logo.svg'
 import './style/index.sass'
 // import Alert from './components/Alert'
-// import Accordion from './components/Accordion'
+import Accordion, { AccordionItem } from './components/Accordion'
 // import Dropdown from './components/Dropdown'
 // import Field from './components/Field'
 // import Icon from './components/Icon'
@@ -54,6 +54,14 @@ class App extends React.Component {
     return (
       <FormThemeProvider theme={{ colors: { accent: 'blue' } }}>
         <div className='container'>
+          <Accordion>
+            <AccordionItem title='First accordion item'>
+              Content for the first accordion
+            </AccordionItem>
+            <AccordionItem title='Second accordion item'>
+              Content for the second accordion
+            </AccordionItem>
+          </Accordion>
           <Form
             fields={[
               'username',
@@ -292,16 +300,6 @@ class App extends React.Component {
             callback={item => alert(item)}
             current={3}
           />
-          <Accordion items={[
-            {
-              title: 'First accordion item',
-              content: 'Content for the first accordion',
-            },
-            {
-              title: 'Second accordion item',
-              content: 'Content for the first accordion',
-            },
-          ]} />
           <Modal
             size='lg'
             title='Modal title'

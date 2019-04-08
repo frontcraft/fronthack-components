@@ -6,22 +6,20 @@
 
 #### JSX example:
 
-```js
-<Accordion items={[
-  {
-    title: 'First accordion item',
-    content: 'Content for the first accordion'
-  },
-  {
-    title: 'Second accordion item',
-    content: 'Content for the first accordion'
-  },
-]}/>
+```jsx
+<Accordion>
+  <AccordionItem title='First accordion item'>
+    Content for a first item
+  </AccordionItem>
+  <AccordionItem title='Second accordion item'>
+    Content for a second item
+  </AccordionItem>
+</Accordion>
 ```
 
 ##### Properties
 
-* `items` - each object must contain a title and content that is visible when expanded
+* `title` - each accordion item must contain a title
 
 #### Static HTML example:
 
