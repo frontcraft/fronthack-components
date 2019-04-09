@@ -115,9 +115,7 @@ storiesOf('Docs/Coding first page', module)
   .add('Read', () => <DocsFirstPage />)
 
 storiesOf('Docs/Further coding', module)
-  .add('Static', () => <DocsFurther />)
-  .add('React', () => <DocsFurther />)
-  .add('Next', () => <DocsFurther />)
+  .add('Read', () => <DocsFurther />)
 
 storiesOf('Docs/Deployment', module)
   .add('Static', () => <DocsDeployment />)
