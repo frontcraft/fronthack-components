@@ -112,9 +112,7 @@ storiesOf('Docs/Recognition of designs', module)
   .add('Read', () => <DocsDesigns />)
 
 storiesOf('Docs/Coding first page', module)
-  .add('Static', () => <DocsFirstPage />)
-  .add('React', () => <DocsFirstPage />)
-  .add('Next', () => <DocsFirstPage />)
+  .add('Read', () => <DocsFirstPage />)
 
 storiesOf('Docs/Further coding', module)
   .add('Static', () => <DocsFurther />)
