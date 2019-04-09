@@ -4,7 +4,9 @@ import { withReadme } from 'storybook-readme'
 
 import '../src/style/index.sass'
 
-import DocsDeployment from '../src/pages/DocsDeployment'
+import DocsDeploymentStatic from '../src/pages/DocsDeploymentStatic'
+import DocsDeploymentReact from '../src/pages/DocsDeploymentReact'
+import DocsDeploymentNext from '../src/pages/DocsDeploymentNext'
 import DocsDesigns from '../src/pages/DocsDesigns'
 import DocsFileStructureStatic from '../src/pages/DocsFileStructureStatic'
 import DocsFileStructureReact from '../src/pages/DocsFileStructureReact'
@@ -118,9 +120,9 @@ storiesOf('Docs/Further coding', module)
   .add('Read', () => <DocsFurther />)
 
 storiesOf('Docs/Deployment', module)
-  .add('Static', () => <DocsDeployment />)
-  .add('React', () => <DocsDeployment />)
-  .add('Next', () => <DocsDeployment />)
+  .add('Static', () => <DocsDeploymentStatic />)
+  .add('React', () => <DocsDeploymentReact />)
+  .add('Next', () => <DocsDeploymentNext />)
 
 storiesOf('Components/Basic styles', module)
   .addDecorator(withReadme(BasicStylesREADME))
