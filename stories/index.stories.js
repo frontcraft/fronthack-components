@@ -84,6 +84,8 @@ import TagsEXAMPLE from '../src/components/Tags/EXAMPLE'
 import TagsREADME from '../src/components/Tags/README.md'
 import TooltipEXAMPLE from '../src/components/Tooltip/EXAMPLE'
 import TooltipREADME from '../src/components/Tooltip/README.md'
+import TopBarEXAMPLE from '../src/components/TopBar/EXAMPLE'
+import TopBarREADME from '../src/components/TopBar/README.md'
 
 addDecorator((storyFn) => (
   <div style={{ padding: '20px' }}>
@@ -258,3 +260,7 @@ storiesOf('Components/Tags', module)
 storiesOf('Components/Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
   .add('default', () => <TooltipEXAMPLE />)
+
+storiesOf('Components/TopBar', module)
+  .addDecorator(withReadme(TopBarREADME))
+  .add('default', () => <TopBarEXAMPLE />)

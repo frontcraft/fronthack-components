@@ -1,0 +1,47 @@
+@import '../../style/variables.sass'
+@import '../../style/mixins.sass'
+
+// Top bar
+//
+// Top navigation bar
+
+
+$height-mobile: 50px
+$height-desktop: 60px
+
+// Block
+// --------------------------------------------------
+// .top-bar
+
+
+// Elements
+// --------------------------------------------------
+.top-bar__spacer
+  margin-top: $height-mobile
+  +breakpoint(tablet)
+    margin-top: $height-desktop
+
+.top-bar__bar
+  background-color: white
+  position: fixed
+  top: 0
+  z-index: 100
+  width: 100%
+  +box-shadow
+
+.top-bar__container
+  display: flex
+  justify-content: space-between
+  +container
+  height: $height-mobile
+  +breakpoint(tablet)
+    height: $height-desktop
+
+.top-bar__logo
+  flex-grow: 1
+  align-self: center
+
+.top-bar__hamburger
+  display: flex
+  align-items: center
+  margin-right: -$container-paddings
