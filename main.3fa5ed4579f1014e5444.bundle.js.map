@@ -1,0 +1,1 @@
+{"version":3,"file":"main.3fa5ed4579f1014e5444.bundle.js","sources":["webpack:///./src/components/Icon/Icon.js"],"sourcesContent":["import React from 'react'\nimport bemCx from 'bem-modifiers'\nimport './style.sass'\n\n\nconst Icon = ({ type, className }) => <i className={bemCx('icon', type, className)} />\n\nexport default Icon\n"],"mappings":"AAKA","sourceRoot":""}
