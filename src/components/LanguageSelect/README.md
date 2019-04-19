@@ -8,17 +8,9 @@
 
 ```js
 <LanguageSelect
-  languages={[
-    {
-      name: 'English',
-      callback: () => alert('Callback. It can be history.push or anything'),
-    },
-    {
-      name: 'Polish',
-      callback: () => alert('Callback. It can be history.push or anything'),
-    },
-  ]}
-  current="English"
+  languages={['English', 'Polish']}
+  current='English'
+  callback={newLanguage => alert(`Switch to ${newLanguage}`)}
 />
 ```
 
