@@ -1,9 +1,10 @@
-import { configure } from '@storybook/react'
+import { addDecorator, configure } from '@storybook/react'
+import { addReadme } from 'storybook-readme'
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.js$/)
+addDecorator(addReadme)
+
 function loadStories() {
-  req.keys().forEach(filename => req(filename))
+  require('../stories/index.js')
 }
 
 configure(loadStories, module)

@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf, addDecorator } from '@storybook/react'
-import { withReadme } from 'storybook-readme'
 
 import '../src/style/index.sass'
 
@@ -87,9 +86,9 @@ import TooltipREADME from '../src/components/Tooltip/README.md'
 import TopBarEXAMPLE from '../src/components/TopBar/EXAMPLE'
 import TopBarREADME from '../src/components/TopBar/README.md'
 
-addDecorator((storyFn) => (
+addDecorator(storyFn => (
   <div style={{ padding: '20px' }}>
-    { storyFn() }
+    {storyFn()}
   </div>
 ))
 
@@ -127,31 +126,31 @@ storiesOf('Docs/Deployment', module)
   .add('Next', () => <DocsDeploymentNext />)
 
 storiesOf('Components/Basic styles', module)
-  .addDecorator(withReadme(BasicStylesREADME))
+  .addParameters({ readme: { sidebar: BasicStylesREADME } })
   .add('default', () => <BasicStyles />)
 
 storiesOf('Components/Accordion', module)
-  .addDecorator(withReadme(AccordionREADME))
+  .addParameters({ readme: { sidebar: AccordionREADME } })
   .add('default', () => <AccordionEXAMPLE />)
 
 storiesOf('Components/Alert', module)
-  .addDecorator(withReadme(AlertREADME))
+  .addParameters({ readme: { sidebar: AlertREADME } })
   .add('default', () => <AlertEXAMPLE />)
 
 storiesOf('Components/Badge', module)
-  .addDecorator(withReadme(BadgeREADME))
+  .addParameters({ readme: { sidebar: BadgeREADME } })
   .add('default', () => <BadgeEXAMPLE />)
 
 storiesOf('Components/Block', module)
-  .addDecorator(withReadme(BlockREADME))
+  .addParameters({ readme: { sidebar: BlockREADME } })
   .add('default', () => <BlockEXAMPLE />)
 
 storiesOf('Components/Breadcrumb', module)
-  .addDecorator(withReadme(BreadcrumbREADME))
+  .addParameters({ readme: { sidebar: BreadcrumbREADME } })
   .add('default', () => <BreadcrumbEXAMPLE />)
 
 storiesOf('Components/Button', module)
-  .addDecorator(withReadme(ButtonREADME))
+  .addParameters({ readme: { sidebar: ButtonREADME } })
   .add('default', () => <ButtonEXAMPLE />)
   .add('primary', () => <ButtonEXAMPLE variant='primary' />)
   .add('secondary', () => <ButtonEXAMPLE variant='secondary' />)
@@ -161,106 +160,106 @@ storiesOf('Components/Button', module)
   .add('link', () => <ButtonEXAMPLE variant='link' />)
 
 storiesOf('Components/Cloudlet', module)
-  .addDecorator(withReadme(CloudletREADME))
+  .addParameters({ readme: { sidebar: CloudletREADME } })
   .add('default', () => <CloudletEXAMPLE />)
 
 storiesOf('Components/Donut', module)
-  .addDecorator(withReadme(DonutREADME))
+  .addParameters({ readme: { sidebar: DonutREADME } })
   .add('default', () => <DonutEXAMPLE />)
 
 storiesOf('Components/Dropdown', module)
-  .addDecorator(withReadme(DropdownREADME))
+  .addParameters({ readme: { sidebar: DropdownREADME } })
   .add('default', () => <DropdownEXAMPLE />)
 
 storiesOf('Components/Field', module)
-  .addDecorator(withReadme(FieldREADME))
+  .addParameters({ readme: { sidebar: FieldREADME } })
   .add('default', () => <FieldEXAMPLE />)
 
 
 storiesOf('Components/Form', module)
-  .addDecorator(withReadme(FormREADME))
+  .addParameters({ readme: { sidebar: FormREADME } })
   .add('default', () => <Form />)
 
 storiesOf('Components/HamburgerNav', module)
-  .addDecorator(withReadme(HamburgerNavREADME))
+  .addParameters({ readme: { sidebar: HamburgerNavREADME } })
   .add('default', () => <HamburgerNavEXAMPLE />)
 
 storiesOf('Components/Icon', module)
-  .addDecorator(withReadme(IconREADME))
+  .addParameters({ readme: { sidebar: IconREADME } })
   .add('default', () => <IconEXAMPLE />)
 
 storiesOf('Components/LanguageSelect', module)
-  .addDecorator(withReadme(LanguageSelectREADME))
+  .addParameters({ readme: { sidebar: LanguageSelectREADME } })
   .add('default', () => <LanguageSelectEXAMPLE />)
 
 storiesOf('Components/ListingItem', module)
-  .addDecorator(withReadme(ListingItemREADME))
+  .addParameters({ readme: { sidebar: ListingItemREADME } })
   .add('default', () => <ListingItemEXAMPLE />)
 
 storiesOf('Components/Logo', module)
-  .addDecorator(withReadme(LogoREADME))
+  .addParameters({ readme: { sidebar: LogoREADME } })
   .add('default', () => <LogoEXAMPLE />)
 
 storiesOf('Components/Modal', module)
-  .addDecorator(withReadme(ModalREADME))
+  .addParameters({ readme: { sidebar: ModalREADME } })
   .add('default', () => <ModalEXAMPLE />)
 
 storiesOf('Components/NavHorizontal', module)
-  .addDecorator(withReadme(NavHorizontalREADME))
+  .addParameters({ readme: { sidebar: NavHorizontalREADME } })
   .add('default', () => <NavHorizontalEXAMPLE />)
 
 storiesOf('Components/NavVertical', module)
-  .addDecorator(withReadme(NavVerticalREADME))
+  .addParameters({ readme: { sidebar: NavVerticalREADME } })
   .add('default', () => <NavVerticalEXAMPLE />)
 
 storiesOf('Components/NavSubway', module)
-  .addDecorator(withReadme(NavSubwayREADME))
+  .addParameters({ readme: { sidebar: NavSubwayREADME } })
   .add('default', () => <NavSubwayEXAMPLE />)
 
 storiesOf('Components/OwlCarousel', module)
-  .addDecorator(withReadme(OwlCarouselREADME))
+  .addParameters({ readme: { sidebar: OwlCarouselREADME } })
   .add('default', () => <OwlCarouselEXAMPLE />)
 
 storiesOf('Components/Pagination', module)
-  .addDecorator(withReadme(PaginationREADME))
+  .addParameters({ readme: { sidebar: PaginationREADME } })
   .add('default', () => <PaginationEXAMPLE />)
 
 storiesOf('Components/Parallax', module)
-  .addDecorator(withReadme(ParallaxREADME))
+  .addParameters({ readme: { sidebar: ParallaxREADME } })
   .add('default', () => <ParallaxEXAMPLE />)
 
 storiesOf('Components/ProgressBar', module)
-  .addDecorator(withReadme(ProgressBarREADME))
+  .addParameters({ readme: { sidebar: ProgressBarREADME } })
   .add('default', () => <ProgressBarEXAMPLE />)
 
 storiesOf('Components/Rating', module)
-  .addDecorator(withReadme(RatingREADME))
+  .addParameters({ readme: { sidebar: RatingREADME } })
   .add('default', () => <RatingEXAMPLE />)
 
 storiesOf('Components/SocialLinks', module)
-  .addDecorator(withReadme(SocialLinksREADME))
+  .addParameters({ readme: { sidebar: SocialLinksREADME } })
   .add('default', () => <SocialLinksEXAMPLE />)
 
 storiesOf('Components/SocialSignUp', module)
-  .addDecorator(withReadme(SocialSignUpREADME))
+  .addParameters({ readme: { sidebar: SocialSignUpREADME } })
   .add('default', () => <SocialSignUpEXAMPLE />)
 
 storiesOf('Components/Stepper', module)
-  .addDecorator(withReadme(StepperREADME))
+  .addParameters({ readme: { sidebar: StepperREADME } })
   .add('default', () => <StepperEXAMPLE />)
 
 storiesOf('Components/Tabs', module)
-  .addDecorator(withReadme(TabsREADME))
+  .addParameters({ readme: { sidebar: TabsREADME } })
   .add('default', () => <TabsEXAMPLE />)
 
 storiesOf('Components/Tags', module)
-  .addDecorator(withReadme(TagsREADME))
+  .addParameters({ readme: { sidebar: TagsREADME } })
   .add('default', () => <TagsEXAMPLE />)
 
 storiesOf('Components/Tooltip', module)
-  .addDecorator(withReadme(TooltipREADME))
+  .addParameters({ readme: { sidebar: TooltipREADME } })
   .add('default', () => <TooltipEXAMPLE />)
 
 storiesOf('Components/TopBar', module)
-  .addDecorator(withReadme(TopBarREADME))
+  .addParameters({ readme: { sidebar: TopBarREADME } })
   .add('default', () => <TopBarEXAMPLE />)
