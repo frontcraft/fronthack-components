@@ -1,10 +1,13 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
 import LanguageSelect from '.'
 
-export default () =>
-  <LanguageSelect
-    languages={['English', 'Polish']}
-    current='English'
-    callback={newLanguage => action(`Switch to ${newLanguage}`)}
-  />
+export default () => {
+  const [current, setCurrent] = React.useState('EN')
+  return (
+    <LanguageSelect
+      languages={['EN', 'DE', 'PL']}
+      current={current}
+      callback={newLanguage => setCurrent(newLanguage)}
+    />
+  )
+}

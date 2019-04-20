@@ -1,10 +1,13 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
 import Pagination from '.'
 
-export default () =>
-  <Pagination
-    pages={5}
-    onClick={item => action(item)}
-    current={3}
-  />
+export default () => {
+  const [currentItem, setCurrentItem] = React.useState(1)
+  return (
+    <Pagination
+      pages={5}
+      onClick={item => setCurrentItem(item)}
+      current={currentItem}
+    />
+  )
+}

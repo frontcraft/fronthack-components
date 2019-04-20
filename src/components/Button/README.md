@@ -13,7 +13,7 @@ fronthack component Button
   variant='primary'
   size='xs'
   className='any-class'
-  onClick={() => action('Button callback, eg. history.push')}
+  onClick={() => alert('Button callback')}
 >Button label</Button>
 ```
 
