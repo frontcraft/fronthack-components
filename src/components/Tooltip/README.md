@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `tooltip`
+```
+fronthack component Tooltip
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Tooltip message="Hey, I'm made with pure CSS" direction="tr" />
 ```
 

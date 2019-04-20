@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `field`
+````
+fronthack component Field
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Field label="Field label" spacing values={[
   'Multiple value',
   'Another value',

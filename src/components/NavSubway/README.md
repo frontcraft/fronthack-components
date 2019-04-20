@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `nav-subway`
+```
+fronthack component NavSubway
+```
 
 #### JSX example:
 
-```js
+```jsx
 <NavSubway links={[
   {
     label: 'Home',

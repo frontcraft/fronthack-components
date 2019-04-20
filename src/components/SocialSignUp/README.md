@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `social-sign-up`
+```
+fronthack component SocialSignUp
+```
 
 #### JSX example:
 
-```js
+```jsx
 <SocialSignUp label='Log in using social media account' />
 ```
 

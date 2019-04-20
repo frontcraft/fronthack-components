@@ -2,7 +2,9 @@
 
 ### Usage
 
-`fronthack component`, then `accordion`
+```
+fronthack component Accordion
+```
 
 #### JSX example:
 

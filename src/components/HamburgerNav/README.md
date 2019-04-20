@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `hamburger-nav`
+```
+fronthack component HamburgerNav
+```
 
 #### JSX example:
 
-```js
+```jsx
 <HamburgerNav links={[
   {
     label: 'Home',

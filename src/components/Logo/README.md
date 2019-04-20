@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `logo`
+```
+fronthack component Logo
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Logo />
 ```
 

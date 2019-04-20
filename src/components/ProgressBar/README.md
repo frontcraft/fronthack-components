@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `progress-bar`
+```
+fronthack component ProgressBar
+```
 
 #### JSX example:
 
-```js
+```jsx
 <ProgressBar percentage={45} />
 ```
 

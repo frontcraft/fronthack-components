@@ -2,10 +2,12 @@
 
 ### Usage
 
-`fronthack component`, then `icon`
+```
+fronthack component Icon
+```
 
 #### JSX example:
-```js
+```jsx
 <Icon type="bell" />
 ```
 

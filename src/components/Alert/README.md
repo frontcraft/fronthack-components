@@ -2,17 +2,19 @@
 
 ### Usage
 
-`fronthack component`, then `alert`
+```
+fronthack component Alert
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Alert message="Successful message" type="success" />
 ```
 
 ##### Avaliable props
 
-* 'type' - color of the alert
+* `type` - color of the alert
 * `message` - each object must contain a title and content that is visible when expanded
 
 #### Static HTML example:

@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `stepper`
+```
+fronthack component Stepper
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Stepper
   steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
   current={2}

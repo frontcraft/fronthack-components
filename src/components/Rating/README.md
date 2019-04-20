@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `rating`
+```
+fronthack component Rating
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Rating value={2} />
 ```
 

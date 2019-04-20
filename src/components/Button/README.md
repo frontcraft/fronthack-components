@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `button`
+```
+fronthack component Button
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Button
   variant='primary'
   size='xs'

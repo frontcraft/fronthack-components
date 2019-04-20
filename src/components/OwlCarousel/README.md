@@ -2,7 +2,9 @@
 
 ### Usage
 
-`fronthack component`, then `owl-carousel`
+```
+fronthack component OwlCarousel
+```
 
 #### JSX example:
 

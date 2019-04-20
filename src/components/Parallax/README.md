@@ -7,11 +7,13 @@ body class. Inspired by http://keithclark.co.uk/articles/pure-css-parallax-websi
 
 ### Usage
 
-`fronthack component`, then `parallax`
+```
+fronthack component Parallax
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Parallax>
   <ParallaxGroup className="parallax__demo-solid">
     <div class="parallax_demo-title">Solid base layer</div>

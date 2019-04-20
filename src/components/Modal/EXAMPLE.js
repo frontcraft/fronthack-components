@@ -2,9 +2,9 @@ import React from 'react'
 import Modal from '.'
 import Button from '../Button'
 
-export default () =>
+export default ({ size }) =>
   <Modal
-    size='sm'
+    size={size}
     title='Modal title'
     trigger={<Button variant='primary'>Open modal</Button>}
   // isOpen

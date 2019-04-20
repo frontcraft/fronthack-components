@@ -2,7 +2,9 @@
 
 ### Usage
 
-`fronthack component`, then `form`
+```
+fronthack component Form
+```
 
 The advanced Fronthack React Form component has been promoted to a standalone npm package. To use it on a project, do following:
 

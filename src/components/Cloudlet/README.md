@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `cloudlet`
+```
+fronthack component Cloudlet
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Cloudlet>Lorem ipsum dolor sit amet</Cloudlet>
 ```
 

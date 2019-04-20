@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `breadcrumb`
+```
+fronthack component Breadcrumb
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Breadcrumb items={['Docs', 'Components API', 'Button']} />
 ```
 

@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `tabs`
+```
+fronthack component Tabs
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Tabs labels={['First', 'Second', 'Third']}>
   {[
     <div>Content of the first tab</div>,

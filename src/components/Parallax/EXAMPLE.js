@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import Parallax, { ParallaxGroup } from '.'
 
 
-export default () =>
-  <Parallax>
+export default ({ debug }) =>
+  <Parallax debug={debug}>
     <ParallaxGroup className='parallax__demo-solid'>
       <div className='parallax_demo-title'>Solid base layer</div>
     </ParallaxGroup>

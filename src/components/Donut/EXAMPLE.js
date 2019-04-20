@@ -1,4 +1,4 @@
 import React from 'react'
 import Donut from '.'
 
-export default () => <Donut percentage={43} pie />
+export default ({ pie }) => <Donut percentage={43} pie={pie} />

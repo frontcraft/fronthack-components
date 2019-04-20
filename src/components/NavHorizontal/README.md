@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `nav-horizontal`
+```
+fronthack component NavHorizontal
+```
 
 #### JSX example:
 
-```js
+```jsx
 <NavHorizontal
   links={[
     {

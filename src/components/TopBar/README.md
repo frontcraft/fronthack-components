@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `top-bar`
+```
+fronthack component TopBar
+```
 
 #### JSX example:
 
-```js
+```jsx
 <TopBar links={[
   { label: 'Projects', url: '/projects' },
   { label: 'About us', url: '/about' },

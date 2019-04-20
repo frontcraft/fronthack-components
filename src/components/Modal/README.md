@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `modal`
+```
+fronthack component Modal
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Modal
   size="sm"
   title="Modal title"

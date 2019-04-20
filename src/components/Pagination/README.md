@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `pagination`
+```
+fronthack component Pagination
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Pagination
   pages={5}
   onClick={item => alert(item)}

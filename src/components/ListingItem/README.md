@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `listing-item`
+```
+fronthack component ListingItem
+```
 
 #### JSX example:
 
-```js
+```jsx
 <ListingItem
   id="12345"
   title="Featured article name"

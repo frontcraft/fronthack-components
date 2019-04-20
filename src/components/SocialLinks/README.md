@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `social-links`
+```
+fronthack component SocialLinks
+```
 
 #### JSX example:
 
-```js
+```jsx
 <SocialLinks url={window.location.href} />
 ```
 

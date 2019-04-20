@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `block`
+```
+fronthack component Block
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Block title="Title of the block">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 </Block>

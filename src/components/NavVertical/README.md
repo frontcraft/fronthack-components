@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `nav-vertical`
+```
+fronthack component NavVertical
+```
 
 #### JSX example:
 
-```js
+```jsx
 <NavVertical
   links={[
     {

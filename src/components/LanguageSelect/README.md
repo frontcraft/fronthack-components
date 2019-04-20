@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `language-select`
+```
+fronthack component LanguageSelect
+```
 
 #### JSX example:
 
-```js
+```jsx
 <LanguageSelect
   languages={['English', 'Polish']}
   current='English'

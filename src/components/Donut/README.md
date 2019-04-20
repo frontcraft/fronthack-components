@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `donut`
+```
+fronthack component Donut
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Donut percentage={43} pie />
 ```
 

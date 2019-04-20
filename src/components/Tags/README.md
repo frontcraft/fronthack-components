@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `tags`
+```
+fronthack component Tags
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Tags tags={['travel', 'nature', 'people']} />
 ```
 

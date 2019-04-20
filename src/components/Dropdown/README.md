@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `dropdown`
+```
+fronthack component Dropdown
+```
 
 #### JSX example:
 
-```js
+```jsx
 <Dropdown overlay links={[
   {
     label: 'Profile',

@@ -2,11 +2,13 @@
 
 ### Usage
 
-`fronthack component`, then `badge`
+```
+fronthack component Badge
+```
 
 #### JSX example:
 
-```js
+```jsx
 <div>Notifications <Badge number={7} /></div>
 ```
 
