@@ -7,10 +7,11 @@
 // to "React Create App". This only has babel loader to load JavaScript.
 
 const path = require("path")
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   plugins: [
-    // your custom plugins
+    new CopyWebpackPlugin([{ from: 'public/icon', to: 'icon' }]),
   ],
   module: {
     rules: [

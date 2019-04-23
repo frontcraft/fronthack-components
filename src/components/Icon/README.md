@@ -7,8 +7,9 @@ fronthack component Icon
 ```
 
 #### JSX example:
+
 ```jsx
-<Icon type="bell" />
+<Icon type="home" />
 ```
 
 ##### Properties
@@ -19,7 +20,7 @@ fronthack component Icon
 #### Static HTML example:
 
 ```html
-<i class="icon icon--bell"></i>
+<i class="icon icon--home"></i>
 ```
 
 ### Avaliable icon types
