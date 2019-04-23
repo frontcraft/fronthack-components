@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
@@ -16,5 +17,12 @@ const Field = ({ label, values, children, spacing, inlineLabel }) =>
       }
     </div>
   </div>
+
+Field.propTypes = {
+  label: PropTypes.string,
+  values: PropTypes.array,
+  spacing: PropTypes.bool,
+  inlineLabel: PropTypes.bool,
+}
 
 export default Field

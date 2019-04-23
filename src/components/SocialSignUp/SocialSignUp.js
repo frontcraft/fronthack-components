@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
@@ -13,6 +14,10 @@ const SocialSignUp = ({ label }) =>
       <GoogleIcon />Login with Google
     </div>
   </div>
+
+SocialSignUp.propTypes = {
+  label: PropTypes.string,
+}
 
 export default SocialSignUp
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../Button'
 import './style.sass'
 
@@ -30,5 +31,13 @@ const ListingItem = ({
       </div>
     </div>
   </div>
+
+ListingItem.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+  mediaUrl: PropTypes.string,
+}
 
 export default ListingItem

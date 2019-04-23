@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 import NavHorizontal from '../../components/NavHorizontal'
 import Logo from '../../components/Logo'
@@ -26,6 +27,13 @@ const TopBar = ({ links }) => {
       </div>
     </header>
   )
+}
+
+TopBar.PropTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
 }
 
 export default TopBar

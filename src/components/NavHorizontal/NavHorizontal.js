@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
@@ -13,5 +14,12 @@ const NavHorizontal = ({ links, className }) =>
       )}>{link.label}</a>
     ))}
   </nav>
+
+NavHorizontal.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
+}
 
 export default NavHorizontal

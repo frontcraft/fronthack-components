@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 
 
@@ -10,5 +11,9 @@ const Tags = ({ tags }) =>
       )}
     </div>
     : null
+
+Tags.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string),
+}
 
 export default Tags

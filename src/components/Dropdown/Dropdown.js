@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 
@@ -33,6 +34,14 @@ class Dropdown extends React.Component {
 
 Dropdown.defaultProps = {
   overlay: false,
+}
+
+Dropdown.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
+  overlay: PropTypes.bool,
 }
 
 export default Dropdown

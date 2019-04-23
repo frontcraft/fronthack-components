@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 
 
@@ -9,4 +10,7 @@ const Breadcrumb = ({ items }) =>
     )}
   </div>
 
+Breadcrumb.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string),
+}
 export default Breadcrumb

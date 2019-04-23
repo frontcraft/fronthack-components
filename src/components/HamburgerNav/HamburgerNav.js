@@ -38,7 +38,10 @@ class HamburgerNav extends React.Component {
 }
 
 HamburgerNav.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.object).isRequired,
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
 }
 
 export default HamburgerNav

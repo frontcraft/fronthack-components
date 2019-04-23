@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import bemCx from 'bem-modifiers'
 import './style.sass'
@@ -30,6 +31,12 @@ const Pagination = ({ pages, onClick, current }) => {
       ><Icon type='arrow-right' /></div>
     </div>
   )
+}
+
+Pagination.propTypes = {
+  pages: PropTypes.number,
+  onClick: PropTypes.func,
+  current: PropTypes.number,
 }
 
 export default Pagination

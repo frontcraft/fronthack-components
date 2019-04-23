@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 
 const NavSubway = ({ links }) =>
@@ -10,5 +11,12 @@ const NavSubway = ({ links }) =>
       </div>
     )}
   </nav>
+
+NavSubway.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
+}
 
 export default NavSubway

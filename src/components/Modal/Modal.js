@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import bemCx from 'bem-modifiers'
 import './style.sass'
 import Icon from '../Icon'
@@ -45,6 +46,12 @@ class Modal extends React.Component {
       </div>
     )
   }
+}
+
+Modal.propTypes = {
+  trigger: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  size: PropTypes.oneOf(['xs', 'sm', 'lg']),
 }
 
 export default Modal

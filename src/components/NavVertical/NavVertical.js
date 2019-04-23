@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.sass'
 
 const NavVertical = ({ links }) =>
@@ -7,5 +8,12 @@ const NavVertical = ({ links }) =>
       <a href={link.url} key={index} className='nav-vertical__link'>{link.label}</a>
     ))}
   </nav>
+
+NavVertical.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
+}
 
 export default NavVertical
