@@ -9,7 +9,7 @@ export default () =>
     },
     {
       label: 'Settings',
-      url: '#',
+      callback: () => alert('A callback instead of url.'),
     },
     {
       label: 'Log out',

@@ -19,9 +19,21 @@ class Dropdown extends React.Component {
         >{children}</span>
         <div className='dropdown__inner'>
           <nav className='dropdown__nav'>
-            {links.map((link, index) => (
-              <a href={link.url} className='dropdown__link' key={index}>{link.label}</a>
-            ))}
+            {links.map((link, index) =>
+              link.url
+                ? <a
+                  href={link.url}
+                  className='dropdown__link'
+                  key={index}
+                >{link.label}</a>
+                : link.callback
+                  ? <div
+                    onClick={() => link.callback()}
+                    className='dropdown__link'
+                    key={index}
+                  >{link.label}</div>
+                  : <div className='dropdown__link' key={index}>{link.label}</div>
+            )}
           </nav>
         </div>
         { (overlay && isOpen) &&
@@ -38,7 +50,8 @@ Dropdown.defaultProps = {
 
 Dropdown.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
-    url: PropTypes.string.isRequired,
+    url: PropTypes.string,
+    callback: PropTypes.func,
     label: PropTypes.string.isRequired,
   })),
   overlay: PropTypes.bool,

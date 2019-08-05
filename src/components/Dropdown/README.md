@@ -16,7 +16,7 @@ fronthack component Dropdown
   },
   {
     label: 'Settings',
-    url: '#',
+    callback: () => alert('A callback instead of url.'),
   },
   {
     label: 'Log out',
@@ -27,7 +27,7 @@ fronthack component Dropdown
 
 ##### Properties
 
-* `links` - menu item objects, that contains two string values - label and url
+* `links` - array of items, where each contains two string values - label and url or callback.
 * `overlay` - overlay tint that darkens the rest of the screen
 
 
