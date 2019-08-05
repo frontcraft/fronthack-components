@@ -52,7 +52,10 @@ class App extends React.Component {
   }
   render() {
     return (
-      <FormThemeProvider theme={{ colors: { accent: 'blue' } }}>
+      <FormThemeProvider theme={{
+        colors: { accent: 'blue' },
+        sizes: { onlyBottomBorder: true, borderWidth: 2 },
+      }}>
         <div className='container'>
           <Accordion>
             <AccordionItem title='First accordion item'>
@@ -108,6 +111,7 @@ class App extends React.Component {
               type='date'
               inlineLabel
               large
+              noBottomGutter
             />
             <TextArea
               name='content'
@@ -135,7 +139,7 @@ class App extends React.Component {
                 label='Select a Framework'
                 options={[
                   { label: 'React', value: 'react' },
-                  { label: 'Vue', value: 'vue' },
+                  { label: 'Vue a very very long option label. Vue a very very long option label.', value: 'vue' },
                   { label: 'Angluar', value: 'angluar' },
                 ]}
                 initialValue={this.state.framework}
@@ -146,6 +150,7 @@ class App extends React.Component {
               <MultiSelect
                 name='framework-multi'
                 label='Select Frameworks'
+                placeholder='Pick any'
                 options={[
                   { label: 'React', value: 'react' },
                   { label: 'Vue', value: 'vue' },
