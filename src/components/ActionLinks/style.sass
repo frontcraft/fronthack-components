@@ -1,0 +1,49 @@
+@import '../../style/variables'
+@import '../../style/mixins'
+
+// Action links
+//
+// Contextual icons to edit or remove a content. As it uses absolute positioning,
+// Make sure that parent element has set position to relative.
+
+
+// Block
+// --------------------------------------------------
+.action-links
+  position: absolute
+  top: 0
+  right: 0
+  border-radius: 2px
+  display: none
+  z-index: 1
+*:hover > .action-links,
+.action-links--still
+  display: flex
+  flex-direction: row
+
+
+// Elements
+// --------------------------------------------------
+.action-links__link
+  color: $text-color !important
+  padding: 0
+  display: block
+  text-align: center
+  line-height: 40px
+  width: 40px
+  background-color: transparent
+  border: none
+  cursor: pointer
+  background-color: $gray-light
+  &:hover
+    color: white !important
+    background-color: $brand-primary
+
+
+// Modifiers
+// --------------------------------------------------
+.action-links--still
+  position: static
+
+.action-links__link--danger:hover
+  background-color: $red

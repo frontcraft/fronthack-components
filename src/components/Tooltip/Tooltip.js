@@ -13,7 +13,7 @@ Tooltip.defaultProps = {
   direction: 'tl',
 }
 
-Tooltip.PropTypes = {
+Tooltip.propTypes = {
   direction: PropTypes.oneOf(['tl', 'tr', 'bl', 'br']),
   message: PropTypes.string,
   children: PropTypes.oneOfType([
