@@ -11,27 +11,25 @@ class HamburgerNav extends React.Component {
 
   render() {
     return (
-      <div className='hamburger-nav is-visible'>
-        <div className='hamburger-nav__icon' onClick={() => this.setState({ show: true })}>
-          <Icon type='menu' />
+      <div className={`hamburger-nav ${this.state.show ? 'is-visible' : ''}`}>
+        <div className='hamburger-nav__trigger' onClick={() => this.setState({ show: true })}>
+          <div className='hamburger-nav__icon' />
         </div>
-        { this.state.show &&
+        {this.state.show &&
           <div className='hamburger-nav__overlay' onClick={() => this.setState({ show: false })} />
         }
-        { this.state.show &&
-          <div className='hamburger-nav__wrapper'>
-            <nav className='hamburger-nav__menu'>
-              { this.props.links.map((link, index) =>
-                <a href={link.url} className='hamburger-nav__link' key={index}>
-                  {link.icon &&
-                    <Icon type={link.icon} className='hamburger-nav__link-icon' />
-                  }
-                  {link.label}
-                </a>
-              )}
-            </nav>
-          </div>
-        }
+        <div className='hamburger-nav__wrapper'>
+          <nav className='hamburger-nav__menu'>
+            { this.props.links.map((link, index) =>
+              <a href={link.url} className='hamburger-nav__link' key={index}>
+                {link.icon &&
+                  <Icon type={link.icon} className='hamburger-nav__link-icon' />
+                }
+                {link.label}
+              </a>
+            )}
+          </nav>
+        </div>
       </div>
     )
   }

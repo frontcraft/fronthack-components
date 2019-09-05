@@ -8,7 +8,7 @@ import Accordion, { AccordionItem } from './components/Accordion'
 // import Icon from './components/Icon'
 import Button from './components/Button'
 // import Badge from './components/Badge'
-// import HamburgerNav from './components/HamburgerNav'
+import HamburgerNav from './components/HamburgerNav'
 // import Stepper from './components/Stepper'
 // import LanguageSelect from './components/LanguageSelect'
 // import ListingItem from './components/ListingItem'
@@ -363,6 +363,7 @@ class App extends React.Component {
             steps={['Cart', 'Shipping', 'Billing', 'Summary', 'Complete']}
             current={2}
           />
+          */}
           <HamburgerNav links={[
             {
               label: 'Home',
@@ -378,6 +379,7 @@ class App extends React.Component {
               url: 'contact',
             },
           ]} />
+          {/*
           <div>Test<Badge number={7} /></div>
           <div><Icon type='bell' /><Badge number={7} /></div>
           <Field label='Field label' spacing values={[

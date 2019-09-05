@@ -35,9 +35,7 @@ fronthack component HamburgerNav
 
 ```html
 <div class="hamburger-nav">
-  <div class="hamburger-nav__icon">
-    <i class="icon icon--menu"></i>
-  </div>
+  <div class="hamburger-nav__icon"></div>
   <div class="hamburger-nav__overlay"></div>
   <div class="hamburger-nav__wrapper">
     <nav class="hamburger-nav__menu">

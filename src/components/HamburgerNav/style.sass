@@ -5,6 +5,7 @@
 //
 // Drawer that appears from the left side of the screen.
 
+$nav-width: 360px
 
 // Block
 // --------------------------------------------------
@@ -12,25 +13,49 @@
 
 // Elements
 // --------------------------------------------------
-.hamburger-nav__icon
-  font-size: 30px
+.hamburger-nav__trigger
   cursor: pointer
+  height: 23px
+  margin: 0 15px
+  +breakpoint(tablet)
+    margin: 0 20px
+
+.hamburger-nav__icon
+  width: 25px
+  height: 3px
+  background-color: black
+  +breakpoint(tablet)
+    width: 30px
+
+  &::before,
+  &::after
+    content: ''
+    height: 3px
+    display: block
+    background-color: black
+
+  &::before
+    transform: translateY(10px)
+
+  &::after
+    transform: translateY(17px)
 
 .hamburger-nav__overlay
   display: none
 
 .hamburger-nav__wrapper
-  display: none
   position: fixed
   background-color: $gray-dark
   top: 0
-  right: 20vw
+  right: calc(-100% - 20px) // Additional space for shadow
   bottom: 0
-  left: 0
   z-index: 101
   box-shadow: 0 0 30px black
+  width: 80vw
+  transition: right 500ms ease-in
   +breakpoint(tablet)
-    right: calc(100vw - 320px)
+    right: -$nav-width - 20px // Additional space for shadow
+    width: $nav-width
 
 .hamburger-nav__menu
   padding-top: 10px
@@ -60,4 +85,4 @@
     display: block
     +overlay()
   .hamburger-nav__wrapper
-    display: block
+    right: 0
