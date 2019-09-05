@@ -16,14 +16,14 @@ $tooltip-triangle-size: 6px
   display: inline-block
   position: relative
 
-  &:before, &:after
+  &::before, &::after
     opacity: 0
     visibility: hidden
     z-index: 98
     +breakpoint(phone, phone)
       display: none
 
-  &:before
+  &::before
     // tooltip body
     content: attr(data-tooltip)
     position: absolute
@@ -44,11 +44,11 @@ $tooltip-triangle-size: 6px
     @else
       color: $gray-base
 
-  &:after
+  &::after
     content: ''
 
   &:hover
-    &:before, &:after
+    &::before, &::after
       opacity: 1
       visibility: visible
 
@@ -57,47 +57,47 @@ $tooltip-triangle-size: 6px
 // Tooltip styling mixin
 =tooltip($direction: tl)
   // apply positioning to top and bottom values
-  @if $direction == "tl" or $direction == "tr"
-    &:before
+  @if $direction == 'tl' or $direction == 'tr'
+    &::before
       top: -($tooltip-triangle-size + 3px)
       bottom: auto
       transform: translateY(-100%)
 
-    &:after
+    &::after
       +triangle(bottom, $tooltip-bg-color, $tooltip-triangle-size)
 
       top: -($tooltip-triangle-size + 3px)
       bottom: auto
-  @else if $direction == "br" or $direction == "bl"
-    &:before
+  @else if $direction == 'br' or $direction == 'bl'
+    &::before
       bottom: -($tooltip-triangle-size + 3px)
       top: auto
       transform: translateY(100%)
 
-    &:after
+    &::after
       +triangle(top, $tooltip-bg-color, $tooltip-triangle-size)
       bottom: -($tooltip-triangle-size + 3px)
       top: auto
 
   // apply positioning to left and right values
-  @if $direction == "tr" or $direction == "br"
-    &:before, &:after
+  @if $direction == 'tr' or $direction == 'br'
+    &::before, &::after
       left: 50%
       right: auto
       margin-left: -$tooltip-triangle-size
 
-    &:before
+    &::before
       margin-left: -$tooltip-triangle-size * 3
-  @else if $direction == "tl" or $direction == "bl"
-    &:before, &:after
+  @else if $direction == 'tl' or $direction == 'bl'
+    &::before, &::after
       right: 50%
       left: auto
       margin-right: -$tooltip-triangle-size
 
-    &:before
+    &::before
       margin-right: -$tooltip-triangle-size * 3
   @else
-    @warn "direction not valid in tooltip mixin"
+    @warn 'direction not valid in tooltip mixin'
 
 
 // Modifiers

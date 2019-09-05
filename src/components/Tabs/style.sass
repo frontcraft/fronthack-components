@@ -31,6 +31,7 @@
   align-items: center
   justify-content: center
   text-align: center
+
   &:hover
     border-color: lighten($brand-primary, 10%)
     background-color: lighten($brand-primary, 10%)
@@ -54,9 +55,10 @@
     .tabs__label:nth-of-type(#{$i+1})
       background-color: $almost-white
       color: $brand-primary
+
     // Active content styling
     .tabs__content,
-      &:nth-of-type(#{$i+1}),
-      &.is-open // State class for React where only one content is displayed at once
-        display: block
-        visibility: visible
+    &:nth-of-type(#{$i+1}),
+    &.is-open // State class for React where only one content is displayed at once
+      display: block
+      visibility: visible

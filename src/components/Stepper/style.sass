@@ -29,6 +29,7 @@
   display: table-cell
   position: relative
   overflow: visible
+
   // Dots
   &::before
     content: ''
@@ -46,6 +47,7 @@
   // First element
   &:first-of-type
     width: 0
+
     .stepper__label
       width: 40px
       margin-left: -20px
@@ -68,9 +70,11 @@
 .stepper__item.is-active
   .stepper__label
     font-weight: $bold
+
   & ~ .stepper__item
     &::before
       border-color: $gray-lighter
       background-color: transparent
+
     &::after
       background-color: $gray-lighter

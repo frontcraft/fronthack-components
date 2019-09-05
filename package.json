@@ -52,6 +52,7 @@
     "react-dom": "^16.9.0",
     "react-standalone-form": "^0.6.5",
     "resolve": "1.10.0",
+    "sass-lint": "^1.13.1",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
     "style-loader": "0.23.1",

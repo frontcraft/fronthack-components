@@ -23,8 +23,10 @@
   background: $gray-light
   padding: 10px
   overflow: hidden
+
   &:hover
     background: lighten($gray-light, 3%)
+
   &::after
     content: '+'
     display: block
@@ -44,6 +46,7 @@
   .accordion__title::after
     content: '-'
     font-size: 45px
+
   .accordion__content
     display: block
     visibility: visible

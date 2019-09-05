@@ -83,7 +83,6 @@ class App extends React.Component {
           <Form
             fields={[
               'username',
-              'tabsInput',
               'age',
               'date',
               'content',
@@ -100,24 +99,8 @@ class App extends React.Component {
               'published',
               'switch',
             ]}
-            required={['username', 'age', 'tabsInput', 'framework-images']}
+            required={['username', 'age', 'framework-images']}
           >
-            {/* <TabsInput
-              name='tabsInput'
-              tabs={['en', 'de']}
-              form={({ fields, onChange }) =>
-                <Form
-                  fields={['text']}
-                  allRequired
-                  callbackOnChange={udpatedFields => onChange(udpatedFields)}
-                  component='div'
-                >
-                  <Input
-                    name='text'
-                    label='Name'
-                  />
-                </Form>}
-            /> */}
             <Input
               name='username'
               label='User name'

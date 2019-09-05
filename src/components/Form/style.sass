@@ -56,8 +56,10 @@ $form-item-tiny-input-width: 140px
     display: flex
     justify-content: flex-end
     align-items: center
+
     & > * + *
       margin-left: 20px
+
     .form__item
       margin-bottom: 0
 
@@ -76,30 +78,38 @@ $form-item-tiny-input-width: 140px
   color: $form-item-color
   +placeholder
     color: $form-item-color
+
 textarea.form__input
   height: auto !important
   resize: vertical
-.form__input[type=number]
+
+.form__input[type='number']
   -moz-appearance: textfield
   appearance: textfield
+
   &::-webkit-inner-spin-button
     -webkit-appearance: none
+
 select.form__input,
 .form__input--multiselect
   padding-right: 30px
   cursor: pointer
   // Remove default caret
   -webkit-appearance: none
+
   &::-ms-expand
     display: none
+
   // Custom caret
   &:not([multiple])
     background:
       image: linear-gradient(45deg, transparent 50%, lighten($form-item-border-color, 0.1)), linear-gradient(135deg, lighten($form-item-border-color, 0.1) 50%, transparent 50%)
       size: 5px 5px, 5px 5px
       repeat: no-repeat
+
   &[multiple]
     height: auto
+
   &:-webkit-autofill
     background-color: $body-bg !important
     transition: background-color 5000s ease-in-out 0s
@@ -109,6 +119,7 @@ select.form__input,
   padding: 3px 5px
   background-color: $form-item-border-color
   border-radius: 2px
+
   & + &
     margin-left: 5px
 
@@ -130,8 +141,10 @@ select.form__input,
   cursor: pointer
   display: flex
   justify-content: space-between
+
   &:hover
     background-color: lighten($form-item-border-color, 0.1)
+
   &.is-checked
     background-color: lighten($form-item-border-color, 0.1)
 
@@ -149,12 +162,15 @@ select.form__input,
   height: $form-item-height
   margin-bottom: -5px
   background-color: transparent
+
   &:focus
     outline: none
+
   &::-webkit-slider-runnable-track
     background-color: $form-item-border-color
     box-shadow: 0 0 60px 15px white
     height: 6px
+
   &::-webkit-slider-thumb
     width: 12px
     height: 12px
@@ -187,9 +203,11 @@ select.form__input,
   text-align: left
   align-items: flex-start
   cursor: pointer
+
   input
     margin: .1em 10px 0 0
     position: relative
+
     &::before
       content: ''
       display: block
@@ -202,10 +220,12 @@ select.form__input,
       cursor: pointer
       border: 2px solid lighten($form-item-border-color, 0.1)
       border-radius: 2px
+
     &:checked
       &::before
         background-color: $brand-primary
         border: 2px solid $brand-primary
+
       &::after
         content: '✓'
         display: block
@@ -225,6 +245,7 @@ select.form__input,
 .form__checkimages
   display: flex
   align-items: center
+
   .form__checkimages-input
     flex: 65px 0 0
     display: flex
@@ -240,8 +261,10 @@ select.form__input,
     cursor: pointer lighten
     position: relative
     z-index: 1
+
     img
       margin-bottom: 12px
+
     &.is-checked::before
       content: ''
       position: absolute
@@ -253,6 +276,7 @@ select.form__input,
       border-radius: 6px
       border: 1px dashed lighten($form-item-color, 15%)
       z-index: -1
+
   & ~ .form__help
     left: 0 !important
 
@@ -309,15 +333,19 @@ select.form__input,
     display: flex
     align-items: flex-end
     margin-bottom: $form-item-margin
+
     .form__item
       margin-bottom: 0
+
     & > * + *
       margin-left: 50px
 
 .form__multi-form-input
   display: flex
+
   & + &
     margin-top: $form-item-margin
+
   & > *:first-child
     flex-grow: 1
 
@@ -341,17 +369,20 @@ select.form__input,
 // --------------------------------------------------
 .form__item--lg
   +input-height($form-item-lg-height)
+
   & + &
     margin-top: -$form-item-margin + 14px
 
 
 .form__item--inline
   width: 100%
+
   .form__checkbox,
   .form__radio
     display: inline-block
     white-space: nowrap
     margin-right: 20px
+
     &:last-of-type
       margin-left: 0
 
@@ -361,6 +392,7 @@ select.form__input,
     display: flex
     flex-direction: column
     width: 100%
+
     .form__label
       order: -1
       margin: 0
@@ -368,18 +400,22 @@ select.form__input,
       align-items: center
       justify-content: space-between
       flex-direction: row
+
       .form__label
         margin-right: 10px
         min-width: $form-item-inline-label-width
         max-width: $form-item-inline-label-width
         white-space: nowrap
+
       .form__input,
       .form__checkbox,
       .form__radio,
       .form__checkimages
         flex-basis: calc(100% - #{$form-item-inline-label-width + 10px})
+
       .form__checkimages
         justify-content: space-between
+
       .form__help
         left: $form-item-inline-label-width + 10px
 
@@ -391,10 +427,12 @@ select.form__input,
   +breakpoint(tablet)
     .form__input
       max-width: $form-item-tiny-input-width
+
     .form__help
       left: auto
       right: 0
       width: $form-item-tiny-input-width
+
     &.form__item--inline-label
       .form__label
         min-width: calc(100% - $form-item-tiny-input-width - 10px)
@@ -418,8 +456,10 @@ select.form__input,
       vertical-align: middle
       transform: translateY(-1px)
       cursor: pointer
+
       &::before
         content: none
+
       &::after
         content: ''
         display: block
@@ -432,8 +472,10 @@ select.form__input,
         border: 1px solid darken(lighten($form-item-border-color, 0.1), 5%)
         border-radius: 10px
         box-sizing: border-box
+
       &:checked
         background-color: $green
+
         &::after
           left: auto
           right: 0
@@ -452,6 +494,7 @@ select.form__input,
 *[disabled]
   opacity: 0.5
   cursor: not-allowed
+
 input[disabled],
 textarea[disabled],
 select[disabled],
@@ -469,6 +512,7 @@ select[disabled],
   .form__addon,
   .form__help
     color: darken($green, 5%)
+
   .form__input:not(:focus)
     border-color: lighten($green, 10%)
 
@@ -481,6 +525,7 @@ select[disabled],
   .form__radio,
   .form__checkimages-input
     color: darken($red, 15%)
+
   .form__input:not(:focus)
     border-color: lighten($red, 15%)
     background-color: lighten($red, 53%)

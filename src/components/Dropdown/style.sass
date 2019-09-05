@@ -20,7 +20,8 @@ $dropdown-max-width: 230px
 .dropdown__label
   cursor: pointer
   white-space: nowrap
-  &:after
+
+  &::after
     content: ''
     +triangle(bottom, $text-color, 7px)
     display: inline-block
@@ -53,6 +54,7 @@ $dropdown-max-width: 230px
   color: $text-color
   padding: 5px 20px
   cursor: pointer
+
   &:hover
     background-color: $gray-light
     color: $text-color
@@ -70,6 +72,7 @@ $dropdown-max-width: 230px
       timing-function: ease-in-out
       iteration-count: 1
       fill-mode: forwards
+
   .dropdown__overlay
     +overlay
 
@@ -77,6 +80,7 @@ $dropdown-max-width: 230px
   0%
     opacity: 0
     transform: rotateX(90deg)
+
   100%
     transform: rotateX(0)
     opacity: 1

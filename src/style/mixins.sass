@@ -9,10 +9,13 @@
 =responsive-visibility($parent)
   #{$parent}
     display: block !important
+
   table#{$parent}
     display: table !important
+
   tr#{$parent}
     display: table-row !important
+
   th#{$parent},
   td#{$parent}
     display: table-cell !important
@@ -64,8 +67,8 @@
 
 // Clearfix prevents overflowing of floated elements.
 =clearfix
-  &:after
-    content: ""
+  &::after
+    content: ''
     display: table
     clear: both
 
@@ -81,6 +84,7 @@
 =column($amount, $gap)
   float: left
   width: calc(#{100% / $amount} - #{$gap * ($amount - 1) / $amount})
+
   &:not(:nth-child(#{$amount}n))
     margin-right: $gap
 
@@ -94,7 +98,7 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15)
 
 // Center element hoizontally or vertically
-=center($position: "horizontal")
+=center($position: 'horizontal')
   @if $position == horizontal
     display: block
     margin-left: auto
@@ -119,8 +123,10 @@
 =placeholder
   &::-moz-placeholder
     @content
+
   &:-ms-input-placeholder
     @content
+
   &::-webkit-input-placeholder
     @content
 
@@ -134,7 +140,7 @@
 // Make all children comma separated
 =comma-separated
   & + &::before
-    content: ", "
+    content: ', '
 
 // Set display of all childrens of the given element to inline.
 =inline
@@ -142,44 +148,44 @@
     display: inline !important
 
 // Colours half of a background with specified color
-=half-background($bg: $brand-primary-light, $side: "right")
+=half-background($bg: $brand-primary-light, $side: 'right')
   @media (max-width: $screen-xs-max)
     background-color: $bg
   +breakpoint(tablet)
-    &:before
-      content: ""
+    &::before
+      content: ''
       position: fixed
       top: 0
       width: 50%
       height: 100%
       background-color: $bg
       z-index: -100
-      @if $side == "right"
+      @if $side == 'right'
         right: 0
       @else
         left: 0
 
 // Triangle build from borders.
 =triangle($direction, $color, $width)
-  content: ""
+  content: ''
   display: block
   position: absolute
   width: 0
   height: 0
   border-style: solid
-  @if $direction == "top"
+  @if $direction == 'top'
     border:
       width: 0 $width * 0.666 $width $width * 0.666
       color: transparent transparent $color transparent
-  @else if $direction == "right"
+  @else if $direction == 'right'
     border:
       width: $width * 0.666 0 $width * 0.666 $width
       color: transparent transparent transparent $color
-  @else if $direction == "bottom"
+  @else if $direction == 'bottom'
     border:
       width: $width $width * 0.666 0 $width * 0.666
       color: $color transparent transparent transparent
-  @else if $direction == "left"
+  @else if $direction == 'left'
     border:
       width: $width * 0.666 $width $width * 0.666 0
       color: transparent $color transparent transparent
@@ -191,10 +197,13 @@
     line-height: $height - $height / 3
     padding-top: $height / 6
     padding-bottom: $height / 6
-    &[type=file]
+
+    &[type='file']
       line-height: $height * 0.45
+
   .form__addon
     height: $height
     line-height: $height
+
   select.form__input:not([multiple])
     background-position: calc(100% - 15px) $height / 2 - 2px, calc(100% - 10px) $height / 2 - 2px

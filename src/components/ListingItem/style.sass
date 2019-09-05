@@ -16,6 +16,7 @@ $listing-item-height: 180px
     display: flex
     align-items: stretch
     height: $listing-item-height
+
   & + &
     padding-top: 30px
     border-top: 1px $gray-lighter solid
@@ -29,12 +30,14 @@ $listing-item-height: 180px
   margin-bottom: 10px
   position: relative
   overflow: hidden
+
   img
     width: 100%
   +breakpoint(tablet)
     max-width: $listing-item-media-width
     overflow: hidden
     margin: 0 30px 0 0
+
     img
       position: absolute
       width: auto
@@ -52,8 +55,10 @@ $listing-item-height: 180px
 
 .listing-item__title
   margin-top: 0
+
   a
     color: $gray-base
+
   h2, h3
     margin: 0 !important
 

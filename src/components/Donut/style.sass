@@ -19,6 +19,7 @@ $donut-bar-width: 33px
   color: $gray-light
   border-radius: 50%
   position: relative
+
   &::before
     content: ''
     position: absolute
@@ -34,7 +35,7 @@ $donut-bar-width: 33px
     animation: 50s donut-spin infinite linear, 100s donut-background infinite step-end
     animation-play-state: paused
     animation-delay: inherit
-  // Inner circle mask. Delete it to get pie chart.
+
   &::after
     content: ''
     position: absolute
@@ -76,4 +77,4 @@ $donut-bar-width: 33px
 // Modifiers
 // --------------------------------------------------
 .donut--pie::after
-    content: none
+  content: none

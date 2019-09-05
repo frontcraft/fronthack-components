@@ -25,9 +25,11 @@ body
   @-ms-viewport
     width: device-width
 
+
 a
   color: $link-color
   text-decoration: none
+
   &:hover,
   &:active,
   &:focus,
@@ -52,15 +54,19 @@ h1, h2, h3, h4
   line-height: normal
   font-family: $font-family-headings
   font-weight: $bold
+
   small
     font-size: 55%
 
 h1
   font-size: 80px
+
 h2
   font-size: 30px
+
 h3
   font-size: 20px
+
 h4
   font-size: 16px
 
@@ -80,8 +86,10 @@ $listing-items-padding: $line-height-base / 6
 ul,
 ol
   margin: 0 0 $paragraphs-margin
+
   li
     padding: $listing-items-padding 0
+
     ul,
     ol
       margin: $listing-items-padding 0 0
@@ -89,18 +97,21 @@ ol
 // Unordered list
 ul
   padding-left: 0
+
   li
     position: relative
     padding-left: 30px
-    &:before
-      content: "\2022"
+
+    &::before
+      content: '\2022'
       color: $brand-primary
       font-size: 1.5em
       position: absolute
       top: $listing-items-padding / 3
       left: 0
-    ul li:before
-      content: "\25E6"
+
+    ul li::before
+      content: '\25E6'
 
 ul li
   list-style: none
@@ -112,13 +123,16 @@ ol
 // Description list
 dl
   margin: 0 0 $paragraphs-margin
+
   dt,
   dd
     padding: $line-height-base / 6 0
+
   dt
     float: left
     clear: left
     width: 30%
+
   dd
     width: 70%
     margin-left: 30%
@@ -136,6 +150,7 @@ blockquote
   overflow: hidden
   clear: both
   text-align: justify
+
   p:last-child
     margin-bottom: 0
 
@@ -157,21 +172,25 @@ table
   text-align: left
   width: 100%
   table-layout: fixed
+
   caption
     text-align: left
     padding: 5px 0
     border-top: 1px solid $gray-light
     border-bottom: 1px solid $gray-light
     margin-bottom: 25px
+
   th,
   td
     padding: 10px 10px 10px 0
     vertical-align: top
     font-weight: $regular
+
   thead th
     color: black
     border-bottom: 1px solid $gray-light
     font-weight: $bold
+
   tr
     th,
     td
@@ -190,13 +209,14 @@ article
     display: block
     margin: 30px auto
     +breakpoint(phone, phone)
-      &[style*="float: right"],
-      &[style*="float: left"]
+      &[style*='float: right'],
+      &[style*='float: left']
         float: none !important
         margin-left: auto !important
         margin-right: auto !important
 
-    &[style*="float: right"]
+    &[style*='float: right']
       margin-left: 30px
-    &[style*="float: left"]
+
+    &[style*='float: left']
       margin-right: 30px
