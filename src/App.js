@@ -23,6 +23,7 @@ import NavHorizontal from './components/NavHorizontal'
 // import Rating from './components/Rating'
 // import SocialLinks from './components/SocialLinks'
 // import Tabs from './components/Tabs'
+// import TabsInput from './components/TabsInput'
 import Form, {
   FormThemeProvider,
   Input,
@@ -41,6 +42,7 @@ import Form, {
   MultiFormInput,
   Switch,
   Switches,
+  MultiImageUpload,
 } from 'react-standalone-form'
 
 import 'core-js/fn/string/starts-with'
@@ -57,6 +59,19 @@ class App extends React.Component {
         sizes: { onlyBottomBorder: true, borderWidth: 2 },
       }}>
         <div className='container'>
+          <Form fields={['input', 'switches']}>
+            <Input name='input' label='Input' />
+            <Switches
+              name='switches'
+              label='Switches'
+              options={[
+                { label: 'Toyota', value: 'toyota' },
+                { label: 'Renault', value: 'renault' },
+                { label: 'Volkswagen', value: 'volkswagen' },
+              ]}
+            />
+            <FormButton callback={fields => console.log(fields)} loading>Submit</FormButton>
+          </Form>
           <Accordion>
             <AccordionItem title='First accordion item'>
               Content for the first accordion
@@ -68,6 +83,7 @@ class App extends React.Component {
           <Form
             fields={[
               'username',
+              'tabsInput',
               'age',
               'date',
               'content',
@@ -79,12 +95,29 @@ class App extends React.Component {
               'switches',
               'range',
               'image',
+              'multiImage',
               'people',
               'published',
               'switch',
             ]}
-            required={['username', 'framework-images']}
+            required={['username', 'age', 'tabsInput', 'framework-images']}
           >
+            {/* <TabsInput
+              name='tabsInput'
+              tabs={['en', 'de']}
+              form={({ fields, onChange }) =>
+                <Form
+                  fields={['text']}
+                  allRequired
+                  callbackOnChange={udpatedFields => onChange(udpatedFields)}
+                  component='div'
+                >
+                  <Input
+                    name='text'
+                    label='Name'
+                  />
+                </Form>}
+            /> */}
             <Input
               name='username'
               label='User name'
@@ -133,7 +166,7 @@ class App extends React.Component {
               initialValue={[{ firstname: 'Michal', lastname: 'Kokocinski' }]}
               large
             />
-            <FormRow>
+            <FormRow mobile>
               <Select
                 name='framework'
                 label='Select a Framework'
@@ -159,6 +192,7 @@ class App extends React.Component {
                 help='Select from the list'
                 inlineLabel
                 large
+                initialValue={['react']}
               />
             </FormRow>
             <ImageSelect
@@ -233,6 +267,12 @@ class App extends React.Component {
             <ImageUpload
               name='image'
               label='Upload graphic'
+              inlineLabel
+              initialValue='https://placehold.it/1139x752'
+            />
+            <MultiImageUpload
+              name='multiImage'
+              label='Upload image'
               inlineLabel
             />
             <FormActions>
@@ -400,9 +440,11 @@ export default App
 
 const PeopleForm = ({ fields, onChange }) =>
   <Form
+    component='div'
     fields={['firstname', 'lastname']}
     callbackOnChange={udpatedFields => onChange(udpatedFields)}
   >
+    {console.log('fields: ', fields)}
     <FormRow>
       <Input
         name='firstname'

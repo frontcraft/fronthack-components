@@ -23,6 +23,8 @@ import BasicStylesREADME from '../src/pages/BasicStylesREADME.md'
 
 import AccordionEXAMPLE from '../src/components/Accordion/EXAMPLE'
 import AccordionREADME from '../src/components/Accordion/README.md'
+import ActionLinksEXAMPLE from '../src/components/ActionLinks/EXAMPLE'
+import ActionLinksREADME from '../src/components/ActionLinks/README.md'
 import AlertEXAMPLE from '../src/components/Alert/EXAMPLE'
 import AlertREADME from '../src/components/Alert/README.md'
 import BadgeEXAMPLE from '../src/components/Badge/EXAMPLE'
@@ -132,6 +134,10 @@ storiesOf('Components/Basic styles', module)
 storiesOf('Components/Accordion', module)
   .addParameters({ readme: { sidebar: AccordionREADME } })
   .add('default', () => <AccordionEXAMPLE />)
+
+storiesOf('Components/ActionLinks', module)
+  .addParameters({ readme: { sidebar: ActionLinksREADME } })
+  .add('default', () => <ActionLinksEXAMPLE />)
 
 storiesOf('Components/Alert', module)
   .addParameters({ readme: { sidebar: AlertREADME } })
