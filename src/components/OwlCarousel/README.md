@@ -19,6 +19,8 @@ Owl Carousel is a jQuery library, so use another solutions for React and NextJS.
   <div><img src="https://placeimg.com/680/320/tech" alt="" /></div>
   <div><img src="https://placeimg.com/680/320/nature" alt="" /></div>
 </div>
+<!-- Load jQuery dependency -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Load OWL Carousel styles -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <!-- Load OWL Carousel library (after jQuery) -->

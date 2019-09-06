@@ -8,17 +8,17 @@
 
 // Block
 // --------------------------------------------------
-.tabs
-  position: relative
-  display: flex
-  align-items: stretch
-  flex-wrap: wrap
-  +clearfix
+// .tabs
 
 
 // Elements
 // --------------------------------------------------
-.tabs__label
+.tabs__btns
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.tabs__btn
   cursor: pointer
   background-color: $brand-primary
   color: white
@@ -50,15 +50,15 @@
 // Pure CSS technique that activates correct tab basing on data-active-tab
 // attribute. Works with up to 7 elements. You can increase it if you need.
 @for $i from 0 through 7
-  .tabs[data-active-tab="#{$i}"]
+  .tabs[data-active-tab='#{$i}']
     // Active tab styling
-    .tabs__label:nth-of-type(#{$i+1})
+    .tabs__btn:nth-child(#{$i + 1})
       background-color: $almost-white
       color: $brand-primary
 
     // Active content styling
-    .tabs__content,
-    &:nth-of-type(#{$i+1}),
-    &.is-open // State class for React where only one content is displayed at once
-      display: block
-      visibility: visible
+    .tabs__content
+      &:nth-child(#{$i + 2}),
+      &.is-open // State class for React where only one content is displayed at once
+        display: block
+        visibility: visible

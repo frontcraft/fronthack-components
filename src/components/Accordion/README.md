@@ -37,10 +37,17 @@ fronthack component Accordion
   </div>
 </nav>
 
+<!-- This component requires additional JavaScript: -->
 <script>
-  $('.accordion__item').click(function() {
-    $(this).parent('.accordion').children().removeClass('is-expanded')
-    $(this).toggleClass('is-expanded')
+  // Accordion
+  document.addEventListener('click', event => {
+    if (event.target.className === 'accordion__title') {
+      const allItems = event.target.parentElement.parentElement.children
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('is-expanded')
+      }
+      event.target.parentElement.classList.toggle('is-expanded')
+    }
   })
 </script>
 ```

@@ -27,9 +27,11 @@ fronthack component Tabs
 
 ```html
 <div class="tabs" data-active-tab="0">
-  <span class="tabs__label">First</span>
-  <span class="tabs__label">Second</span>
-  <span class="tabs__label">Third</span>
+  <div class="tabs__btns">
+    <span class="tabs__btn">First</span>
+    <span class="tabs__btn">Second</span>
+    <span class="tabs__btn">Third</span>
+  </div>
   <div class="tabs__content">
     <p>Content for the first tab</p>
   </div>
@@ -41,9 +43,16 @@ fronthack component Tabs
   </div>
 </div>
 
+<!-- This component requires additional JavaScript: -->
 <script>
-  $('.tabs__label').click(function() {
-    $(this).parent('.tabs').attr({ 'data-active-tab': $(this).index() })
-  })
+  // Tabs
+  document.addEventListener('click', event => {
+  if (event.target.className === 'tabs__btn') {
+    const tabs = event.target.parentElement.parentElement
+    const btns = Array.from(event.target.parentElement.children)
+    const index = btns.findIndex(item => item.innerHTML === event.target.innerHTML)
+    tabs.setAttribute('data-active-tab', index)
+  }
+})
 </script>
 ```

@@ -35,7 +35,9 @@ fronthack component HamburgerNav
 
 ```html
 <div class="hamburger-nav">
-  <div class="hamburger-nav__icon"></div>
+  <div class="hamburger-nav__trigger">
+    <div class="hamburger-nav__icon"></div>
+  </div>
   <div class="hamburger-nav__overlay"></div>
   <div class="hamburger-nav__wrapper">
     <nav class="hamburger-nav__menu">
@@ -48,9 +50,13 @@ fronthack component HamburgerNav
   </div>
 </div>
 
+<!-- This component requires additional JavaScript: -->
 <script>
-  $('.hamburger-nav__icon, .hamburger-nav__overlay').click(function() {
-    $(this).parent('.hamburger-nav').toggleClass('is-visible')
+  // Hamburger Nav
+  document.addEventListener('click', event => {
+    if (['hamburger-nav__trigger', 'hamburger-nav__overlay'].includes(event.target.className)) {
+      event.target.parentElement.classList.toggle('is-visible')
+    }
   })
 </script>
 ```

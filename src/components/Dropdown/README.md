@@ -48,9 +48,13 @@ fronthack component Dropdown
   <div class="dropdown__overlay"></div>
 </div>
 
+<!-- This component requires additional JavaScript: -->
 <script>
-  $('.dropdown__label, .dropdown__overlay').click(function() {
-    $(this).parent('.dropdown').toggleClass('is-open')
+  // Dropdown
+  document.addEventListener('click', event => {
+    if (['dropdown__label', 'dropdown__overlay'].includes(event.target.className)) {
+      event.target.parentElement.classList.toggle('is-open')
+    }
   })
 </script>
 ```

@@ -22,7 +22,7 @@ import NavHorizontal from './components/NavHorizontal'
 // import ProgressBar from './components/ProgressBar'
 // import Rating from './components/Rating'
 // import SocialLinks from './components/SocialLinks'
-// import Tabs from './components/Tabs'
+import Tabs from './components/Tabs'
 // import TabsInput from './components/TabsInput'
 import Form, {
   FormThemeProvider,
@@ -271,13 +271,14 @@ class App extends React.Component {
               framework: 'react',
             })}
           >Change framework to React</Button>
-          {/* <Tabs labels={['First', 'Second', 'Third']}>
+          <Tabs labels={['First', 'Second', 'Third']}>
             {[
               <div key='1'>Content of the first tab</div>,
               <div key='2'>Content of the second tab</div>,
               <div key='3'>Content of the third tab</div>,
             ]}
           </Tabs>
+          {/*
           <Dropdown overlay links={[
             {
               label: 'Profile',

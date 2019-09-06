@@ -12,13 +12,15 @@ class Tabs extends React.Component {
     const { active } = this.state
     return (
       <div className='tabs' data-active-tab={active}>
-        {this.props.labels.map((label, index) =>
-          <div
-            className={bemCx('tabs__label', {}, { 'is-active': index === active })}
-            onClick={() => this.setState({ active: index })}
-            key={index}
-          >{label}</div>
-        )}
+        <div className='tabs__btns'>
+          {this.props.labels.map((label, index) =>
+            <div
+              className={bemCx('tabs__btn', {}, { 'is-active': index === active })}
+              onClick={() => this.setState({ active: index })}
+              key={index}
+            >{label}</div>
+          )}
+        </div>
         <div className='tabs__content is-open'>{this.props.children[active]}</div>
       </div>
     )

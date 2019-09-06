@@ -38,9 +38,14 @@ fronthack component Modal
   </div>
   <div class="modal__overlay"></div>
 </div>
+
+<!-- This component requires additional JavaScript: -->
 <script>
-  $('.modal__trigger, .modal__overlay').click(function() {
-    $(this).parent('.modal').toggleClass('is-open')
+  // Modal
+  document.addEventListener('click', event => {
+    if (['modal__trigger', 'modal__overlay'].includes(event.target.className)) {
+      event.target.parentElement.classList.toggle('is-open')
+    }
   })
 </script>
 ```
