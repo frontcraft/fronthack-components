@@ -4,14 +4,17 @@ import { storiesOf, addDecorator } from '@storybook/react'
 import '../src/style/index.sass'
 
 import DocsDeploymentStatic from '../src/pages/DocsDeploymentStatic'
+import DocsDeploymentJekyll from '../src/pages/DocsDeploymentJekyll'
 import DocsDeploymentReact from '../src/pages/DocsDeploymentReact'
 import DocsDeploymentNext from '../src/pages/DocsDeploymentNext'
 import DocsDesigns from '../src/pages/DocsDesigns'
 import DocsFileStructureStatic from '../src/pages/DocsFileStructureStatic'
+import DocsFileStructureJekyll from '../src/pages/DocsFileStructureJekyll'
 import DocsFileStructureReact from '../src/pages/DocsFileStructureReact'
 import DocsFileStructureNext from '../src/pages/DocsFileStructureNext'
 import DocsFirstPage from '../src/pages/DocsFirstPage'
 import DocsProjectSetupStatic from '../src/pages/DocsProjectSetupStatic'
+import DocsProjectSetupJekyll from '../src/pages/DocsProjectSetupJekyll'
 import DocsProjectSetupReact from '../src/pages/DocsProjectSetupReact'
 import DocsProjectSetupNext from '../src/pages/DocsProjectSetupNext'
 import DocsFurther from '../src/pages/DocsFurther'
@@ -104,12 +107,14 @@ storiesOf('Docs/Requirements', module)
   .add('Read', () => <DocsRequirements />)
 
 storiesOf('Docs/First project setup', module)
-  .add('Static HTML', () => <DocsProjectSetupStatic />)
+  .add('Static site', () => <DocsProjectSetupStatic />)
+  .add('Jekyll', () => <DocsProjectSetupJekyll />)
   .add('React', () => <DocsProjectSetupReact />)
   .add('Next', () => <DocsProjectSetupNext />)
 
 storiesOf('Docs/File structure', module)
-  .add('Static HTML', () => <DocsFileStructureStatic />)
+  .add('Static site', () => <DocsFileStructureStatic />)
+  .add('Jekyll', () => <DocsFileStructureJekyll />)
   .add('React', () => <DocsFileStructureReact />)
   .add('Next', () => <DocsFileStructureNext />)
 
@@ -124,6 +129,7 @@ storiesOf('Docs/Further coding', module)
 
 storiesOf('Docs/Deployment', module)
   .add('Static', () => <DocsDeploymentStatic />)
+  .add('Jekyll', () => <DocsDeploymentJekyll />)
   .add('React', () => <DocsDeploymentReact />)
   .add('Next', () => <DocsDeploymentNext />)
 

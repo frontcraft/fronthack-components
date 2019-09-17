@@ -14,14 +14,11 @@ export default () => <div>
   </ul>
 
 
-  <p>With the advance of the project, following directories should appear:</p>
+  <p>With the advance of the project, following directories should be created:</p>
 
   <ul>
     <li><em><strong>components</strong></em></li>
     <li><em><strong>containers</strong></em></li>
-    <li><em><strong>data</strong></em></li>
-    <li><em><strong>forms</strong></em></li>
-    <li><em><strong>helpers</strong></em></li>
     <li><em><strong>static</strong></em></li>
   </ul>
 </div>

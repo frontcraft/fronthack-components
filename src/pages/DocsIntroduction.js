@@ -16,12 +16,12 @@ export default () => <div>
   <h2>What Fronthack includes?</h2>
 
   <ul>
-    <li>A boilerplate for three types of projects (React, Next.js or static HTML) with Webpack or Gulp under the hood.</li>
+    <li>A boilerplate for four types of projects (React, Next.js, Static site, Jekyll).</li>
     <li>Styles written in Sass, with BEM convention to avoid naming conflicts.</li>
     <li>Library of ready components which you add to your project and modify.</li>
     <li>Global Sass variables used by all components, that gives them common sense of style.</li>
-    <li>Tool that allows you to display designs under the HTML code in a browser.</li>
-    <li>Tool to visualy plan the UI structure, before writing any code.</li>
+    <li>Tool for pixel perfect implementations that puts designs under the DOM structure.</li>
+    <li>Canvas tool to visually plan the structure of UI, before writing any code.</li>
     <li>Linter configuration.</li>
     <li>Opiniated file structure of the project.</li>
     <li>And more...</li>

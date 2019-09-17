@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => <div>
-  <h2>Static HTML + jQuery project setup</h2>
+  <h2>Static HTML project setup</h2>
 
   <p>To create new Static HTML project on Fronthack, use a following command:</p>
 
