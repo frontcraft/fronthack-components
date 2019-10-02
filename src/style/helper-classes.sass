@@ -238,13 +238,13 @@
 // Wraps content into centered container with a limited width on desktop resolutions.
 
 .container
-  +container($container-max-width)
+  +container
 
-.narrow-container
-  +container($container-narrow-max-width)
+.container-narrow
+  +container(narrow)
 
-.wide-container
-  +container($container-wide-max-width)
+.container-wide
+  +container(wide)
 
 // Avoid doubled paddings if container is located inside another container.
 [class*='container'] [class*='container']

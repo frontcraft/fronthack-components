@@ -73,7 +73,11 @@
     clear: both
 
 // Make given element container.
-=container($container-width: $container-max-width)
+=container($container-width: $container)
+  @if $container-width == wide
+    $container-width: $container-wide
+  @else if $container-width == narrow
+    $container-width: $container-narrow
   width: 100% !important
   max-width: $container-width + $container-paddings * 2
   margin: 0 auto
