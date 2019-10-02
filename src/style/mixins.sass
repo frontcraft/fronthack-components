@@ -84,6 +84,7 @@
 =column($amount, $gap)
   float: left
   width: calc(#{100% / $amount} - #{$gap * ($amount - 1) / $amount})
+  box-sizing: border-box
 
   &:not(:nth-child(#{$amount}n))
     margin-right: $gap
