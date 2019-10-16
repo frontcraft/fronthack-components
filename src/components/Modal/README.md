@@ -43,7 +43,8 @@ fronthack component Modal
 <script>
   // Modal
   document.addEventListener('click', event => {
-    if (['modal__trigger', 'modal__overlay'].includes(event.target.className)) {
+    if (event.target.classList.contains('modal__trigger')
+    || event.target.classList.contains('modal__overlay')) {
       event.target.parentElement.classList.toggle('is-open')
     }
   })
