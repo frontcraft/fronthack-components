@@ -29,7 +29,7 @@ const TopBar = ({ links }) => {
   )
 }
 
-TopBar.PropTypes = {
+TopBar.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
     url: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,

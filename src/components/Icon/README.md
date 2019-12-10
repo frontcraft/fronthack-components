@@ -85,6 +85,7 @@ fronthack component Icon
  * eu
  * europe
  * eye
+ * filters
  * flag
  * flag-slat
  * glasses
