@@ -13,6 +13,7 @@ const Button = ({
   block,
   disabled,
   className,
+  ...otherProps
 }) => {
   const ComponentProp = component
   return (
@@ -24,6 +25,7 @@ const Button = ({
         disabled: disabled,
       }, { [className]: className })}
       onClick={onClick}
+      {...otherProps}
     >{children}</ComponentProp>
   )
 }
@@ -37,11 +39,12 @@ Button.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  component: PropTypes.node,
+  component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onClick: PropTypes.func,
   variant: PropTypes.oneOf([
     'primary',
     'secondary',
+    'light',
     'danger',
     'link',
   ]),

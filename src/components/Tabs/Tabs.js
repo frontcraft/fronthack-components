@@ -4,27 +4,23 @@ import bemCx from 'bem-modifiers'
 import './style.sass'
 
 
-class Tabs extends React.Component {
-  state = {
-    active: 0,
-  }
-  render() {
-    const { active } = this.state
-    return (
-      <div className='tabs' data-active-tab={active}>
-        <div className='tabs__btns'>
-          {this.props.labels.map((label, index) =>
-            <div
-              className={bemCx('tabs__btn', {}, { 'is-active': index === active })}
-              onClick={() => this.setState({ active: index })}
-              key={index}
-            >{label}</div>
-          )}
-        </div>
-        <div className='tabs__content is-open'>{this.props.children[active]}</div>
+const Tabs = ({ labels, children }) => {
+  const [active, setActive] = React.useState(0)
+
+  return (
+    <div className='tabs' data-active-tab={active}>
+      <div className='tabs__btns'>
+        {labels.map((label, index) =>
+          <div
+            className={bemCx('tabs__btn', {}, { 'is-active': index === active })}
+            onClick={() => setActive(index)}
+            key={index}
+          >{label}</div>
+        )}
       </div>
-    )
-  }
+      <div className='tabs__content is-open'>{children[active]}</div>
+    </div>
+  )
 }
 
 Tabs.propTypes = {

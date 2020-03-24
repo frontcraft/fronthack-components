@@ -10,17 +10,17 @@ fronthack component Pagination
 
 ```jsx
 <Pagination
-  pages={5}
+  pagesInTotal={5}
   onClick={item => alert(item)}
-  current={3}
+  page={3}
 />
 ```
 
 ##### Properties
 
-* `pages` - total amount of pages
+* `pagesInTotal` - total amount of pages
 * `onClick` - callback to perform after click
-* `current` - current page number
+* `page` - current page number
 
 
 #### Static HTML example:

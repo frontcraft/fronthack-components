@@ -8,8 +8,10 @@
 // Block
 // --------------------------------------------------
 .pagination
-  text-align: center
-  display: block
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
   font-weight: $bold
   font-size: 13px
   margin-bottom: 0
@@ -18,7 +20,8 @@
 // Elements
 // --------------------------------------------------
 .pagination__item
-  display: inline-block
+  display: block
+  text-align: center
   border: 1px solid $gray-light
   box-sizing: border-box
   min-width: 30px
@@ -28,6 +31,9 @@
   color: $gray-light
   cursor: pointer
 
+  & + &
+    margin-left: -1px
+
   &:hover
     background-color: $gray-lighter
 
@@ -36,6 +42,8 @@
 .pagination__item--active
   background: $brand-primary
   border-color: $brand-primary
-  color: #fff
-  cursor: normal
   pointer-events: none
+
+.pagination__item--disabled
+  pointer-events: none
+  opacity: 0.33

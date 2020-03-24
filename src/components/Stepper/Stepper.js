@@ -7,7 +7,7 @@ const Stepper = ({ steps, current }) =>
   <div className='stepper'>
     {steps.map((step, index) =>
       <div
-        className={`stepper__item${(current && current === index) ? ' is-active' : ''}`}
+        className={`stepper__item${(current === index) ? ' is-active' : ''}`}
         key={index}
       ><div className='stepper__label'>{step}</div></div>
     )}
@@ -15,7 +15,7 @@ const Stepper = ({ steps, current }) =>
 
 Stepper.propTypes = {
   steps: PropTypes.arrayOf(PropTypes.string).isRequired,
-  current: PropTypes.number,
+  current: PropTypes.number.isRequired,
 }
 
 export default Stepper

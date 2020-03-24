@@ -5,52 +5,64 @@ import './style.sass'
 import Icon from '../Icon'
 
 
-class Modal extends React.Component {
-  state = {
-    isOpen: false,
-  }
-  componentDidMount() {
-    if (typeof this.props.isOpen !== 'undefined' && this.props.isOpen) {
-      this.setState({ isOpen: true })
-    }
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.isOpen === prevState.isOpen && this.props.isOpen !== this.state.isOpen) {
-      this.setState({ isOpen: this.props.isOpen })
-    }
-  }
-  render() {
-    const { children, size, title, trigger } = this.props
-    return (
-      <div className={bemCx('modal', {
-        [size]: size,
-      }, 'is-open')}>
-        <span onClick={() => this.setState({ isOpen: true })}>{trigger}</span>
+const Modal = ({
+  isOpen: isOpenProp,
+  trigger,
+  title,
+  size,
+  onClose,
+  children,
+}) => {
+  const [isOpen, setIsOpen] = React.useState()
 
-        { this.state.isOpen &&
-          <div className='modal__inner'>
-            {title && <div className='modal__title'>{title}</div>}
-            <div className='modal__content'>{children}</div>
-            <div
-              className='modal__close'
-              onClick={() => this.setState({ isOpen: false })}
-            ><Icon type='x' /></div>
+  React.useEffect(() => {
+    if (isOpenProp) {
+      setIsOpen(isOpenProp)
+    }
+  }, [])
+
+  React.useEffect(() => {
+    if (isOpenProp !== isOpen) {
+      setIsOpen(isOpenProp)
+    }
+  }, [isOpenProp])
+
+  return (
+    <div className={bemCx('modal', { [size]: size }, 'is-open')}>
+
+      {trigger && <span onClick={() => setIsOpen(true)}>{trigger}</span>}
+
+      {isOpen &&
+        <div className='modal__inner'>
+          <div className='modal__content'>
+            {title && <h2 className='modal__title'>{title}</h2>}
+            {children}
           </div>
-        }
-        { this.state.isOpen &&
           <div
-            className='modal__overlay'
-            onClick={() => this.setState({ isOpen: false })}
-          />
-        }
-      </div>
-    )
-  }
+            className='modal__close'
+            onClick={() => {
+              setIsOpen(false)
+              onClose && onClose()
+            }}
+          ><Icon type='x' /></div>
+        </div>
+      }
+      {isOpen &&
+        <div
+          className='modal__overlay'
+          onClick={() => {
+            setIsOpen(false)
+            onClose && onClose()
+          }}
+        />
+      }
+    </div>
+  )
 }
 
 Modal.propTypes = {
-  trigger: PropTypes.node.isRequired,
-  title: PropTypes.string,
+  trigger: PropTypes.node,
+  title: PropTypes.node,
   size: PropTypes.oneOf(['xs', 'sm', 'lg']),
 }
 

@@ -9,12 +9,12 @@
 // Block
 // --------------------------------------------------
 .stepper
-  margin: 21px auto 16px
+  margin: 20px auto 40px
   display: table
   width: 100%
   max-width: 740px
   table-layout: fixed
-  line-height: 21px
+  line-height: normal
 
 // Elements
 // --------------------------------------------------
@@ -22,8 +22,10 @@
   margin: 20px 0 0 50%
   width: 100%
   text-align: center
-  white-space: nowrap
-  font-weight: $bold
+  font-weight: $regular
+  font-size: 14px
+  +breakpoint(tablet)
+    white-space: nowrap
 
 .stepper__item
   display: table-cell

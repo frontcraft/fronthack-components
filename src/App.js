@@ -5,7 +5,7 @@ import './style/index.sass'
 import Accordion, { AccordionItem } from './components/Accordion'
 // import Dropdown from './components/Dropdown'
 // import Field from './components/Field'
-// import Icon from './components/Icon'
+import Icon from './components/Icon'
 import Button from './components/Button'
 // import Badge from './components/Badge'
 import HamburgerNav from './components/HamburgerNav'
@@ -56,11 +56,25 @@ class App extends React.Component {
     return (
       <FormThemeProvider theme={{
         colors: { accent: 'blue' },
-        sizes: { onlyBottomBorder: true, borderWidth: 2 },
+        sizes: {
+          onlyBottomBorder: true,
+          borderWidth: 2,
+          addonSpacing: 15,
+        },
+        customValidationFunction: (value, type) => {
+          switch (type) {
+            case 'michal':
+              return value !== 'Michal' && 'You did not typed name "Michal"'
+          }
+        },
       }}>
         <div className='container'>
-          <Form fields={['input', 'switches']}>
-            <Input name='input' label='Input' />
+          <Form fields={['input', 'switches']} allRequired callback>
+            <FormThemeProvider theme={{
+              sizes: { inputHeight: 60 },
+            }}>
+              <Input name='input' label='Input' addon={<Icon type='user' />} />
+            </FormThemeProvider>
             <Switches
               name='switches'
               label='Switches'
@@ -70,7 +84,7 @@ class App extends React.Component {
                 { label: 'Volkswagen', value: 'volkswagen' },
               ]}
             />
-            <FormButton callback={fields => console.log(fields)} loading>Submit</FormButton>
+            <FormButton callback={fields => console.log(fields)}>Submit</FormButton>
           </Form>
           <Accordion>
             <AccordionItem title='First accordion item'>
@@ -104,7 +118,6 @@ class App extends React.Component {
             <Input
               name='username'
               label='User name'
-              type='text'
               placeholder='Enter username'
               initialValue='Michal'
               help='Required field'
@@ -131,11 +144,12 @@ class App extends React.Component {
             />
             <TextArea
               name='content'
-              label='Content'
+              // label='Content'
               placeholder='Enter content'
               inlineLabel
               large
               min={15}
+              addon={<Icon type='search' />}
             />
             <MultiFormInput
               name='people'
@@ -426,11 +440,10 @@ export default App
 
 const PeopleForm = ({ fields, onChange }) =>
   <Form
-    component='div'
     fields={['firstname', 'lastname']}
     callbackOnChange={udpatedFields => onChange(udpatedFields)}
+    isMultiFormInput
   >
-    {console.log('fields: ', fields)}
     <FormRow>
       <Input
         name='firstname'

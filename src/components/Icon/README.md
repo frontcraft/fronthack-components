@@ -65,6 +65,7 @@ fronthack component Icon
  * clock
  * cloud
  * clusters
+ * cog
  * counter
  * cutlery
  * database

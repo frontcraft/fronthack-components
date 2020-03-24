@@ -28,7 +28,10 @@ class Dropdown extends React.Component {
                 >{link.label}</a>
                 : link.callback
                   ? <div
-                    onClick={() => link.callback()}
+                    onClick={() => {
+                      link.callback()
+                      setIsOpen(false)
+                    }}
                     className='dropdown__link'
                     key={index}
                   >{link.label}</div>

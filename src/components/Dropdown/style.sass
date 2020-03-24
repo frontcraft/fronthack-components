@@ -48,6 +48,9 @@ $dropdown-max-width: 230px
   border: 1px solid $gray-light
   box-shadow: $gray-light 0 0 5px
 
+.dropdown__overlay
+  display: none
+
 .dropdown__link
   display: block
   margin: 0 -20px
@@ -74,6 +77,7 @@ $dropdown-max-width: 230px
       fill-mode: forwards
 
   .dropdown__overlay
+    display: block
     +overlay
 
 @keyframes dropdown-inner

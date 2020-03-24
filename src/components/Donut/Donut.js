@@ -13,7 +13,7 @@ const Donut = ({ percentage, pie }) =>
   </div>
 
 Donut.propTypes = {
-  percentage: PropTypes.number,
+  percentage: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   pie: PropTypes.bool,
 }
 
