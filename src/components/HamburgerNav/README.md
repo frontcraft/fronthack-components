@@ -57,6 +57,9 @@ fronthack component HamburgerNav
     if (['hamburger-nav__trigger', 'hamburger-nav__overlay'].includes(event.target.className)) {
       event.target.parentElement.classList.toggle('is-visible')
     }
+    if (event.target.className === 'hamburger-nav__link') {
+      event.target.parentElement.parentElement.parentElement.classList.remove('is-visible')
+    }
   })
 </script>
 ```

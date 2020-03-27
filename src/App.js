@@ -69,7 +69,7 @@ class App extends React.Component {
         },
       }}>
         <div className='container'>
-          <Form fields={['input', 'switches']} allRequired callback>
+          <Form fields={['input', 'switches']} allRequired onChange={fields => console.log(fields)}>
             <FormThemeProvider theme={{
               sizes: { inputHeight: 60 },
             }}>
@@ -441,8 +441,8 @@ export default App
 const PeopleForm = ({ fields, onChange }) =>
   <Form
     fields={['firstname', 'lastname']}
-    callbackOnChange={udpatedFields => onChange(udpatedFields)}
-    isMultiFormInput
+    onChange={udpatedFields => onChange(udpatedFields)}
+    runOnChangeInitially
   >
     <FormRow>
       <Input
