@@ -4,14 +4,24 @@ import './style.sass'
 
 const NavVertical = ({ links }) =>
   <nav className='nav-vertical'>
-    {links.map((link, index) => (
-      <a href={link.url} key={index} className='nav-vertical__link'>{link.label}</a>
-    ))}
+    {links.map((item, index) => item.url
+      ? <a
+        href={item.url}
+        key={index}
+        className='nav-vertical__link'
+      >{item.label}</a>
+      : <div
+        onClick={() => item.callback()}
+        key={index}
+        className='nav-vertical__link'
+      >{item.label}</div>
+    )}
   </nav>
 
 NavVertical.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
-    url: PropTypes.string.isRequired,
+    url: PropTypes.string,
+    callback: PropTypes.func,
     label: PropTypes.string.isRequired,
   })),
 }
