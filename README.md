@@ -14,12 +14,7 @@ in real-life environment
 
 ### Deployment
 
-To deploy a storybook to https://frontcraft.github.io/fronthack-components/index.html,
-run a following command:
-
-```
-yarn deploy-storybook
-```
+Master branch is automaticaly deployed to Netlify.
 
 Fronthack CLI uses the latest version of files in this repository, so if you
 introduce a changes in any component, Fronthack will treat them as a source of

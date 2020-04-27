@@ -70,7 +70,6 @@
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -c .storybook",
-    "deploy-storybook": "yarn build-storybook && gh-pages -d storybook-static",
     "lint": "eslint src/components/**/*.js"
   },
   "jest": {
@@ -135,7 +134,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gh-pages": "^2.0.1",
     "storybook-readme": "^5.0.2"
   },
   "browserslist": {
