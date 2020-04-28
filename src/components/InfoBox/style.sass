@@ -1,0 +1,32 @@
+@import '../../style/variables'
+@import '../../style/mixins'
+
+// Info box
+//
+// A box that shows important info and calls for action.
+
+
+// Block
+// --------------------------------------------------
+.info-box
+  background-color: white
+  padding: 30px 20px
+  font-size: 20px
+  margin: -20px 0 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  border: 2px solid $text-color
+  +breakpoint(tablet)
+    flex-direction: row
+
+
+// Elements
+// --------------------------------------------------
+.info-box__text
+  text-align: center
+  margin-right: 20px
+  margin-bottom: 20px
+  +breakpoint(tablet)
+    margin-bottom: 0

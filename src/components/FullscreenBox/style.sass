@@ -1,0 +1,54 @@
+@import '../../style/variables'
+@import '../../style/mixins'
+
+// Fullscreen box
+//
+// A small block on a fullscreen background, ideal for log in screens, etc.
+
+
+// Block
+// --------------------------------------------------
+.fullscreen-box
+  width: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background:
+    image: url('https://placehold.it/800x600')
+    size: cover
+    repeat: no-repeat
+  box-sizing: border-box
+
+  +breakpoint(tablet)
+    padding: 30px
+
+
+// Elements
+// --------------------------------------------------
+.fullscreen-box__box
+  width: 400px
+  max-width: 100%
+  background-color: white
+  box-sizing: border-box
+  padding: 40px #{$container-paddings}
+  justify-content: center
+  text-align: center
+  +box-shadow
+  +breakpoint(tablet)
+    padding: 40px 30px
+
+.fullscreen-box__title
+  text-align: center
+  font-weight: $bold
+  margin-bottom: 30px
+
+.fullscreen-box__footer
+  color: white
+  font-size: 14px
+  margin-top: 10px
+
+  a
+    color: white
+    text-decoration: underline

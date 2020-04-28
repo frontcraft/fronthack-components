@@ -30,6 +30,8 @@ import ActionLinksEXAMPLE from '../src/components/ActionLinks/EXAMPLE'
 import ActionLinksREADME from '../src/components/ActionLinks/README.md'
 import AlertEXAMPLE from '../src/components/Alert/EXAMPLE'
 import AlertREADME from '../src/components/Alert/README.md'
+import AvatarEXAMPLE from '../src/components/Avatar/EXAMPLE'
+import AvatarREADME from '../src/components/Avatar/README.md'
 import BadgeEXAMPLE from '../src/components/Badge/EXAMPLE'
 import BadgeREADME from '../src/components/Badge/README.md'
 import BlockEXAMPLE from '../src/components/Block/EXAMPLE'
@@ -48,14 +50,20 @@ import FieldEXAMPLE from '../src/components/Field/EXAMPLE'
 import FieldREADME from '../src/components/Field/README.md'
 import Form from '../src/components/Form'
 import FormREADME from '../src/components/Form/README.md'
+import FullscreenBoxEXAMPLE from '../src/components/FullscreenBox/EXAMPLE'
+import FullscreenBoxREADME from '../src/components/FullscreenBox/README.md'
 import HamburgerNavEXAMPLE from '../src/components/HamburgerNav/EXAMPLE'
 import HamburgerNavREADME from '../src/components/HamburgerNav/README.md'
 import IconEXAMPLE from '../src/components/Icon/EXAMPLE'
 import IconREADME from '../src/components/Icon/README.md'
+import InfoBoxEXAMPLE from '../src/components/InfoBox/EXAMPLE'
+import InfoBoxREADME from '../src/components/InfoBox/README.md'
 import LanguageSelectEXAMPLE from '../src/components/LanguageSelect/EXAMPLE'
 import LanguageSelectREADME from '../src/components/LanguageSelect/README.md'
 import ListingItemEXAMPLE from '../src/components/ListingItem/EXAMPLE'
 import ListingItemREADME from '../src/components/ListingItem/README.md'
+import LoaderEXAMPLE from '../src/components/Loader/EXAMPLE'
+import LoaderREADME from '../src/components/Loader/README.md'
 import LogoEXAMPLE from '../src/components/Logo/EXAMPLE'
 import LogoREADME from '../src/components/Logo/README.md'
 import ModalEXAMPLE from '../src/components/Modal/EXAMPLE'
@@ -80,6 +88,8 @@ import SocialLinksEXAMPLE from '../src/components/SocialLinks/EXAMPLE'
 import SocialLinksREADME from '../src/components/SocialLinks/README.md'
 import SocialSignUpEXAMPLE from '../src/components/SocialSignUp/EXAMPLE'
 import SocialSignUpREADME from '../src/components/SocialSignUp/README.md'
+import SpinnerEXAMPLE from '../src/components/Spinner/EXAMPLE'
+import SpinnerREADME from '../src/components/Spinner/README.md'
 import StepperEXAMPLE from '../src/components/Stepper/EXAMPLE'
 import StepperREADME from '../src/components/Stepper/README.md'
 import TabsEXAMPLE from '../src/components/Tabs/EXAMPLE'
@@ -152,6 +162,12 @@ storiesOf('Components/Alert', module)
   .add('warning', () => <AlertEXAMPLE type='warning' />)
   .add('error', () => <AlertEXAMPLE type='error' />)
 
+storiesOf('Components/Avatar', module)
+  .addParameters({ readme: { sidebar: AvatarREADME } })
+  .add('default', () => <AvatarEXAMPLE />)
+  .add('sm', () => <AvatarEXAMPLE size='sm' />)
+  .add('lg', () => <AvatarEXAMPLE size='lg' />)
+
 storiesOf('Components/Badge', module)
   .addParameters({ readme: { sidebar: BadgeREADME } })
   .add('default', () => <BadgeEXAMPLE />)
@@ -197,6 +213,10 @@ storiesOf('Components/Form', module)
   .addParameters({ readme: { sidebar: FormREADME } })
   .add('default', () => <Form />)
 
+storiesOf('Components/FullscreenBox', module)
+  .addParameters({ readme: { sidebar: FullscreenBoxREADME } })
+  .add('default', () => <FullscreenBoxEXAMPLE />)
+
 storiesOf('Components/HamburgerNav', module)
   .addParameters({ readme: { sidebar: HamburgerNavREADME } })
   .add('default', () => <HamburgerNavEXAMPLE />)
@@ -205,6 +225,10 @@ storiesOf('Components/Icon', module)
   .addParameters({ readme: { sidebar: IconREADME } })
   .add('default', () => <IconEXAMPLE />)
 
+storiesOf('Components/InfoBox', module)
+  .addParameters({ readme: { sidebar: InfoBoxREADME } })
+  .add('default', () => <InfoBoxEXAMPLE />)
+
 storiesOf('Components/LanguageSelect', module)
   .addParameters({ readme: { sidebar: LanguageSelectREADME } })
   .add('default', () => <LanguageSelectEXAMPLE />)
@@ -212,6 +236,10 @@ storiesOf('Components/LanguageSelect', module)
 storiesOf('Components/ListingItem', module)
   .addParameters({ readme: { sidebar: ListingItemREADME } })
   .add('default', () => <ListingItemEXAMPLE />)
+
+storiesOf('Components/Loader', module)
+  .addParameters({ readme: { sidebar: LoaderREADME } })
+  .add('default', () => <LoaderEXAMPLE />)
 
 storiesOf('Components/Logo', module)
   .addParameters({ readme: { sidebar: LogoREADME } })
@@ -264,6 +292,10 @@ storiesOf('Components/SocialLinks', module)
 storiesOf('Components/SocialSignUp', module)
   .addParameters({ readme: { sidebar: SocialSignUpREADME } })
   .add('default', () => <SocialSignUpEXAMPLE />)
+
+storiesOf('Components/Spinner', module)
+  .addParameters({ readme: { sidebar: SpinnerREADME } })
+  .add('default', () => <SpinnerEXAMPLE />)
 
 storiesOf('Components/Stepper', module)
   .addParameters({ readme: { sidebar: StepperREADME } })
