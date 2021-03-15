@@ -1,12 +1,12 @@
 import React from 'react'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import './style.sass'
 
 
 const Alert = ({ message, type }) =>
-  <div className={bemCx('alert', type)}>
+  <div className={classNames('alert', `alert--${type}`)}>
     <div className='alert__icon'><Icon type='warning' /></div>
     {message}
   </div>

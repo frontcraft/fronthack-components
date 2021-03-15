@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
 const Field = ({ label, values, children, spacing, inlineLabel }) =>
-  <div className={bemCx('field', { spacing, 'inline-label': inlineLabel })}>
+  <div className={classNames('field', { 'field--spacing': spacing, 'field--inline-label': inlineLabel })}>
     <div className='field__label'>{label}</div>
     <div className='field__items'>
       {children

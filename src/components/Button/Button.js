@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
@@ -18,12 +18,13 @@ const Button = ({
   const ComponentProp = component
   return (
     <ComponentProp
-      className={bemCx('btn', {
-        [variant]: variant,
-        [size]: size,
-        block: block,
-        disabled: disabled,
-      }, { [className]: className })}
+      className={classNames('btn', {
+        [`btn--${variant}`]: variant,
+        [`btn--${size}`]: size,
+        'btn--block': block,
+        'btn--disabled': disabled,
+        [className]: className,
+      })}
       onClick={onClick}
       {...otherProps}
     >{children}</ComponentProp>

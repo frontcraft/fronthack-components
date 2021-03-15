@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
@@ -12,7 +12,7 @@ const Tabs = ({ labels, children }) => {
       <div className='tabs__btns'>
         {labels.map((label, index) =>
           <div
-            className={bemCx('tabs__btn', {}, { 'is-active': index === active })}
+            className={classNames('tabs__btn', { 'is-active': index === active })}
             onClick={() => setActive(index)}
             key={index}
           >{label}</div>

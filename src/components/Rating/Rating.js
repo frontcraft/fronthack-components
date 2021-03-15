@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
@@ -12,7 +12,7 @@ const Rating = ({ value }) => {
     i++
   }
   return (
-    <div className={bemCx('rating', { [value]: value })}>{dots}</div>
+    <div className={classNames('rating', `rating--${value}`)}>{dots}</div>
   )
 }
 

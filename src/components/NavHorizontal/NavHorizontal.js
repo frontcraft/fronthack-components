@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
 const NavHorizontal = ({ links, className }) =>
-  <nav className={bemCx('nav-horizontal', {}, className)}>
+  <nav className={classNames('nav-horizontal', className)}>
     {links.map((link, index) => (
-      <a href={link.url} key={index} className={bemCx(
+      <a href={link.url} key={index} className={classNames(
         'nav-horizontal__link',
-        {},
         { 'is-active': window.location.pathname.startsWith(link.url) }
       )}>{link.label}</a>
     ))}

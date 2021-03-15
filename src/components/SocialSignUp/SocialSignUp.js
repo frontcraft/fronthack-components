@@ -1,18 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
 const SocialSignUp = ({ label }) =>
   <div className='social-sign-up'>
     <div className='social-sign-up__label'>{label}</div>
-    <div className={bemCx('social-sign-up__button', 'facebook')} onClick={() => alert('Facebook auth action')}>
-      <FacebookIcon />Login with Facebook
-    </div>
-    <div className={bemCx('social-sign-up__button', 'google')} onClick={() => alert('Google auth action')}>
-      <GoogleIcon />Login with Google
-    </div>
+    <div
+      className={classNames('social-sign-up__button', 'social-sign-up__button--facebook')}
+      onClick={() => alert('Facebook auth action')}
+    ><FacebookIcon />Login with Facebook</div>
+    <div
+      className={classNames('social-sign-up__button', 'social-sign-up__button--google')}
+      onClick={() => alert('Google auth action')}
+    ><GoogleIcon />Login with Google</div>
   </div>
 
 SocialSignUp.propTypes = {

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 import Icon from '../Icon'
 
@@ -28,7 +28,7 @@ const Modal = ({
   }, [isOpenProp])
 
   return (
-    <div className={bemCx('modal', { [size]: size }, 'is-open')}>
+    <div className={classNames('modal', { [`modal--${size}`]: size }, 'is-open')}>
 
       {trigger && <span onClick={() => setIsOpen(true)}>{trigger}</span>}
 

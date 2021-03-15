@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
 const Tooltip = ({ direction, message, children }) =>
-  <div className={bemCx('tooltip', direction)} data-tooltip={message}>
+  <div className={classNames('tooltip', `tooltip--${direction}`)} data-tooltip={message}>
     {children}
   </div>
 

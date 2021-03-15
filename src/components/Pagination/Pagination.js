@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
@@ -20,41 +20,41 @@ const Pagination = ({ pagesInTotal, onClick, page, pagesMax }) => {
   return (
     <div className='pagination'>
       <div
-        className={bemCx('pagination__item', { disabled: page === 0 })}
+        className={classNames('pagination__item', { 'pagination__item--disabled': page === 0 })}
         onClick={() => onClick(page - 1)}
       ><Icon type='arrow-left' /></div>
       {items.map(item =>
         <div
           onClick={() => onClick(item)}
           key={item}
-          className={bemCx('pagination__item', { active: item === page })}
+          className={classNames('pagination__item', { 'pagination__item--active': item === page })}
         >{item + 1}</div>
       )}
       {isTooManyPages &&
         <>
           {page >= pagesMax - 1 &&
             <div
-              className={bemCx('pagination__item', { disabled: true })}
+              className={classNames('pagination__item', 'pagination__item--disabled')}
             >...</div>
           }
           {page >= pagesMax - 2 && page < pagesInTotal - 1 &&
             <div
-              className={bemCx('pagination__item', { active: true })}
+              className={classNames('pagination__item', 'pagination__item--active')}
             >{page + 1}</div>
           }
           {page < pagesInTotal - 2 &&
             <div
-              className={bemCx('pagination__item', { disabled: true })}
+              className={classNames('pagination__item', 'pagination__item--disabled')}
             >...</div>
           }
           <div
             onClick={() => onClick(pagesInTotal - 1)}
-            className={bemCx('pagination__item', { active: pagesInTotal - 1 === page })}
+            className={classNames('pagination__item', { 'pagination__item--active': pagesInTotal - 1 === page })}
           >{pagesInTotal}</div>
         </>
       }
       <div
-        className={bemCx('pagination__item', { disabled: page + 1 >= pagesInTotal })}
+        className={classNames('pagination__item', { 'pagination__item--disabled': page + 1 >= pagesInTotal })}
         onClick={() => onClick(page + 1)}
       ><Icon type='arrow-right' /></div>
     </div>

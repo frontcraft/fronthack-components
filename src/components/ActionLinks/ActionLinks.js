@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactLoading from 'react-loading'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 import Modal from '../Modal'
 import Button from '../Button'
@@ -12,7 +12,7 @@ const ActionLinks = ({ editUrl, deleteAction, visible, still }) => {
   const [loading, setLoading] = React.useState(false)
   return (
     visible
-      ? <div className={bemCx('action-links', { still: still })}>
+      ? <div className={classNames('action-links', { 'action-links--still': still })}>
         {editUrl &&
           <button
             className='action-links__link'

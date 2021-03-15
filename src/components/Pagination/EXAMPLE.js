@@ -5,9 +5,10 @@ export default () => {
   const [currentItem, setCurrentItem] = React.useState(1)
   return (
     <Pagination
-      pages={5}
       onClick={item => setCurrentItem(item)}
-      current={currentItem}
+      page={currentItem}
+      pagesInTotal={10}
+      pagesMax={5}
     />
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
 const Donut = ({ percentage, pie }) =>
   <div
-    className={bemCx('donut', { pie: pie })}
+    className={classNames('donut', { 'donut--pie': pie })}
     style={{ animationDelay: `-${percentage}s` }}
   >
     <div className='donut__label'>{percentage}%</div>

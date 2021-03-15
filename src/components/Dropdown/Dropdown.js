@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import bemCx from 'bem-modifiers'
+import classNames from 'classnames'
 import './style.sass'
 
 
@@ -12,7 +12,7 @@ class Dropdown extends React.Component {
     const { links, children, overlay } = this.props
     const { isOpen } = this.state
     return (
-      <div className={bemCx('dropdown', [], { 'is-open': isOpen })}>
+      <div className={classNames('dropdown', { 'is-open': isOpen })}>
         <span
           className='dropdown__label'
           onClick={() => this.setState({ isOpen: !isOpen })}
