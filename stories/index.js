@@ -8,6 +8,7 @@ import DocsDeploymentJekyll from '../src/pages/DocsDeploymentJekyll'
 import DocsDeploymentReact from '../src/pages/DocsDeploymentReact'
 import DocsDeploymentNext from '../src/pages/DocsDeploymentNext'
 import DocsDesigns from '../src/pages/DocsDesigns'
+import DocsContribution from '../src/pages/DocsContribution'
 import DocsFileStructureStatic from '../src/pages/DocsFileStructureStatic'
 import DocsFileStructureJekyll from '../src/pages/DocsFileStructureJekyll'
 import DocsFileStructureReact from '../src/pages/DocsFileStructureReact'
@@ -142,6 +143,9 @@ storiesOf('Docs/Deployment', module)
   .add('Jekyll', () => <DocsDeploymentJekyll />)
   .add('React', () => <DocsDeploymentReact />)
   .add('Next', () => <DocsDeploymentNext />)
+
+storiesOf('Docs/Contribution', module)
+  .add('Read', () => <DocsContribution />)
 
 storiesOf('Components/Basic styles', module)
   .addParameters({ readme: { sidebar: BasicStylesREADME } })

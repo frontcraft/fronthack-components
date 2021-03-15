@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => <div>
-  <h2>What Fronthack is?</h2>
+  <h2>What is Fronthack?</h2>
 
   <p>Fronthack is a complete solution for coding a frontend for the app or a static HTML site. With help of Fronthack it is easier to build scallable projects based on React, Next.js or just a static HTML. It provides a powerfull commandline generator tool and a design system. Which help of it you can generate an opiniated bolerplate for new project, use a wide library of components that are ready to use (like buttons, modals or more complex hamburger menus or forms) or create own custom components that share the unified approach. In the end it results in very good structure of your project.</p>
 
