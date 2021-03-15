@@ -85,6 +85,8 @@ import ProgressBarEXAMPLE from '../src/components/ProgressBar/EXAMPLE'
 import ProgressBarREADME from '../src/components/ProgressBar/README.md'
 import RatingEXAMPLE from '../src/components/Rating/EXAMPLE'
 import RatingREADME from '../src/components/Rating/README.md'
+import SmartphoneWrapperEXAMPLE from '../src/components/SmartphoneWrapper/EXAMPLE'
+import SmartphoneWrapperREADME from '../src/components/SmartphoneWrapper/README.md'
 import SocialLinksEXAMPLE from '../src/components/SocialLinks/EXAMPLE'
 import SocialLinksREADME from '../src/components/SocialLinks/README.md'
 import SocialSignUpEXAMPLE from '../src/components/SocialSignUp/EXAMPLE'
@@ -288,6 +290,10 @@ storiesOf('Components/ProgressBar', module)
 storiesOf('Components/Rating', module)
   .addParameters({ readme: { sidebar: RatingREADME } })
   .add('default', () => <RatingEXAMPLE />)
+
+storiesOf('Components/SmartphoneWrapper', module)
+  .addParameters({ readme: { sidebar: SmartphoneWrapperREADME } })
+  .add('default', () => <SmartphoneWrapperEXAMPLE />)
 
 storiesOf('Components/SocialLinks', module)
   .addParameters({ readme: { sidebar: SocialLinksREADME } })
